@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Конкурс на самое безбашенное путешествие с Пинк</title>
+	</head>
+	
+	<body>
+		<header class="header">
+			<div class="top-menu">
+				<a href="#" class="logo"><img src=""></a>
+				<div class="menu-icon"></div>
+			</div>
+			<h2>Конкурс на самое безбашенное путешествие с Пинк</h2>
+		</header>
+		
+		<div class="form">
+			<p>Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+			<form class="story-form" action="" method="post">
+				<div class="namefields">
+					<label for="name">Имя: *</label>
+					<input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+					<label for="surname">Фамилия: *</label>
+					<input type="text" id="surname" name="surname" placeholder="Укажите фамилию" required>
+					<label for="patronymic">Отчество: *</label>
+					<input type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже" required>
+				</div>
+				<div class="appfields">
+					<label>С каким приложением путешествовали? *</label>
+					<input type="radio" name="appfield" id="ios" value="ios" checked><label for="ios">Pink для iOS</label>
+					<input type="radio" name="appfield" id="android" value="android"><label for="android">Pink на Android</label>
+					<input type="radio" name="appfield" id="windows" value="windows"><label for="ios">Windows Phone</label>
+				</div>
+				<div class="timefields">
+					<label>Когда вы путешествовали? *</label>
+					<input type="date" name="startdate" id="startdate" placeholder="1 апреля 2015"></input>
+					<label for="startdate">Дата выезда</label>
+					<input name="duration" id="duration">
+					<label for="duration">Продолжительность</label>
+					<input type="date" name="finishdate" id="finishdate" placeholder="1 апреля 2015"></input>
+					<label for="finishdate">Дата возвращения</label>
+				</div>
+				<div class="companionfields">
+					<label for="companions">Количество попутчиков</label>
+					<input name="companions" id="companions">
+					<div class="companion">
+						<label>№</label><label for="companionname">Имя: *</label>
+						<div class="input-group">
+							<span class="input-group-id" id="companionname">1</span>
+							<input type="text" name="companionname" id="companionname" placeholder="Введите ваше имя" required>
+						</div>
+						<label for="companionnickname">Прозвище:</label>
+						<input type="text" name="companionnickname" id="companionnickname" placeholder="Ну как же без этого!">
+					</div>
+					<div class="companion">
+						<label>№</label><label for="companionname">Имя: *</label>
+						<div class="input-group">
+							<span class="input-group-id" id="companionname">2</span>
+							<input type="text" name="companionname" id="companionname" placeholder="Введите ваше имя" required>
+						</div>
+						<label for="companionnickname">Прозвище:</label>
+						<input type="text" name="companionnickname" id="companionnickname" placeholder="Ну как же без этого!">
+					</div>
+				</div>
+				<div class="achievementfields">
+					<label>Ваши безбашенные достижения в путешествии</label>
+					<input type="checkbox" name="selfie" id="selfie" checked><label for="selfie">Сделал селфи с акулой</label>
+					<input type="checkbox" name="beach" id="beach" checked><label for="beach">Обгорел на пляже</label>
+					<input type="checkbox" name="chuck" id="chuck"><label for="chuck">Видел Чака Норриса</label>
+					<input type="checkbox" name="souvenirs" id="souvenirs"><label for="souvenirs">Накупил сувениров</label>
+					<input type="checkbox" name="tower" id="tower" checked><label for="tower">Удержал башню</label>
+					<input type="checkbox" name="hotel" id="hotel"><label for="hotel">Разгромил отель</label>
+				</div>
+				<div class="photofields">
+					<label>Ваши фотографии из поездки *</label>
+					<a href="#" class="button upload">Загрузить фото</a>
+					<hr>
+					<div class="photo-preview">
+						<img src="" width="" height="" alt="">
+						<span></span>
+					</div>
+				</div>
+				<a href="#" class="button submit">Отправить форму</a>
+				<span>* - обязательные поля</span>
+			</form>
+		</div>
+		
+		<footer class="footer">
+			<img src="" width="" height="" alt="Pink">
+			<div class="social-icons">
+				<a href="#" class="social-icon"><img src="" width="" height="" alt="Twitter"></a>
+				<a href="#" class="social-icon"><img src="" width="" height="" alt="Facebook"></a>
+				<a href="#" class="social-icon"><img src="" width="" height="" alt="Youtube"></a>
+			</div>
+			<div class="copyright">
+				<span>Разработано</span>
+				<img src="" width="" height="" alt="HTML Academy">
+			</div>
+		</footer>
+	</body>
+	
+</html>
