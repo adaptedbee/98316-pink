@@ -3,15 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+	<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 		<div class="intro">
 			<div class="top-menu">
-				<a class="logo-link" href="#">Pink</a>
-				<div class="top-menu__icon"></div>
+				<a class="logo-link" href="#"></a>
+				<div class="top-menu__nav-wrap">
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__item main-nav__item--active"><a href="">Информация</a></li>
+							<li class="main-nav__item"><a href="">Блог</a></li>
+							<li class="main-nav__item"><a href="">Отзывы</a></li>
+							<li class="main-nav__item"><a href="">Конкурс</a></li>
+						</ul>
+						<a class="main-nav__toggle main-nav__toggle-close" href=""></a>
+					</nav>
+				</div>
 			</div>
-			<h2 class="headline">Взгляните на жизнь иначе!</h2>
+			<h2 class="intro__headline">Взгляните на жизнь иначе!</h2>
 			<a class="intro__applink" href="#">Скачать приложение</a>
 			<div class="intro__applications">
 				<div class="intro__application intro__application--ios"></div>
@@ -33,55 +44,63 @@
 		</div>
 		
 		<div class="reviews">
-			<div class="reviews__review">
-				<h3 class="reviews__review-headline">Николай Петров</h3>
+			<input type="radio" id="btn-1" name="toggle" checked>
+			<input type="radio" id="btn-2" name="toggle">
+			<input type="radio" id="btn-3" name="toggle">
+			<div class="reviews__review reviews__review--1">
+				<h3 class="reviews__review-headline">Николай Петров1</h3>
 				<p class="reviews__review-paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 			</div>
-			<div class="reviews__review">
-				<h3 class="reviews__review-headline">Николай Петров</h3>
+			<div class="reviews__review reviews__review--2">
+				<h3 class="reviews__review-headline">Николай Петров2</h3>
 				<p class="reviews__review-paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 			</div>
-			<div class="reviews__review">
-				<h3 class="reviews__review-headline">Николай Петров</h3>
+			<div class="reviews__review reviews__review--3">
+				<h3 class="reviews__review-headline">Николай Петров3</h3>
 				<p class="reviews__review-paragraph">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 			</div>
-			<div class="reviews__controls"></div>
+			<div class="reviews__controls">
+				<label for="btn-1"></label>
+				<label for="btn-2"></label>
+				<label for="btn-3"></label>
+			</div>
 		</div>
 		
 		<div class="price">
 			<table class="price-table">
 				<thead class="price-table__head">
-					<td class="price-table__head-cell">
-						<p class="price-table__head-cell-apptype">База</p>
-						<p class="price-table__head-cell-appprice">1,99 USD</p>
+					<td class="price-table__headcell">
+						<p class="price-table__headcell-apptype">База</p>
+						<p class="price-table__headcell-appprice">1,99 USD</p>
 					</td>
-					<td class="price-table__head-cell price-table__head-cell--hit">
-						<p class="price-table__head-cell-apptype">Стандарт</p>
-						<p class="price-table__head-cell-appprice">3,99 USD</p>
+					<td class="price-table__headcell price-table__headcell--hit">
+						<p class="price-table__headcell-apptype">Стандарт</p>
+						<p class="price-table__headcell-appprice">3,99 USD</p>
 					</td>
-					<td class="price-table__head-cell">
-						<p class="price-table__head-cell-apptype">Анлим</p>
-						<p class="price-table__head-cell-appprice">9,99 USD</p>
+					<td class="price-table__headcell">
+						<p class="price-table__headcell-apptype">Анлим</p>
+						<p class="price-table__headcell-appprice">9,99 USD</p>
 					</td>
 				</thead>
 				<tbody class="price-table__body">
 					<tr class="price-table__row">
-						<td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
-						<td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
-						<td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
+						<td class="price-table__cell price-table__cell--yes">Розовый фильтр ДА</td>
+						<td class="price-table__cell price-table__cell--yes">Розовый фильтр ДА</td>
+						<td class="price-table__cell price-table__cell--yes">Розовый фильтр ДА</td>
 					</tr>
 					<tr class="price-table__row">
-						<td class="price-table__cell price-table__cell--no">Смайлики</td>
-						<td class="price-table__cell price-table__cell--yes">Смайлики</td>
-						<td class="price-table__cell price-table__cell--yes">Смайлики</td>
+						<td class="price-table__cell price-table__cell--no">Смайлики НЕТ</td>
+						<td class="price-table__cell price-table__cell--yes">Смайлики ДА</td>
+						<td class="price-table__cell price-table__cell--yes">Смайлики ДА</td>
 					</tr>
 					<tr class="price-table__row">
-						<td class="price-table__cell price-table__cell--no">Комментарии</td>
-						<td class="price-table__cell price-table__cell--no">Комментарии</td>
-						<td class="price-table__cell price-table__cell--yes">Комментарии</td>
+						<td class="price-table__cell price-table__cell--no">Комментарии НЕТ</td>
+						<td class="price-table__cell price-table__cell--no">Комментарии НЕТ</td>
+						<td class="price-table__cell price-table__cell--yes">Комментарии ДА</td>
 					</tr>
 				</tbody>
 			</table>
+			<div class="price-table__controls"></div>
 		</div>
 		
 		<div class="contacts">
