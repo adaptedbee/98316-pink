@@ -11,7 +11,7 @@ html, body{
 	margin: 0 auto;
 	width: 320px;
 	/* max-width: 1200px; */
-	
+
 	font-family: 'Open Sans', Arial, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
@@ -22,24 +22,24 @@ html, body{
 	width:100%;
 	background-color:$introdark;
 	background-image:url('');
-	
+
 	&__headline{
 		font-size:24px;
 		line-height:28px;
 		text-align:center;
 		font-weight:300;
-		
+
 		color:$white;
 	}
 	&__applink{
 		font-size:18px;
 		line-height:18px;
 		font-weight:bold;
-		
+
 		text-decoration:none;
 		text-align:center;
 		color:$white;
-		
+
 		display:block;
 		width:280px;
 		padding-top:15px;
@@ -63,7 +63,7 @@ html, body{
 		line-height:24px;
 		font-weight:300;
 		color:$white;
-		
+
 		text-align:center;
 	}
 }
@@ -79,18 +79,18 @@ html, body{
 }
 
 .main-nav{
-	
+
 	&__list{
 		list-style:none;
 		padding:0;
 		margin:0;
-		
+
 	}
 	&__item{
 		font-size:18px;
 		line-height:32px;
 		font-weight:bold;
-		
+
 		width:280px;
 		display:inline-block;
 	}
@@ -114,13 +114,13 @@ html, body{
 	width:100%;
 	background-color:$lightbg;
 	background-image:url('');
-	
+
 	&__headline{
 		font-size:24px;
 		line-height:28px;
 		text-align:center;
 		font-weight:300;
-		
+
 		color:$dark;
 	}
 
@@ -128,21 +128,21 @@ html, body{
 		font-size:18px;
 		line-height:24px;
 		font-weight:bold;
-		
+
 		text-align:center;
 	}
 	&__paragraph{
 		font-size:14px;
 		line-height:24px;
 		color:$dark;
-		
+
 		text-align:center;
 	}
 }
 
 .reviews{
-	width:100%;	
-	
+	width:100%;
+
 	&__review{
 	}
 	&__review-headline{
@@ -161,11 +161,11 @@ html, body{
 	&__review{
 		display:none;
 	}
-	
+
 	input[type="radio"]{
 		display:none;
 	}
-	
+
 	&__controls{
 		display:block;
 		margin:0 auto;
@@ -173,21 +173,21 @@ html, body{
 	&__controls label{
 		display: inline-block;
 		vertical-align:top;
-		
+
 		width: 6px;
 		height: 6px;
 		margin-right:13px;
 		background: $label-inner;
-		cursor: pointer;   
+		cursor: pointer;
 		border: 3px solid $white;
-		border-radius: 50%;    
+		border-radius: 50%;
 	}
 	&__controls label:last-child{
 		margin-right:0;
 	}
 	#btn-1:checked ~ &__controls label[for="btn-1"],
 	#btn-2:checked ~ &__controls label[for="btn-2"],
-	#btn-3:checked ~ &__controls label[for="btn-3"]{ 
+	#btn-3:checked ~ &__controls label[for="btn-3"]{
 		background-color: $white;
 		border-color:$dark;
 	}
@@ -197,29 +197,29 @@ html, body{
 	#btn-2:checked ~ &__controls label[for="btn-1"],
 	#btn-2:checked ~ &__controls label[for="btn-3"],
 	#btn-3:checked ~ &__controls label[for="btn-1"],
-	#btn-3:checked ~ &__controls label[for="btn-2"]{ 
+	#btn-3:checked ~ &__controls label[for="btn-2"]{
 		background-color: $label-inner;
 		border-color:$white;
-	} 
+	}
 	#btn-1:checked ~ &__review--2,
-	#btn-1:checked ~ &__review--3{ 
+	#btn-1:checked ~ &__review--3{
 		display:none;
 	}
-	#btn-1:checked ~ &__review--1{ 
+	#btn-1:checked ~ &__review--1{
 		display:block;
 	}
 	#btn-2:checked ~ &__review--1,
-	#btn-2:checked ~ &__review--3{ 
+	#btn-2:checked ~ &__review--3{
 		display:none;
 	}
-	#btn-2:checked ~ &__review--2{ 
+	#btn-2:checked ~ &__review--2{
 		display:block;
 	}
 	#btn-3:checked ~ &__review--1,
-	#btn-3:checked ~ &__review--2{ 
+	#btn-3:checked ~ &__review--2{
 		display:none;
 	}
-	#btn-3:checked ~ &__review--3{ 
+	#btn-3:checked ~ &__review--3{
 		display:block;
 	}
 }
@@ -229,9 +229,9 @@ html, body{
 	background-color:$lightbg;
 }
 .price-table{
-	
+
 	overflow:hidden;
-	
+
 	&__head{
 	}
 	&__headcell{
@@ -268,7 +268,7 @@ html, body{
 	}
 	&__cell{
 		width:280px;
-		
+
 		font-size:14px;
 		line-height:30px;
 		color:$dark;
@@ -291,7 +291,7 @@ html, body{
 
 .contacts{
 	width:100%;
-	
+
 	&__headline{
 		font-size:24px;
 		line-height:28px;
@@ -304,7 +304,7 @@ html, body{
 		line-height:21px;
 		font-weight:bold;
 		color:$dark;
-		
+
 		text-align: center;
 	}
 	&__link{
@@ -312,7 +312,7 @@ html, body{
 		line-height:28px;
 		font-weight:300;
 		color:$red;
-		
+
 		display:block;
 		text-align:center;
 	}
