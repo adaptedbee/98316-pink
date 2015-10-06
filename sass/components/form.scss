@@ -1,0 +1,121 @@
+.form{
+  width:100%;
+
+  &__text{
+    font-size:$basetextsize;
+    line-height:2.143;
+    color:$dark;
+    text-align:center;
+  }
+}
+
+.storyform{
+
+  &__fields{
+    background-color:$white;
+  }
+  &__fields--highlighted{
+    background-color: #f2f2f2;
+  }
+  &__input-wrapper{
+    @include formcenterblock;
+  }
+  &__highlighted-label{
+    @include formheadline;
+  }
+  &__highlighted-label--center{
+    text-align:center;
+  }
+  &__textinput{
+    width:100%;
+
+    @include formlabel;
+  }
+  &__headline{
+    @include formheadline;
+    text-align:center;
+  }
+  &__radio{
+
+  }
+  &__label{
+    @include formlabel;
+  }
+  &__dateinput{
+    @include formlabel;
+    @include formcenterblock;
+  }
+  &__dateinput:disabled{
+    background-color:#f2f2f2;
+  }
+  &__pm-number{
+    @include formlabel;
+    @include formcenterblock;
+  }
+  &__checkbox{
+
+  }
+  &__uploadbutton{
+    @include formlabel;
+    font-weight:600;
+
+    @include formcenterblock;
+  }
+  &__submitbutton{
+    font-size:$subheadlinetextsize;
+    line-height:1.667;
+    color: $white;
+    font-weight:bold;
+    text-align: center;
+    background-color: $submitcolor;
+
+    @include formcenterblock;
+  }
+  &__comment{
+    font-size:$basetextsize;
+    line-height:2.143;
+    text-align:center;
+    color:$dark;
+  }
+  &__comment span{
+    color:$red;
+  }
+}
+.companion-table{
+
+  &__label-row{
+
+  }
+  &__label{
+    @include formheadline;
+  }
+  &__name-row{
+
+  }
+  &__input-id{
+    @include formlabel;
+  }
+  &__input{
+    @include formlabel;
+  }
+  &__nickname-row{
+
+  }
+  &__input-id--none{
+
+  }
+}
+.photo-preview{
+
+  &__image{
+
+  }
+  &__close{
+
+  }
+  &__filename{
+    font-size:12px;
+    line-height:1.5;
+    color:$dark;
+  }
+}
