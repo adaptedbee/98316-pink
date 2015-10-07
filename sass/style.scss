@@ -1,0 +1,69 @@
+@import "variables.scss";
+@import "components/main.scss";
+@import "components/form.scss";
+
+html, body{
+	padding: 0;
+	margin: 0 auto;
+	width: 320px;
+	/* max-width: 1200px; */
+
+	font-family: 'Open Sans', Arial, sans-serif;
+	@include basetext;
+	color:black;
+}
+
+.logo-link{
+	text-decoration:none;
+	background-image:url('');
+}
+
+.top-menu{
+
+	&__nav-wrap{
+	}
+}
+
+.main-nav{
+
+	&__list{
+		list-style:none;
+		padding:0;
+		margin:0;
+
+	}
+	&__item{
+		font-size:$subheadlinetextsize;
+		line-height:1.778;
+		font-weight:bold;
+
+		width:87.5%;
+		display:inline-block;
+	}
+	&__item a{
+		color:$white;
+		text-decoration:none;
+		text-align:center;
+		text-transform:uppercase;
+	}
+	&__item--active{
+	}
+	&__toggle{
+	}
+	&__toggle--close{
+	}
+
+}
+
+
+
+.header{
+	width:100%;
+	background-color:$introdark;
+	background-image:url('');
+
+	&__headline{
+		@include headlinetext;
+		color:$white;
+	}
+}
