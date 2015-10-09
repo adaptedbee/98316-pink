@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Конкурс на самое безбашенное путешествие с Пинк</title>
+		<link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 	</head>
-	
+
 	<body>
 		<header class="header">
 			<div class="top-menu">
@@ -13,23 +15,38 @@
 			</div>
 			<h2 class="header__headline">Конкурс на самое безбашенное путешествие с Пинк</h2>
 		</header>
-		
+
 		<div class="form">
 			<p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
 			<form class="storyform" action="" method="post">
 				<div class="storyform__fields">
-					<label class="storyform__highlighted-label" for="name">Имя: *</label>
-					<input class="storyform__textinput" type="text" id="name" name="name" placeholder="Введите ваше имя" required>
-					<label class="storyform__highlighted-label" for="surname">Фамилия: *</label>
-					<input class="storyform__textinput" type="text" id="surname" name="surname" placeholder="Укажите фамилию" required>
-					<label class="storyform__highlighted-label" for="patronymic">Отчество: *</label>
-					<input class="storyform__textinput" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+					<div class="storyform__input-wrapper">
+						<label class="storyform__highlighted-label" for="name">Имя: *</label>
+						<input class="storyform__textinput" type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+					</div>
+					<div class="storyform__input-wrapper">
+						<label class="storyform__highlighted-label" for="surname">Фамилия: *</label>
+						<input class="storyform__textinput" type="text" id="surname" name="surname" placeholder="Укажите фамилию" required>
+					</div>
+					<div class="storyform__input-wrapper">
+						<label class="storyform__highlighted-label" for="patronymic">Отчество: *</label>
+						<input class="storyform__textinput" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--highlighted">
 					<h3 class="storyform__headline">С каким приложением путешествовали? *</h3>
-					<input class="storyform__radio" type="radio" name="appfield" id="ios" value="ios" checked><label class="storyform__label" for="ios">Pink для iOS</label>
-					<input class="storyform__radio" type="radio" name="appfield" id="android" value="android"><label class="storyform__label" for="android">Pink на Android</label>
-					<input class="storyform__radio" type="radio" name="appfield" id="windows" value="windows"><label class="storyform__label" for="ios">Windows Phone</label>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__radio" type="radio" name="appfield" id="ios" value="ios" checked>
+						<label class="storyform__label" for="ios">Pink для iOS</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__radio" type="radio" name="appfield" id="android" value="android">
+						<label class="storyform__label" for="android">Pink на Android</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__radio" type="radio" name="appfield" id="windows" value="windows">
+						<label class="storyform__label" for="ios">Windows Phone</label>
+					</div>
 				</div>
 				<div class="storyform__fields">
 					<h3 class="storyform__headline">Когда вы путешествовали? *</h3>
@@ -59,7 +76,7 @@
 						<div class="companion-table__nickname-row">
 							<div class="companion-table__input-id companion-table__input-id--none"></div>
 							<input class="companion-table__input" type="text" name="companionnickname1" id="companionnickname1" placeholder="Ну как же без этого!">
-						</div>						
+						</div>
 					</div>
 					<div class="companion-table">
 						<div class="companion-table__label-row">
@@ -76,17 +93,35 @@
 						<div class="companion-table__nickname-row">
 							<div class="companion-table__input-id companion-table__input-id--none"></div>
 							<input class="companion-table__input" type="text" name="companionnickname2" id="companionnickname2" placeholder="Ну как же без этого!">
-						</div>						
+						</div>
 					</div>
 				</div>
 				<div class="storyform__fields">
 					<h3 class="storyform__headline">Ваши безбашенные достижения в путешествии</h3>
-					<input class="storyform__checkbox" type="checkbox" name="selfie" id="selfie" checked><label class="storyform__label" for="selfie">Сделал селфи с акулой</label>
-					<input class="storyform__checkbox" type="checkbox" name="beach" id="beach" checked><label class="storyform__label" for="beach">Обгорел на пляже</label>
-					<input class="storyform__checkbox" type="checkbox" name="chuck" id="chuck"><label class="storyform__label" for="chuck">Видел Чака Норриса</label>
-					<input class="storyform__checkbox" type="checkbox" name="souvenirs" id="souvenirs"><label class="storyform__label" for="souvenirs">Накупил сувениров</label>
-					<input class="storyform__checkbox" type="checkbox" name="tower" id="tower" checked><label class="storyform__label" for="tower">Удержал башню</label>
-					<input class="storyform__checkbox" type="checkbox" name="hotel" id="hotel"><label class="storyform__label" for="hotel">Разгромил отель</label>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__checkbox" type="checkbox" name="selfie" id="selfie" checked>
+						<label class="storyform__label" for="selfie">Сделал селфи с акулой</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__checkbox" type="checkbox" name="beach" id="beach" checked>
+						<label class="storyform__label" for="beach">Обгорел на пляже</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__checkbox" type="checkbox" name="chuck" id="chuck">
+						<label class="storyform__label" for="chuck">Видел Чака Норриса</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__checkbox" type="checkbox" name="souvenirs" id="souvenirs">
+						<label class="storyform__label" for="souvenirs">Накупил сувениров</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__checkbox" type="checkbox" name="tower" id="tower" checked>
+						<label class="storyform__label" for="tower">Удержал башню</label>
+					</div>
+					<div class="storyform__input-wrapper">
+						<input class="storyform__checkbox" type="checkbox" name="hotel" id="hotel">
+						<label class="storyform__label" for="hotel">Разгромил отель</label>
+					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--highlighted">
 					<h3 class="storyform__headline">Ваши фотографии из поездки *</h3>
@@ -137,7 +172,7 @@
 				<p class="storyform__comment"><span>*</span> - обязательные поля</p>
 			</form>
 		</div>
-		
+
 		<footer class="footer">
 			<div class="logo">
 				<a class="logo-link logo-link--black" href="#">Pink</a>
@@ -153,5 +188,5 @@
 			</div>
 		</footer>
 	</body>
-	
+
 </html>

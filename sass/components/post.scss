@@ -1,0 +1,120 @@
+.blogpost{
+  width:100%;
+
+  &__wrapper{
+    padding-top:12.5%;
+    width:87.5%;
+    display:block;
+    margin:0 auto 30px;
+  }
+  &__headline{
+    font-size:30px;
+    line-height:1.2;
+    color:$dark;
+    margin-top:0;
+    margin-bottom:10%;
+    font-weight:bold;
+    text-align:center;
+  }
+  &__date{
+    font-size:12px;
+    line-height:2.25;
+    color:$red;
+    text-transform:uppercase;
+    text-align:center;
+
+    margin-top:0;
+    margin-bottom:10%;
+  }
+  &__description{
+    font-size:16px;
+    line-height:1.6875;
+    color:$dark;
+    text-align:center;
+
+    display:block;
+    padding-bottom:25px;
+    // border-bottom:1px solid #e5e5e5;
+    margin-bottom:35px;
+  }
+  &__subheadline{
+    @include formlabel;
+    font-weight:bold;
+    text-transform:uppercase;
+    margin-top:0;
+    margin-bottom:30px;
+  }
+  &__paragraph{
+    font-size:14px;
+    line-height:1.929;
+    color:$dark;
+    margin-top:0;
+    margin-bottom:45px;
+  }
+  &__paragraph a{
+    color:$red;
+  }
+  &__ulist{
+    display:block;
+    // padding-left:22px;
+    margin-top:0;
+    margin-bottom:0;
+
+    font-size:14px;
+    line-height:1.929;
+    color:$dark;
+    // list-style-type:disc;
+  }
+  &__ulist li{
+    // display:block;
+    margin-top:0;
+    margin-bottom:45px;
+  }
+  &____quote{
+    font-size:14px;
+    line-height:1.929;
+    color:$dark;
+
+    // display:block;
+    // border-left:1px solid $red;
+  }
+  &__quote-author{
+    font-size:14px;
+    line-height:1.929;
+
+    font-style: italic;
+    color:#8a8a8a;
+    display:block;
+  }
+  &__navigation{
+    display:block;
+    width:100%;
+    margin:0 auto 30px;
+    font-size:0;
+  }
+  &__navigation-link{
+    @include formlabel;
+    font-weight:bold;
+    text-decoration:none;
+    text-align:center;
+    text-transform:uppercase;
+    color:$dark;
+
+    display:inline-block;
+    vertical-align:top;
+    margin-bottom:20px;
+
+    padding-top:20px;
+    padding-bottom:20px;
+    border:2px solid #e5e5e5;
+    border-radius:1px;
+    width:276px;
+  }
+  &__navigation-link--prev{
+    width: 126px;
+    margin-right:20px;
+  }
+  &__navigation-link--next{
+    width: 126px;
+  }
+}
