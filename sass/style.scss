@@ -7,7 +7,7 @@
 html, body{
 	padding: 0;
 	margin: 0 auto;
-	width: 320px;
+	// width: 700px;
 	/* max-width: 1200px; */
 
 	font-family: 'Open Sans', Arial, sans-serif;
@@ -60,7 +60,7 @@ html, body{
 		line-height:1.778;
 		font-weight:bold;
 
-		width:87.5%;
+		width:88%;
 		display:inline-block;
 	}
 	&__item a{
@@ -93,5 +93,13 @@ html, body{
 	&__headline{
 		@include headlinetext;
 		color:$white;
+	}
+}
+
+@media screen and (min-width:700px){
+	.top-menu{
+		width:620px;
+		padding-left:40px;
+		padding-right:40px;
 	}
 }
