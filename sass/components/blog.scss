@@ -10,7 +10,13 @@
   margin:0 auto;
   border-bottom:1px solid #e5e5e5;
 
+  &__mark{
+    display:none;
+  }
   &__headline{
+    // display:inline-block;
+    // vertical-align:top;
+
     font-size:$subheadlinetextsize;
     line-height:1.5;
     font-weight:bold;
@@ -42,8 +48,6 @@
   border-bottom:none;
 }
 .paginator{
-  list-style:none;
-  font-size:0;
   padding-left:0px;
   padding-top:25px;
   // padding-bottom:30px;
@@ -52,6 +56,14 @@
   display:block;
   margin:0 auto 60px;
 
+  &__mark{
+    display:none;
+  }
+  ul{
+    list-style:none;
+    font-size:0;
+    padding-left:0;
+  }
   &__item{
     display:inline-block;
     vertical-align:top;
@@ -86,5 +98,71 @@
   &__item--active{
     border-color:$red;
 
+  }
+}
+
+@media screen and (min-width:700px){
+  .blog{
+    padding-top:45px;
+  }
+  .blogpost-preview{
+    border-bottom:2px dotted #e5e5e5;
+    display:inline-block;
+    vertical-align:top;
+    width:80%;
+
+    &__mark{
+      display:inline-block;
+      vertical-align:top;
+
+      margin-top:51px;
+      margin-right:30px;
+      margin-left:40px;
+
+      width:28px;
+      height:26px;
+      background-image:url('http://placehold.it/28x26');
+    }
+    &__headline{
+      font-size:27px;
+      line-height:1;
+
+      margin-top:50px;
+      margin-bottom:15px;
+    }
+    &__date{
+      font-size:14px;
+      line-height:1;
+
+      margin-bottom:35px;
+      // margin-left:60px;
+    }
+    &__description{
+      font-size:18px;
+      line-height:1.667;
+
+      margin-bottom:45px;
+      // margin-left:60px;
+    }
+  }
+  .paginator{
+    display:inline-block;
+    vertical-align:top;
+    width:80%;
+
+    &__mark{
+      display:inline-block;
+      vertical-align:middle;
+
+      margin-top:42px;
+      margin-left:40px;
+      margin-right:20px;
+
+      font-size:18px;
+      line-height:30px;
+      color:$dark;
+      font-weight:bold;
+      text-transform:uppercase;
+    }
   }
 }
