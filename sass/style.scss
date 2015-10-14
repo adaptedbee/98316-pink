@@ -138,6 +138,9 @@ html, body{
 
 		background-image:url('http://placehold.it/50x50');
 	}
+	&__icon:last-child{
+		margin-right:0px;
+	}
 	&__icon--tw{
 
 	}
@@ -210,9 +213,37 @@ html, body{
 }
 @media screen and (min-width:1200px){
 	.top-menu{
-		width:940px;
-		padding-left:130px;
-		padding-right:130px;
+		width:80%; /*940 130*/
+		padding-left:10%;
+		padding-right:10%;
 		// margin:0 auto;
+	}
+	.header{
+		&__wrapper{
+			padding-top:75px;
+			// padding-bottom:85px;
+		}
+	}
+	.footer{
+		width:80%;
+		margin:0 auto;
+
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		align-items:center;
+
+		.logo{
+			margin-left:0;
+			margin-right:0;
+		}
+	}
+	.social-icons{
+		margin-left:0;
+		margin-right:0;
+	}
+	.copyright{
+		margin-left:0;
+		margin-right:0;
 	}
 }
