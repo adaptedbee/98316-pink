@@ -9,11 +9,24 @@
 
 	<body>
 		<header class="header">
-			<div class="top-menu">
+			<div class="top-menu clearfix">
 				<a class="logo-link" href="#">Pink</a>
-				<div class="top-menu__icon"></div>
+				<a class="main-nav__toggle main-nav__toggle-close" href=""></a>
+				<div class="top-menu__nav-wrap">
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__item main-nav__item--active"><a href="">Информация</a></li>
+							<li class="main-nav__item"><a href="">Блог</a></li>
+							<li class="main-nav__item"><a href="">Отзывы</a></li>
+							<li class="main-nav__item"><a href="">Конкурс</a></li>
+						</ul>
+						<!-- <a class="main-nav__toggle main-nav__toggle-close" href=""></a> -->
+					</nav>
+				</div>
 			</div>
-			<h2 class="header__headline">Блог путешественников, пользователей Пинк</h2>
+			<div class="header__wrapper">
+				<h2 class="header__headline">Блог путешественников, пользователей Пинк</h2>
+			</div>
 		</header>
 
 		<div class="blogpost">
