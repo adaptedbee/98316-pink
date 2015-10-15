@@ -210,20 +210,6 @@ html, body{
 			font-weight:300;
 		}
 	}
-}
-@media screen and (min-width:1200px){
-	.top-menu{
-		width:80%; /*940 130*/
-		padding-left:10%;
-		padding-right:10%;
-		// margin:0 auto;
-	}
-	.header{
-		&__wrapper{
-			padding-top:75px;
-			// padding-bottom:85px;
-		}
-	}
 	.footer{
 		width:80%;
 		margin:0 auto;
@@ -245,5 +231,19 @@ html, body{
 	.copyright{
 		margin-left:0;
 		margin-right:0;
+	}
+}
+@media screen and (min-width:1200px){
+	.top-menu{
+		width:80%; /*940 130*/
+		padding-left:10%;
+		padding-right:10%;
+		// margin:0 auto;
+	}
+	.header{
+		&__wrapper{
+			padding-top:75px;
+			// padding-bottom:85px;
+		}
 	}
 }
