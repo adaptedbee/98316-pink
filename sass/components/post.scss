@@ -230,7 +230,6 @@
     &__navigation-link--prev{
       width: 20%;
       margin-right:5%;
-
       // float:left;
     }
     &__navigation-link--next{
@@ -244,6 +243,47 @@
       margin-right:5%;
 
       float:left;
+    }
+  }
+}
+@media screen and (min-width:1200px){
+  .blogpost{
+
+    &__wrapper{
+      padding-top:110px;
+      width:68%;
+    }
+    &__date{
+      top:360px;
+    }
+    &__date:before{
+      width:31%;
+    }
+    &__date:after{
+      width:31%;
+    }
+    &__description{
+      margin-bottom:140px;
+    }
+    &__navigation{
+      margin-bottom:55px;
+    }
+    &__navigation-link--prev{
+      width: 31%;
+      margin-right:2%;
+      // float:left;
+    }
+    &__navigation-link--next{
+      width: 31%;
+      // margin-right:0;
+
+      // float:right;
+    }
+    &__navigation-link--back{
+      width:31%;
+      margin-right:2%;
+
+      // float:left;
     }
   }
 }
