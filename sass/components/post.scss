@@ -1,6 +1,9 @@
 .blogpost{
   width:100%;
 
+  font-size:14px;
+  line-height:1.929;
+
   &__wrapper{
     padding-top:35px;
     width:88%;
@@ -52,8 +55,6 @@
     margin-bottom:30px;
   }
   &__paragraph{
-    font-size:14px;
-    line-height:1.929;
     color:$dark;
     margin-top:0;
     margin-bottom:40px;
@@ -67,8 +68,8 @@
     margin-top:0;
     margin-bottom:0;
 
-    font-size:14px;
-    line-height:1.929;
+    // font-size:14px;
+    // line-height:1.929;
     color:$dark;
     // list-style-type:disc;
     li{
@@ -88,8 +89,8 @@
     border-left:2px solid $red;
   }
   &__quote-author{
-    font-size:14px;
-    line-height:1.929;
+    // font-size:14px;
+    // line-height:1.929;
 
     font-style: italic;
     color:#8a8a8a;

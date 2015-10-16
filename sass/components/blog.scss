@@ -195,3 +195,20 @@
     }
   }
 }
+@media screen and (min-width:700px){
+  .blogpost-preview{
+    &__mark{
+      display:block;
+    }
+  }
+  .paginator{
+    &__mark{
+      display:block;
+      font-size:18px;
+      line-height:30px;
+      color:$dark;
+      font-weight:bold;
+      text-transform:uppercase;
+    }
+  }
+}
