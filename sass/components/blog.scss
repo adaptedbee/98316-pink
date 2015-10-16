@@ -7,7 +7,9 @@
   display:block;
   margin:0 auto 30px;
   border-bottom:1px solid #e5e5e5;
-
+  &__mark{
+    display:none;
+  }
   &__headline{
     font-size:$subheadlinetextsize;
     line-height:1.5;
@@ -41,6 +43,11 @@
   width:87.5%;
   display:block;
   margin:0 auto 30px;
+
+  &__mark{
+    display:none;
+  }
+
   &__item{
     display:inline-block;
     vertical-align:top;
@@ -63,5 +70,22 @@
   }
   &__item--active{
     border-color:$red;
+  }
+}
+@media screen and (min-width:700px){
+  .blogpost-preview{
+    &__mark{
+      display:block;
+    }
+  }
+  .paginator{
+    &__mark{
+      display:block;
+      font-size:18px;
+      line-height:30px;
+      color:$dark;
+      font-weight:bold;
+      text-transform:uppercase;
+    }
   }
 }

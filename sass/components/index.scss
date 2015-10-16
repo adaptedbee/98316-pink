@@ -18,7 +18,7 @@
     color:$white;
 
     display:block;
-    width:87.5%;
+    width:274px;
     padding-top:15px;
     padding-bottom:15px;
     margin:0 auto;
@@ -68,7 +68,9 @@
     text-align:center;
   }
 }
-
+.effect{
+  display:none;
+}
 .reviews{
   width:100%;
 
@@ -80,6 +82,9 @@
     display:block;
     font-weight:bold;
     text-align:center;
+  }
+  &__review-subheadline{
+    display:none;
   }
   &__review-paragraph{
     font-size:$basetextsize;
@@ -243,5 +248,41 @@
   }
   &__map{
     width:100%;
+  }
+}
+.footer{
+  display:none;
+}
+
+@media screen and (min-width: 700px){
+  .effect{
+    display:block;
+
+    &__headline{
+      font-size:30px;
+      line-height:36px;
+      font-weight:bold;
+      color:#000;
+    }
+    &__paragraph{
+      font-size:14px;
+      line-height:24px;
+      color:$dark;
+    }
+    &__morelink{
+      font-size:14px;
+      line-height:24px;
+      color:$red;
+    }
+  }
+  .reviews{
+    &__review-subheadline{
+    display:block;
+    margin-top:0;
+    color:$dark;
+    }
+  }
+  .footer{
+    display:block;
   }
 }

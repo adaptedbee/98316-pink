@@ -1,9 +1,12 @@
 .blogpost{
   width:100%;
 
+  font-size:14px;
+  line-height:1.929;
+
   &__wrapper{
-    padding-top:12.5%;
-    width:87.5%;
+    padding-top:12%;
+    width:88%;
     display:block;
     margin:0 auto 30px;
   }
@@ -45,8 +48,6 @@
     margin-bottom:30px;
   }
   &__paragraph{
-    font-size:14px;
-    line-height:1.929;
     color:$dark;
     margin-top:0;
     margin-bottom:45px;
@@ -60,8 +61,8 @@
     margin-top:0;
     margin-bottom:0;
 
-    font-size:14px;
-    line-height:1.929;
+    // font-size:14px;
+    // line-height:1.929;
     color:$dark;
     // list-style-type:disc;
   }
@@ -70,17 +71,17 @@
     margin-top:0;
     margin-bottom:45px;
   }
-  &____quote{
-    font-size:14px;
-    line-height:1.929;
+  &__quote{
+    // font-size:14px;
+    // line-height:1.929;
     color:$dark;
 
     // display:block;
     // border-left:1px solid $red;
   }
   &__quote-author{
-    font-size:14px;
-    line-height:1.929;
+    // font-size:14px;
+    // line-height:1.929;
 
     font-style: italic;
     color:#8a8a8a;
