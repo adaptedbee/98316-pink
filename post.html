@@ -9,11 +9,24 @@
 
 	<body>
 		<header class="header">
-			<div class="top-menu">
+			<div class="top-menu clearfix">
 				<a class="logo-link" href="#">Pink</a>
-				<div class="top-menu__icon"></div>
+				<a class="main-nav__toggle main-nav__toggle-close" href=""></a>
+				<div class="top-menu__nav-wrap">
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__item main-nav__item--active"><a href="">Информация</a></li>
+							<li class="main-nav__item"><a href="">Блог</a></li>
+							<li class="main-nav__item"><a href="">Отзывы</a></li>
+							<li class="main-nav__item"><a href="">Конкурс</a></li>
+						</ul>
+						<!-- <a class="main-nav__toggle main-nav__toggle-close" href=""></a> -->
+					</nav>
+				</div>
 			</div>
-			<h2 class="header__headline">Блог путешественников, пользователей Пинк</h2>
+			<div class="header__wrapper">
+				<h2 class="header__headline">Блог путешественников, пользователей Пинк</h2>
+			</div>
 		</header>
 
 		<div class="blogpost">
@@ -38,10 +51,10 @@
 				</blockquote>
 				<h3 class="blogpost__subheadline">Местная еда</h3>
 				<p class="blogpost__paragraph">Существует мнение, что вся еда в Тайланде экстремально острая. Это мнение сложилось не напрасно! Но не стоит делать из этого проблему — просто попросите сделать ваше блюдо «not spicy». Желающие могут попробовать жареных тараканчиков. Мы не рискнули.</p>
-				<div class="blogpost__navigation">
+				<div class="blogpost__navigation clearfix">
 					<a class="blogpost__navigation-link blogpost__navigation-link--prev" href="#">Пред.</a>
 					<a class="blogpost__navigation-link blogpost__navigation-link--next" href="#">След.</a>
-					<a class="blogpost__navigation-link" href="#">Назад к списку</a>
+					<a class="blogpost__navigation-link blogpost__navigation-link--back" href="#">Назад к списку</a>
 				</div>
 			</div>
 		</div>

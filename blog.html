@@ -9,40 +9,64 @@
 
 	<body>
 		<header class="header">
-			<div class="top-menu">
+			<div class="top-menu clearfix">
 				<a class="logo-link" href="#">Pink</a>
-				<div class="top-menu__icon"></div>
+				<a class="main-nav__toggle main-nav__toggle-close" href=""></a>
+				<div class="top-menu__nav-wrap">
+					<nav class="main-nav">
+						<ul class="main-nav__list">
+							<li class="main-nav__item main-nav__item--active"><a href="">Информация</a></li>
+							<li class="main-nav__item"><a href="">Блог</a></li>
+							<li class="main-nav__item"><a href="">Отзывы</a></li>
+							<li class="main-nav__item"><a href="">Конкурс</a></li>
+						</ul>
+						<!-- <a class="main-nav__toggle main-nav__toggle-close" href=""></a> -->
+					</nav>
+				</div>
 			</div>
-			<h2 class="header__headline">Блог путешественников, пользователей Пинк</h2>
+			<div class="header__wrapper">
+				<h2 class="header__headline">Блог путешественников, пользователей Пинк</h2>
+			</div>
 		</header>
 
 		<div class="blog">
+			<div class="blogpost-preview__mark"></div>
 			<div class="blogpost-preview">
+				<div class="blogpost-preview__mark"></div>
 				<h3 class="blogpost-preview__headline">Антон и Надя в Таиланде</h3>
 				<p class="blogpost-preview__date">Опубликовано: 6 месяцев назад</p>
 				<p class="blogpost-preview__description">Читайте рассказ о том, как семейная пара посещала Таиланд, стараясь максимально избегать избитых туристических мест и районов.</p>
 			</div>
+			<div class="blogpost-preview__mark"></div>
 			<div class="blogpost-preview">
+				<div class="blogpost-preview__mark"></div>
 				<h3 class="blogpost-preview__headline">Гастрольный тур «Кубанских борщеваров»</h3>
 				<p class="blogpost-preview__date">Опубликовано: 5 лет назад</p>
 				<p class="blogpost-preview__description">Возрождение культурных традиций уже не за горами. Фолк-металл-рэп группа из столицы Кубани провела весь год в гастролях по России и ближнему (а также среднему) зарубежью.</p>
 			</div>
+			<div class="blogpost-preview__mark"></div>
 			<div class="blogpost-preview">
+				<div class="blogpost-preview__mark"></div>
 				<h3 class="blogpost-preview__headline">Чета Болонских в Париже</h3>
 				<p class="blogpost-preview__date">Опубликовано: 100 лет назад</p>
 				<p class="blogpost-preview__description">Невероятные приключения русских во Франции. Интриги, предательства, погони и, разумеется, убийства. Читайте криминально-исторический трактат в двух томах.</p>
 			</div>
+			<div class="blogpost-preview__mark"></div>
 			<div class="blogpost-preview">
+				<div class="blogpost-preview__mark"></div>
 				<h3 class="blogpost-preview__headline">Путешествие на яхте сеньора Христофора</h3>
 				<p class="blogpost-preview__date">Опубликовано: 523 года назад</p>
 				<p class="blogpost-preview__description">Группа испанцев отдыхала на яхте, но они даже не представляли, какие открытия ждут их впереди и чем это обернётся для всего человечества!</p>
 			</div>
-			<ul class="paginator">
-				<li class="paginator__item paginator__item--active"><span>1</span></li>
-				<li class="paginator__item"><a href="#">2</a></li>
-				<li class="paginator__item"><a href="#">3</a></li>
-				<li class="paginator__item"><a href="#">4</a></li>
-			</ul>
+			<span class="paginator__mark">Стр.</span>
+			<div class="paginator">
+				<ul>
+					<li class="paginator__item paginator__item--active"><span>1</span></li>
+					<li class="paginator__item"><a href="#">2</a></li>
+					<li class="paginator__item"><a href="#">3</a></li>
+					<li class="paginator__item"><a href="#">4</a></li>
+				</ul>
+			</div>
 		</div>
 
 		<footer class="footer">
