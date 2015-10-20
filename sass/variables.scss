@@ -31,11 +31,11 @@ $headlinelineheight: 1.17;
 }
 @mixin formlabel{
   font-size:$subheadlinetextsize;
-  line-height: 1.667;
+  line-height: 1; /* 1.667 */
   color:$dark;
 }
-@mixin formcenterblock{
-  width: 87.5%;
+@mixin formcenterblock{ /* ??? */
+  width: 100%;
   margin:0 auto;
   display:block;
 }

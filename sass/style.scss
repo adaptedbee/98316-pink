@@ -116,8 +116,10 @@ html, body{
 		@include headlinetext;
 		color:$white;
 
-		margin-top:0;
-		margin-bottom:0;
+		// margin-top:0;
+		// margin-bottom:0;
+		width:88%;
+		margin:0 auto 0;
 	}
 }
 .footer{
