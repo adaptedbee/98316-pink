@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>Pink</title>
+	<head>
+		<meta charset="utf-8">
+		<title>Pink</title>
 		<link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-  	<div class="top-menu clearfix">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="indexpage">
+		<div class="top-menu clearfix">
 			<a class="logo-link" href="#">Pink</a>
 			<a class="main-nav__toggle main-nav__toggle-close" href=""></a>
 			<div class="top-menu__nav-wrap">
@@ -25,28 +25,50 @@
 
 		<div class="intro">
 			<h2 class="intro__headline">Взгляните на жизнь иначе!</h2>
-			<img src="http://placehold.it/260x285" width="" height="" alt="">
-			<div class="intro__applink-wrapper">
-				<a class="intro__applink" href="#">Скачать приложение</a>
+			<div class="intro__download">
+				<div class="intro__download-wrapper">
+					<a class="intro__applink" href="#">Скачать приложение</a>
+					<div class="intro__applications">
+						<div class="intro__application intro__application--ios"></div>
+						<div class="intro__application intro__application--android"></div>
+						<div class="intro__application intro__application--windows8"></div>
+					</div>
+					<p class="intro__paragraph">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+				</div>
 			</div>
-			<div class="intro__applications">
-				<div class="intro__application intro__application--ios"></div>
-				<div class="intro__application intro__application--android"></div>
-				<div class="intro__application intro__application--windows8"></div>
-			</div>
-			<p class="intro__paragraph">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
 		</div>
 
 		<div class="information">
-			<h2 class="information__headline">Устали от серости мегаполиса?</h2>
-			<h2 class="information__headline">Нам есть, что вам предложить!</h2>
-			<h3 class="information__subheadline">Поднимает настроение</h3>
-			<p class="information__paragraph">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-			<h3 class="information__subheadline">Меняет мир вокруг</h3>
-			<p class="information__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-			<h3 class="information__subheadline">Заводит новых друзей</h3>
-			<p class="information__paragraph">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-			<img src="http://placehold.it/160x280" width="" height="" alt="">
+			<div class="information__wrapper clearfix">
+				<h2 class="information__headline">Устали от серости мегаполиса?</h2>
+				<h2 class="information__headline">Нам есть, что вам предложить!</h2>
+				<div class="information__text">
+					<div class="information-item">
+						<img class="information-item__img" src="http://placehold.it/180x300" width="180" height="300" alt="">
+						<h3 class="information-item__subheadline">Поднимает настроение</h3>
+						<p class="information-item__paragraph">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+					</div>
+					<div class="information-item">
+						<img class="information-item__img" src="http://placehold.it/180x300" width="180" height="300" alt="">
+						<h3 class="information-item__subheadline">Меняет мир вокруг</h3>
+						<p class="information-item__paragraph">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+					</div>
+					<div class="information-item">
+						<img class="information-item__img" src="http://placehold.it/180x300" width="180" height="300" alt="">
+						<h3 class="information-item__subheadline">Заводит новых друзей</h3>
+						<p class="information-item__paragraph">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+					</div>
+				</div>
+				<img class="information__img" src="http://placehold.it/160x280" width="" height="" alt="">
+			</div>
+		</div>
+
+		<div class="effect clearfix">
+			<div class="effect__wrapper">
+				<h2 class="effect__headline">Эффект на 24 часа!</h2>
+				<p class="effect__paragraph">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+				<a class="effect__morelink" href="#">Узнать больше об исследовании</a>
+			</div>
 		</div>
 
 		<div class="reviews">
@@ -79,6 +101,8 @@
 			<table class="price-table">
 				<thead class="price-table__head">
 					<td class="price-table__headcell">
+					</td>
+					<td class="price-table__headcell">
 						<p class="price-table__headcell-apptype">База</p>
 						<p class="price-table__headcell-appprice">1,99 USD</p>
 					</td>
@@ -93,19 +117,22 @@
 				</thead>
 				<tbody class="price-table__body">
 					<tr class="price-table__row">
-						<td class="price-table__cell price-table__cell--yes">Розовый фильтр ДА</td>
-						<td class="price-table__cell price-table__cell--yes">Розовый фильтр ДА</td>
-						<td class="price-table__cell price-table__cell--yes">Розовый фильтр ДА</td>
+						<td class="price-table__cell">Розовый фильтр</td>
+						<td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
+						<td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
+						<td class="price-table__cell price-table__cell--yes">Розовый фильтр</td>
 					</tr>
 					<tr class="price-table__row">
-						<td class="price-table__cell price-table__cell--no">Смайлики НЕТ</td>
-						<td class="price-table__cell price-table__cell--yes">Смайлики ДА</td>
-						<td class="price-table__cell price-table__cell--yes">Смайлики ДА</td>
+						<td class="price-table__cell">Смайлики</td>
+						<td class="price-table__cell price-table__cell--no">Смайлики</td>
+						<td class="price-table__cell price-table__cell--yes">Смайлики</td>
+						<td class="price-table__cell price-table__cell--yes">Смайлики</td>
 					</tr>
 					<tr class="price-table__row">
-						<td class="price-table__cell price-table__cell--no">Комментарии НЕТ</td>
-						<td class="price-table__cell price-table__cell--no">Комментарии НЕТ</td>
-						<td class="price-table__cell price-table__cell--yes">Комментарии ДА</td>
+						<td class="price-table__cell">Комментарии</td>
+						<td class="price-table__cell price-table__cell--no">Комментарии</td>
+						<td class="price-table__cell price-table__cell--no">Комментарии</td>
+						<td class="price-table__cell price-table__cell--yes">Комментарии</td>
 					</tr>
 				</tbody>
 			</table>
@@ -120,8 +147,9 @@
 			<a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
 			<h3 class="contacts__subheadline">Приезжайте в гости:</h3>
 			<a class="contacts__link" href="#">ул. Большая Конюшенная, 19/8</a>
-			<div class="contacts__map"></div>
 		</div>
+
+		<div class="map"></div>
 
 		<!-- <script src="js/script.js"></script> -->
 
@@ -140,5 +168,5 @@
 			</div>
 		</footer>
 
-  </body>
+	</body>
 </html>
