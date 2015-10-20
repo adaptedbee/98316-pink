@@ -33,15 +33,15 @@
 			<p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
 			<form class="storyform" action="" method="post">
 				<div class="storyform__fields storyform__fields--name">
-					<div class="storyform__input-wrapper">
+					<div class="storyform__input-wrapper storyform__input-wrapper--name">
 						<label class="storyform__highlighted-label storyform__highlighted-label--name" for="name">Имя: *</label>
 						<input class="storyform__textinput" type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 					</div>
-					<div class="storyform__input-wrapper">
+					<div class="storyform__input-wrapper storyform__input-wrapper--name">
 						<label class="storyform__highlighted-label storyform__highlighted-label--name" for="surname">Фамилия: *</label>
 						<input class="storyform__textinput" type="text" id="surname" name="surname" placeholder="Укажите фамилию" required>
 					</div>
-					<div class="storyform__input-wrapper">
+					<div class="storyform__input-wrapper storyform__input-wrapper--name">
 						<label class="storyform__highlighted-label storyform__highlighted-label--name" for="patronymic">Отчество: *</label>
 						<input class="storyform__textinput" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
 					</div>
@@ -71,17 +71,19 @@
 				</div>
 				<div class="storyform__fields storyform__fields--time clearfix">
 					<h3 class="storyform__headline">Когда вы путешествовали? *</h3>
-					<div class="storyform__input-wrapper storyform__input-wrapper--time">
-						<input class="storyform__dateinput" type="date" name="startdate" id="startdate" placeholder="1 апреля 2015">
-						<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
-					</div>
-					<div class="storyform__input-wrapper storyform__input-wrapper--time">
-						<input class="storyform__pm-number" type="number" name="duration" id="duration">
-						<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
-					</div>
-					<div class="storyform__input-wrapper storyform__input-wrapper--time">
-						<input class="storyform__dateinput" type="date" name="finishdate" id="finishdate" placeholder="1 апреля 2015" disabled>
-						<label class="storyform__highlighted-label storyform__highlighted-label--center" for="finishdate">Дата возвращения</label>
+					<div class="storyform__fields-wrapper storyform__fields-wrapper--time">
+						<div class="storyform__input-wrapper storyform__input-wrapper--time">
+							<input class="storyform__dateinput" type="date" name="startdate" id="startdate" placeholder="1 апреля 2015">
+							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
+						</div>
+						<div class="storyform__input-wrapper storyform__input-wrapper--time">
+							<input class="storyform__pm-number" type="number" name="duration" id="duration">
+							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
+						</div>
+						<div class="storyform__input-wrapper storyform__input-wrapper--time">
+							<input class="storyform__dateinput" type="date" name="finishdate" id="finishdate" placeholder="1 апреля 2015" disabled>
+							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="finishdate">Дата возвращения</label>
+						</div>
 					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--companions">
@@ -128,39 +130,39 @@
 				</div>
 				<div class="storyform__fields storyform__fields--achievements">
 					<h3 class="storyform__headline">Ваши безбашенные достижения в путешествии</h3>
-					<ul>
+					<ul class="clearfix">
 						<li>
-							<div class="storyform__input-wrapper">
+							<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 								<input class="storyform__checkbox" type="checkbox" name="selfie" id="selfie" checked>
 								<label class="storyform__label" for="selfie">Сделал селфи с акулой</label>
 							</div>
 						</li>
 						<li>
-							<div class="storyform__input-wrapper">
+							<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 								<input class="storyform__checkbox" type="checkbox" name="beach" id="beach" checked>
 								<label class="storyform__label" for="beach">Обгорел на пляже</label>
 							</div>
 						</li>
 						<li>
-							<div class="storyform__input-wrapper">
+							<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 								<input class="storyform__checkbox" type="checkbox" name="chuck" id="chuck">
 								<label class="storyform__label" for="chuck">Видел Чака Норриса</label>
 							</div>
 						</li>
 						<li>
-							<div class="storyform__input-wrapper">
+							<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 								<input class="storyform__checkbox" type="checkbox" name="souvenirs" id="souvenirs">
 								<label class="storyform__label" for="souvenirs">Накупил сувениров</label>
 							</div>
 						</li>
 						<li>
-							<div class="storyform__input-wrapper">
+							<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 								<input class="storyform__checkbox" type="checkbox" name="tower" id="tower" checked>
 								<label class="storyform__label" for="tower">Удержал башню</label>
 							</div>
 						</li>
 						<li>
-							<div class="storyform__input-wrapper">
+							<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 								<input class="storyform__checkbox" type="checkbox" name="hotel" id="hotel">
 								<label class="storyform__label" for="hotel">Разгромил отель</label>
 							</div>

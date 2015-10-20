@@ -309,5 +309,87 @@
   }
 }
 @media screen and (min-width: 1200px){
+  .form{
 
+    &__text{
+      width:65%;
+    }
+  }
+  .storyform{
+    &__fields--name{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+    }
+    &__input-wrapper--name{
+      width:300px;
+      margin:0;
+    }
+    &__fields--app{
+      padding-left:5%;
+      padding-right:5%;
+
+      ul{
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+      }
+    }
+    &__fields--time{
+      padding-left:5%;
+      padding-right:5%;
+
+      // display:flex;
+      // flex-direction: row;
+      // align-items:center;
+      // justify-content: space-between;
+    }
+    &__fields-wrapper--time{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+    }
+    &__input-wrapper--time{
+      float:none;
+      margin:0;
+      // display:inline-block;
+      width:240px;
+      // margin-right:45px;
+    }
+    &__fields--companions{
+      padding-left:5%;
+      padding-right:5%;
+    }
+    &__fields--achievements{
+      padding-left:5%;
+      padding-right:5%;
+
+      ul{
+        // display:flex;
+        // flex-direction: row;
+        // align-items:center;
+        // justify-content: space-between;
+      }
+      ul>li{
+        width:260px;
+        display:block;
+        margin-right:60px;
+        float:left;
+      }
+      ul>li:nth-child(3n){
+        margin-right:0;
+      }
+    }
+    &__storyform__input-wrapper--achievements{
+
+    }
+    &__fields--photos{
+      padding-left:5%;
+      padding-right:5%;
+      // margin-bottom:65px;
+    }
+  }
 }
