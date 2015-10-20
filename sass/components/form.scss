@@ -10,6 +10,10 @@
 
     width:88%;
     margin:0 auto 50px;
+
+    span{
+      display:none;
+    }
   }
 }
 
@@ -19,9 +23,24 @@
 
   &__fields{
     background-color:$white;
-    padding-bottom:30px;
+    margin-bottom:20px;
   }
-  &__fields--highlighted{
+  &__fields--name{
+
+  }
+  &__fields--app{
+    background-color: #f2f2f2;
+  }
+  &__fields--time{
+
+  }
+  &__fields--companions{
+    background-color: #f2f2f2;
+  }
+  &__fields--achievements{
+
+  }
+  &__fields--photos{
     background-color: #f2f2f2;
   }
   &__input-wrapper{
@@ -30,8 +49,10 @@
   &__highlighted-label{
     @include formheadline;
     display:block;
-    padding-left:10%;
     margin-bottom:5px; /*10*/
+  }
+  &__highlighted-label--name{
+    padding-left:10%;
   }
   &__highlighted-label--center{
     text-align:center;
@@ -62,7 +83,7 @@
     margin-bottom:35px;
   }
   &__radio{
-
+    margin-right:20px;
   }
   &__label{
     @include formlabel;
@@ -87,6 +108,10 @@
   &__pm-number{
     @include formlabel;
     @include formcenterblock;
+    line-height:1.667;
+
+    border:2px solid #e5e5e5;
+    border-radius:1px;
 
     margin-bottom:15px;
   }
@@ -203,4 +228,86 @@
     line-height:1.5;
     color:$dark;
   }
+}
+@media screen and (min-width: 700px){
+  .form{
+    padding-top:100px;
+
+    &__text{
+      font-size:18px;
+      line-height:30px;
+      width:80%;
+      margin:0 auto 45px;
+
+      span{
+        display:inline;
+      }
+    }
+  }
+  .storyform{
+    &__fields{
+      // padding-left:10%;
+    }
+    &__fields--app{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--time{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--companions{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--achievements{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--photos{
+      padding-left:10%;
+      padding-right:10%;
+      margin-bottom:65px;
+    }
+    &__highlighted-label--name{
+      padding-left:4%;
+    }
+    &__textinput{
+      width:96%;
+      padding-left:4%;
+    }
+    &__input-wrapper--time{
+      width:240px;
+      float:left;
+    }
+    &__input-wrapper--time:nth-child(2){
+      margin-right:2%;
+    }
+    &__pm-number{
+      width:240px;
+      margin:0 0 15px 0;
+    }
+    &__submitbutton{
+      width:300px;
+      margin:0;
+    }
+    &__comment{
+      margin:0;
+    }
+    &__submit-wrapper{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+
+      margin-bottom:100px;
+    }
+  }
+  .companion-table{
+    width:380px;
+    margin:0 0 20px 0;
+  }
+}
+@media screen and (min-width: 1200px){
+
 }

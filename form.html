@@ -30,23 +30,23 @@
 		</header>
 
 		<div class="form">
-			<p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
+			<p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
 			<form class="storyform" action="" method="post">
-				<div class="storyform__fields">
+				<div class="storyform__fields storyform__fields--name">
 					<div class="storyform__input-wrapper">
-						<label class="storyform__highlighted-label" for="name">Имя: *</label>
+						<label class="storyform__highlighted-label storyform__highlighted-label--name" for="name">Имя: *</label>
 						<input class="storyform__textinput" type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 					</div>
 					<div class="storyform__input-wrapper">
-						<label class="storyform__highlighted-label" for="surname">Фамилия: *</label>
+						<label class="storyform__highlighted-label storyform__highlighted-label--name" for="surname">Фамилия: *</label>
 						<input class="storyform__textinput" type="text" id="surname" name="surname" placeholder="Укажите фамилию" required>
 					</div>
 					<div class="storyform__input-wrapper">
-						<label class="storyform__highlighted-label" for="patronymic">Отчество: *</label>
+						<label class="storyform__highlighted-label storyform__highlighted-label--name" for="patronymic">Отчество: *</label>
 						<input class="storyform__textinput" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
 					</div>
 				</div>
-				<div class="storyform__fields storyform__fields--highlighted">
+				<div class="storyform__fields storyform__fields--app">
 					<h3 class="storyform__headline">С каким приложением путешествовали? *</h3>
 					<ul>
 						<li>
@@ -69,18 +69,26 @@
 						</li>
 					</ul>
 				</div>
-				<div class="storyform__fields">
+				<div class="storyform__fields storyform__fields--time clearfix">
 					<h3 class="storyform__headline">Когда вы путешествовали? *</h3>
-					<input class="storyform__dateinput" type="date" name="startdate" id="startdate" placeholder="1 апреля 2015">
-					<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
-					<input class="storyform__pm-number" type="number" name="duration" id="duration">
-					<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
-					<input class="storyform__dateinput" type="date" name="finishdate" id="finishdate" placeholder="1 апреля 2015" disabled>
-					<label class="storyform__highlighted-label storyform__highlighted-label--center" for="finishdate">Дата возвращения</label>
+					<div class="storyform__input-wrapper storyform__input-wrapper--time">
+						<input class="storyform__dateinput" type="date" name="startdate" id="startdate" placeholder="1 апреля 2015">
+						<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
+					</div>
+					<div class="storyform__input-wrapper storyform__input-wrapper--time">
+						<input class="storyform__pm-number" type="number" name="duration" id="duration">
+						<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
+					</div>
+					<div class="storyform__input-wrapper storyform__input-wrapper--time">
+						<input class="storyform__dateinput" type="date" name="finishdate" id="finishdate" placeholder="1 апреля 2015" disabled>
+						<label class="storyform__highlighted-label storyform__highlighted-label--center" for="finishdate">Дата возвращения</label>
+					</div>
 				</div>
-				<div class="storyform__fields storyform__fields--highlighted">
-					<label class="storyform__highlighted-label storyform__highlighted-label--center" for="companions">Количество попутчиков</label>
+				<div class="storyform__fields storyform__fields--companions">
+					<h3 class="storyform__headline">Количество попутчиков</h3>
+					<!-- <div class="storyform__input-wrapper"> -->
 					<input class="storyform__pm-number" type="number" name="companions" id="companions">
+					<!-- </div> -->
 					<table class="companion-table">
 						<tr class="companion-table__label-row">
 							<td class="companion-table__label">№</td>
@@ -118,7 +126,7 @@
 						</tr>
 					</table>
 				</div>
-				<div class="storyform__fields">
+				<div class="storyform__fields storyform__fields--achievements">
 					<h3 class="storyform__headline">Ваши безбашенные достижения в путешествии</h3>
 					<ul>
 						<li>
@@ -159,7 +167,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="storyform__fields storyform__fields--highlighted">
+				<div class="storyform__fields storyform__fields--photos clearfix">
 					<h3 class="storyform__headline">Ваши фотографии из поездки *</h3>
 					<input class="storyform__uploadbutton" type="file" name="img" accept="image/jpeg,image/png,image/gif">Загрузить фото</a>
 					<hr>
@@ -204,8 +212,10 @@
 						<figcaption class="photo-preview__filename">IMG-8.JPG</figcaption>
 					</figure>
 				</div>
-				<input class="storyform__submitbutton" type="submit" value="Отправить форму">
-				<p class="storyform__comment"><span>*</span> — обязательные поля</p>
+				<div class="storyform__submit-wrapper">
+					<input class="storyform__submitbutton" type="submit" value="Отправить форму">
+					<p class="storyform__comment"><span>*</span> — обязательные поля</p>
+				</div>
 			</form>
 		</div>
 
