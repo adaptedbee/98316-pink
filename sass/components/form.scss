@@ -1,20 +1,46 @@
 .form{
   width:100%;
+  padding-top:50px;
 
   &__text{
     font-size:$basetextsize;
     line-height:2.143;
     color:$dark;
     text-align:center;
+
+    width:88%;
+    margin:0 auto 50px;
+
+    span{
+      display:none;
+    }
   }
 }
 
 .storyform{
+  width:88%;
+  margin:0 auto;
 
   &__fields{
     background-color:$white;
+    margin-bottom:20px;
   }
-  &__fields--highlighted{
+  &__fields--name{
+
+  }
+  &__fields--app{
+    background-color: #f2f2f2;
+  }
+  &__fields--time{
+
+  }
+  &__fields--companions{
+    background-color: #f2f2f2;
+  }
+  &__fields--achievements{
+
+  }
+  &__fields--photos{
     background-color: #f2f2f2;
   }
   &__input-wrapper{
@@ -22,21 +48,42 @@
   }
   &__highlighted-label{
     @include formheadline;
+    display:block;
+    margin-bottom:5px; /*10*/
+  }
+  &__highlighted-label--name{
+    padding-left:10%;
   }
   &__highlighted-label--center{
     text-align:center;
   }
   &__textinput{
-    width:100%;
+    width:90%;
 
     @include formlabel;
+    line-height:1.667;
+    margin-bottom:25px;
+    padding-left:10%;
   }
   &__headline{
     @include formheadline;
     text-align:center;
+
+    margin-top:0;
+    margin-bottom:40px;
+  }
+  ul{
+    padding-left:0;
+    margin:0;
+    list-style:none;
+  }
+  ul>li{
+    display:block;
+    margin-top:0;
+    margin-bottom:35px;
   }
   &__radio{
-
+    margin-right:20px;
   }
   &__label{
     @include formlabel;
@@ -44,16 +91,32 @@
   &__dateinput{
     @include formlabel;
     @include formcenterblock;
+
+    line-height:1.667;
+
+    border:2px solid #e5e5e5;
+    border-radius:1px;
+
+    padding-left:10%;
+    width:90%;
+    margin-bottom:15px;
   }
   &__dateinput:disabled{
     background-color:#f2f2f2;
+    // outline:none;
   }
   &__pm-number{
     @include formlabel;
     @include formcenterblock;
+    line-height:1.667;
+
+    border:2px solid #e5e5e5;
+    border-radius:1px;
+
+    margin-bottom:15px;
   }
   &__checkbox{
-
+    margin-right:20px;
   }
   &__uploadbutton{
     @include formlabel;
@@ -64,49 +127,96 @@
   &__submitbutton{
     width:280px;
     font-size:$subheadlinetextsize;
-    line-height:1.667;
+    line-height:1; /* 1.667 */
     color: $white;
     font-weight:bold;
     text-align: center;
+    text-transform:uppercase;
+    padding-top:22px;
+    padding-bottom:22px;
     background-color: $submitcolor;
+    border:none;
+    outline:none;
+    border-radius:1px;
 
     @include formcenterblock;
+
+    margin-bottom:45px;
   }
   &__comment{
     font-size:$basetextsize;
-    line-height:2.143;
+    line-height:2.143; /*2.143*/
     text-align:center;
     color:$dark;
+    margin-top:0;
+    margin-bottom:60px;
   }
   &__comment span{
     color:$red;
   }
 }
 .companion-table{
+  // display:table;
+  width:100%;
+  margin:0 auto 20px;
 
   &__label-row{
-
+    // display:table-row;
   }
   &__label{
     @include formheadline;
+    // display:table-cell;
+
+    line-height:1;
+    padding-top:25px;
+    padding-bottom:15px;
+    margin-top:0;
+    margin-bottom:0;
+  }
+  &__label:first-child{
+    // width:60px;
+    width:19%;
+  }
+  &__label:last-child{
+    // width:220px;
+    width:79%;
   }
   &__name-row{
-
-  }
-  &__input-id{
-    @include formlabel;
+    // display:table-row;
+    // padding-top:20px;
+    // padding-bottom:20px;
   }
   &__input{
     @include formlabel;
+    // display:table-cell;
+    // width:200px;
+    padding-top:20px;
+    padding-bottom:20px;
+    // padding-left:20px;
+    border:2px solid #e5e5e5;
+    border-radius:1px;
+
+    input{
+      width:99%; /* !!!!!!!!!!! */
+      height:100%;
+    }
   }
+  &__input--id{
+    // width:19%;
+    padding-left:0;
+    text-align:center;
+  }
+
   &__nickname-row{
 
   }
-  &__input-id--none{
+  // &__input-id--none{
 
-  }
+  // }
 }
 .photo-preview{
+  margin: 0 25px 0 0;
+  float:left;
 
   &__image{
 
@@ -120,14 +230,167 @@
     color:$dark;
   }
 }
-
 @media screen and (min-width: 700px){
-  .storyform{
+  .form{
+    padding-top:100px;
 
+    &__text{
+      font-size:18px;
+      line-height:30px;
+      width:80%;
+      margin:0 auto 45px;
+
+      span{
+        display:inline;
+      }
+    }
+  }
+  .storyform{
+    &__fields{
+      // padding-left:10%;
+    }
+    &__fields--app{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--time{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--companions{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--achievements{
+      padding-left:10%;
+      padding-right:10%;
+    }
+    &__fields--photos{
+      padding-left:10%;
+      padding-right:10%;
+      margin-bottom:65px;
+    }
+    &__highlighted-label--name{
+      padding-left:4%;
+    }
+    &__textinput{
+      width:96%;
+      padding-left:4%;
+    }
+    &__input-wrapper--time{
+      width:240px;
+      float:left;
+    }
+    &__input-wrapper--time:nth-child(2){
+      margin-right:2%;
+    }
+    &__pm-number{
+      width:240px;
+      margin:0 0 15px 0;
+    }
     &__submitbutton{
       width:300px;
       margin:0;
     }
+    &__comment{
+      margin:0;
+    }
+    &__submit-wrapper{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
 
+      margin-bottom:100px;
+    }
+  }
+  .companion-table{
+    width:380px;
+    margin:0 0 20px 0;
+  }
+}
+@media screen and (min-width: 1200px){
+  .form{
+
+    &__text{
+      width:65%;
+    }
+  }
+  .storyform{
+    &__fields--name{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+    }
+    &__input-wrapper--name{
+      width:300px;
+      margin:0;
+    }
+    &__fields--app{
+      padding-left:5%;
+      padding-right:5%;
+
+      ul{
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+      }
+    }
+    &__fields--time{
+      padding-left:5%;
+      padding-right:5%;
+
+      // display:flex;
+      // flex-direction: row;
+      // align-items:center;
+      // justify-content: space-between;
+    }
+    &__fields-wrapper--time{
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+    }
+    &__input-wrapper--time{
+      float:none;
+      margin:0;
+      // display:inline-block;
+      width:240px;
+      // margin-right:45px;
+    }
+    &__fields--companions{
+      padding-left:5%;
+      padding-right:5%;
+    }
+    &__fields--achievements{
+      padding-left:5%;
+      padding-right:5%;
+
+      ul{
+        // display:flex;
+        // flex-direction: row;
+        // align-items:center;
+        // justify-content: space-between;
+      }
+      ul>li{
+        width:260px;
+        display:block;
+        margin-right:60px;
+        float:left;
+      }
+      ul>li:nth-child(3n){
+        margin-right:0;
+      }
+    }
+    &__storyform__input-wrapper--achievements{
+
+    }
+    &__fields--photos{
+      padding-left:5%;
+      padding-right:5%;
+      // margin-bottom:65px;
+    }
   }
 }

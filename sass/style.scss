@@ -5,8 +5,8 @@
 @import "components/post.scss";
 
 html, body{
-	padding: 0;
-	margin: 0 auto;
+	// padding: 0;
+	// margin: 0 auto;
 	// width: 700px;
 	/* max-width: 1200px; */
 
@@ -16,8 +16,8 @@ html, body{
 }
 .clearfix:after{
 	content:'';
-  display:table;
-  clear:both;
+	display:table;
+	clear:both;
 }
 .logo-link{
 	display:block;
@@ -25,12 +25,15 @@ html, body{
 	height:25px;
 
 	text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+	white-space: nowrap;
+	overflow: hidden;
 
 	float:left;
 	// text-decoration:none;
 	background-image:url('http://placehold.it/75x25');
+	background-position:0 0;
+	background-repeat:no-repeat;
+
 	&--black{
 		width:150px;
 		height:40px;
@@ -84,6 +87,9 @@ html, body{
 		width:50px;
 		height:25px;
 		background-image:url('http://placehold.it/50x25');
+		background-position:0 0;
+		background-repeat:no-repeat;
+
 		float:right;
 	}
 	&__toggle--close{
@@ -95,6 +101,8 @@ html, body{
 	width:100%;
 	background-color:$introdark;
 	background-image:url('');
+	background-position:0 0;
+	background-repeat:no-repeat;
 
 	&__wrapper{
 		display:block;
@@ -108,8 +116,10 @@ html, body{
 		@include headlinetext;
 		color:$white;
 
-		margin-top:0;
-		margin-bottom:0;
+		// margin-top:0;
+		// margin-bottom:0;
+		width:88%;
+		margin:0 auto 0;
 	}
 }
 .footer{
@@ -135,6 +145,8 @@ html, body{
 		overflow: hidden;
 
 		background-image:url('http://placehold.it/50x50');
+		background-position:0 0;
+		background-repeat:no-repeat;
 	}
 	&__icon:last-child{
 		margin-right:0px;
@@ -179,6 +191,8 @@ html, body{
 		overflow: hidden;
 
 		background-image:url('http://placehold.it/27x34');
+		background-position:0 0;
+		background-repeat:no-repeat;
 	}
 }
 @media screen and (min-width:700px){
@@ -187,6 +201,8 @@ html, body{
 		height:40px;
 
 		background-image:url('http://placehold.it/150x40');
+		background-position:0 0;
+		background-repeat:no-repeat;
 	}
 	.main-nav{
 		&__toggle{
@@ -204,12 +220,12 @@ html, body{
 		}
 		&__headline{
 			font-size:50px;
-			line-height:1;
+			line-height:1.2;
 			font-weight:300;
 		}
 	}
 	.footer{
-		width:80%;
+		width:88%;
 		margin:0 auto;
 
 		display:flex;
@@ -243,5 +259,8 @@ html, body{
 			padding-top:75px;
 			// padding-bottom:85px;
 		}
+	}
+	.footer{
+		width:78%;
 	}
 }

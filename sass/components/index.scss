@@ -1,23 +1,31 @@
 .intro{
   width:100%;
   background-color:red;
-  // background-image:url('http://placehold.it/320x390');
+  background-image:url('');
+  background-size:100% 400px;
+  background-position:0 0;
+  background-repeat:no-repeat;
 
   padding-top:25px;
+  // height:370px;
 
   &__headline{
     @include headlinetext;
 
     color:$white;
 
-    margin-top:25px;
-    margin-bottom:35px;
+    margin:0 auto 320px; /* 35px */
+    width:88%;
   }
-  &__applink-wrapper{
+  &__download{
     width:100%;
     background-color:$introdark;
     padding-top:30px;
-    padding-bottom:25px;
+    padding-bottom:30px;
+  }
+  &__download-wrapper{
+    width:88%;
+    margin:0 auto;
   }
   &__applink{
     font-size:$subheadlinetextsize;
@@ -29,19 +37,22 @@
     color:$white;
 
     display:block;
-    width:274px;
+    width:99%;
     padding-top:15px;
     padding-bottom:15px;
-    margin:0 auto;
+    margin:0 auto 25px;
     border:3px solid white;
     border-radius:25px;
   }
   &__applications{
     display:block;
-    width:100%;
-    background-color:$introdark;
-
+    // width:100%;
     margin:0 auto 30px;
+    font-size:0;
+
+    text-align:center;
+
+    // background-color:$introdark;
   }
   &__application{
     display:inline-block;
@@ -49,7 +60,11 @@
     width:45px;
     height:60px;
     margin-right:35px;
-    margin-bottom:30px;
+    // margin-bottom:30px;
+
+    background-size:45px 60px;
+    background-position:0 0;
+    background-repeat:no-repeat;
   }
   &__application:last-child{
     margin-right:0;
@@ -70,40 +85,57 @@
 
     text-align:center;
     margin-top:0;
-    margin-bottom:35px;
+    margin-bottom:0;
   }
 }
 .information{
   width:100%;
   background-color:$lightbg;
   background-image:url('');
+  background-size: 0 0;
+  background-position:0 0;
+  background-repeat:no-repeat;
 
   padding-top:45px;
 
+  &__wrapper{
+    width:88%;
+    margin:0 auto;
+  }
   &__headline{
     @include headlinetext;
 
     color:$dark;
     margin-top:0;
     margin-bottom:45px;
-  }
 
+  }
+  &__img{
+    display:block;
+    margin:0 auto;
+    width:43%
+  }
+}
+.information-item{
+  &__img{
+    display:none;
+  }
   &__subheadline{
     font-size:$subheadlinetextsize;
     line-height:1.333;
     font-weight:bold;
 
     text-align:center;
+    margin-top:0;
+    margin-bottom:20px;
   }
   &__paragraph{
     @include basetext;
     color:$dark;
 
     text-align:center;
-  }
-  img{
-    display:block;
-    margin:0 auto;
+    margin-top:0;
+    margin-bottom:40px;
   }
 }
 .effect{
@@ -111,8 +143,10 @@
 }
 .reviews{
   width:100%;
+  padding-top:50px;
 
   &__review{
+    margin-bottom:35px;
   }
   &__review-headline{
     font-size:$subheadlinetextsize;
@@ -120,6 +154,9 @@
     display:block;
     font-weight:bold;
     text-align:center;
+
+    margin-top:0;
+    margin-bottom:25px;
   }
   &__review-subheadline{
     display:none;
@@ -129,9 +166,12 @@
     line-height:1.667;
     color:$dark;
     text-align:center;
+    margin-top:0;
+    margin-bottom:0;
   }
   &__review{
     display:none;
+    flex-direction: column;
   }
 
   input[type="radio"]{
@@ -141,10 +181,17 @@
   &__controls{
     display:block;
     margin:0 auto;
+
+    width:100%;
+    text-align:center;
   }
   &__controls label{
     display: inline-block;
     vertical-align:top;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 
     width: 6px;
     height: 6px;
@@ -178,96 +225,130 @@
     display:none;
   }
   #btn-1:checked ~ &__review--1{
-    display:block;
+    // display:block;
+    display:flex;
   }
   #btn-2:checked ~ &__review--1,
   #btn-2:checked ~ &__review--3{
     display:none;
   }
   #btn-2:checked ~ &__review--2{
-    display:block;
+    // display:block;
+    display:flex;
   }
   #btn-3:checked ~ &__review--1,
   #btn-3:checked ~ &__review--2{
     display:none;
   }
   #btn-3:checked ~ &__review--3{
-    display:block;
+    // display:block;
+    display:flex;
   }
 }
 
 .price{
-  width:100%;
+  // width:100%;
   background-color:$lightbg;
 }
 .price-table{
 
-  overflow:hidden;
+  // overflow:hidden;
+  width:840px;
+  margin:0 auto; /* ???? */
 
   &__head{
   }
   &__headcell{
     background-color:$dark;
-    width:87.5%;
+    width:33%;
+    padding-top:25px;
+
+    border-left:2px solid #e5e5e5; /* !!!!!!!!!! */
   }
   &__headcell:nth-child(1){
     display:none;
   }
   &__headcell:nth-child(3){
-    display:none;
+    // display:none;
   }
   &__headcell-apptype{
     font-size:$subheadlinetextsize;
-    line-height:1.667;
+    line-height:1; /*1.667*/
     font-weight:bold;
     color:$white;
     text-align:center;
     text-transform:uppercase;
+
+    margin-top:0;
+    margin-bottom:10px;
   }
   &__headcell-appprice{
     font-size:$headlinetextsize;
-    line-height:1.25;
+    line-height:1; /*1.25*/
     font-weight:300;
     color:$white;
     text-align:center;
+
+    margin-top:0;
+    margin-bottom:20px;
   }
   &__headcell--hit{
     background-image:url('');
+    background-size:0 0;
+    background-position:0 0;
+    background-repeat:no-repeat;
   }
   &__body{
   }
   &__row{
   }
   &__cell{
-    width:87.5%;
+    width:30%;
+    border:2px solid #e5e5e5;
 
     font-size:$basetextsize;
-    line-height:2.143;
+    line-height:1; /*2.143*/
     color:$dark;
     background-color:$white;
     text-transform:uppercase;
+
+    background-position:230px center;
+    background-repeat:no-repeat;
+
+    padding-top:20px;
+    padding-bottom:25px;
+    padding-left:3%;
   }
   &__cell:nth-child(1){
     display:none;
   }
   &__cell:nth-child(3){
-    display:none;
+    // display:none;
   }
   &__cell--yes{
-    background-image:url('');
+    background-image:url('http://placehold.it/26x22');
+    background-size: 26px 22px;
+    background-color:green;
   }
   &__cell--no{
-    background-image:url('');
+    background-image:url('http://placehold.it/26x26');
+    background-size: 26px 26px;
+    background-color:red;
   }
 }
 
 .contacts{
   width:100%;
+  margin-bottom:40px;
+  padding-top:95px;
 
   &__headline{
     @include headlinetext;
 
     color:$dark;
+
+    margin-top:0;
+    margin-bottom:40px;
   }
   &__subheadline{
     font-size: $subheadlinetextsize;
@@ -276,6 +357,9 @@
     color:$dark;
 
     text-align: center;
+
+    margin-top:0;
+    margin-bottom:5px;
   }
   &__link{
     @include headlinetext;
@@ -283,31 +367,110 @@
     color:$red;
 
     display:block;
+    text-decoration:none;
+    margin-top:0;
+    margin-bottom:25px;
   }
-  &__map{
+}
+.map{
     width:100%;
     height:200px;
     background-image:url('http://placehold.it/320x200');
+    background-size:100% 200px;
+    background-position:0 0;
+    background-repeat:no-repeat;
   }
-}
-.footer{
+.indexpage .footer{
   display:none;
 }
 
 @media screen and (min-width: 700px){
+  .intro{
+    padding-top:100px;
+    background-image:url('');
+    background-size:100% 520px;
+    // margin-bottom:520px;
+
+    &__headline{
+      width:48%;
+      margin-left:6%;
+
+      font-size:40px;
+      line-height:1.2;
+
+      margin-bottom:35px;
+    }
+    &__download{
+      width:48%;
+      padding-top:0;
+      margin-left:6%;
+
+      background:none;
+    }
+    &__paragraph{
+      font-size:18px;
+      line-height:24px;
+    }
+  }
+  .information{
+    &__headline{
+      font-size:40px;
+      line-height:1.2;
+    }
+    &__text{
+      width:50%;
+      float:right;
+      padding-top:75px;
+    }
+    &__img{
+      margin-right:7%;
+      width:43%; /* 270px */
+      // height:480px;
+      // background-image:url('http://placehold.it/270x480');
+      float:left;
+    }
+  }
+  .information-item{
+    &__img{
+      display:none;
+    }
+    &__paragraph{
+      margin-bottom:45px;
+    }
+  }
   .effect{
     display:block;
 
+    width:88%;
+    margin:0 auto;
+
+    background-image:url('http://placehold.it/260x300');
+    background-size: 260px 300px;
+    background-position:0 0;
+    background-repeat:no-repeat;
+
+    &__wrapper{ /* ??? */
+      width:48%;
+      float:right;
+      padding-top:40px;
+      padding-bottom:55px;
+    }
     &__headline{
       font-size:30px;
       line-height:36px;
       font-weight:bold;
       color:#000;
+
+      margin-top:0;
+      margin-bottom:20px;
     }
     &__paragraph{
       font-size:14px;
       line-height:24px;
       color:$dark;
+
+      margin-top:0;
+      margin-bottom:20px;
     }
     &__morelink{
       font-size:14px;
@@ -316,20 +479,236 @@
     }
   }
   .reviews{
+    width:88%;
+    margin:0 auto 100px;
+    padding-top:80px;
+
+    &__review{
+      // display: flex;
+      // flex-direction: column;
+    }
+    &__review-headline{
+      font-size:20px;
+      line-height:30px;
+
+      margin-bottom:10px;
+
+      order:2;
+    }
     &__review-subheadline{
       display:block;
       margin-top:0;
+
+      font-size:14px;
+      line-height:30px;
+
       color:$dark;
       text-align:center;
+
+      order:3;
+    }
+    &__review-paragraph{
+      font-size:18px;
+      line-height:30px;
+      margin-bottom: 45px;
+      order:1;
+    }
+  }
+  .price-table{
+    width:88%;
+    margin:0 auto;
+
+    &__headcell{
+      width:24%;
+    }
+    &__headcell:nth-child(1){
+      display:table-cell; /* block ??? */
+    }
+    &__headcell-apptype{
+      font-size:16px;
+    }
+    &__headcell-appprice{
+      font-size:18px;
+    }
+    &__cell{
+      width:24%;
+    }
+    &__cell:nth-child(1){
+      display:table-cell;
+    }
+    &__cell:not(:nth-child(1)){
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+
+      background-position:center center;
     }
   }
   .contacts{
-    .map{
-      height:380px;
-      background-image:url('http://placehold.it/700x380');
+    width:88%;
+    margin:0 auto;
+    padding-top:125px;
+
+    &__headline{
+      width:74%;
+      margin:0 auto 55px;
+
+      font-size:40px;
+      line-height:1;
+    }
+    &__subheadline{
+
+    }
+    &__link{
+
     }
   }
-  .footer{
+  .map{
+      width:100%;
+      height:380px;
+      background-image:url('http://placehold.it/700x380');
+      background-size: 100% 380px;
+      background-position:0 0;
+      background-repeat:no-repeat;
+    }
+  .indexpage .footer{
+    display:block;
+  }
+}
+@media screen and (min-width: 1200px){
+  .intro{
+    padding-top:120px;
+    background-image:url('');
+    background-size:100% 750px;
+
+    &__headline{
+      font-size:50px;
+      width:25%;
+      margin-left:10%;
+    }
+    &__download{
+      width:25%;
+      margin-left:10%;
+    }
+    &__download-wrapper{
+      width:100%;
+    }
+    &__applink{
+      font-size:21px;
+      margin-bottom:65px;
+    }
+  }
+  .information{
+    &__wrapper{
+      width:80%;
+    }
+    &__headline{
+      font-size:50px;
+    }
+    &__img{
+      display:none;
+    }
+  }
+  .information__text{
+    width:100%;
+
+    display:flex;
+    flex-direction:row;
+    align-items:top;
+    justify-content: space-between;
+  }
+  .information-item{
+    width:32%;
+
+    &__img{
+      display:block;
+      width:60%;
+      height:auto;
+      margin:0 auto 60px;
+    }
+    &__subheadline{
+      font-size:30px;
+      line-height:1;
+      width:70%;
+      margin:0 auto 30px;
+    }
+    &__paragraph{
+      font-size:18px;
+      line-height:30px;
+      margin-bottom:70px;
+    }
+  }
+  .effect{
+    width:80%;
+
+    background-image:url('http://placehold.it/300x350');
+    background-size: 300px 350px;
+    &__wrapper{
+      width:60%;
+    }
+    &__headline{
+
+    }
+    &__paragraph{
+      font-size:18px;
+      line-height:30px;
+    }
+    &__morelink{
+      font-size:18px;
+      line-height:30px;
+    }
+  }
+  .reviews{
+    padding-top:200px;
+
+    background-image:url('http://placehold.it/60x80');
+    background-size: 60px 80px;
+    background-position:center 75px;
+    background-repeat:no-repeat;
+
+    &__review-paragraph{
+      width:82%;
+      margin:0 auto;
+    }
+  }
+  .price-table{
+    &__headcell-apptype{
+      font-size:18px;
+      line-height:1;
+    }
+    &__headcell-appprice{
+      font-size:24px;
+      line-height:1;
+    }
+    &__cell{
+      font-size:18px;
+      line-height:1;
+    }
+  }
+  .contacts{
+    padding-top:170px;
+
+    &__headline{
+      font-size:50px;
+      line-height:1.2;
+      width:50%;
+    }
+    &__subheadline{
+      margin-bottom:35px;
+    }
+    &__link{
+
+    }
+  }
+  .map{
+    width:100%;
+    height:525px;
+    background-image:url('http://placehold.it/1200x525');
+    background-size: 100% 525px;
+    background-position:0 0;
+    background-repeat:no-repeat;
+  }
+  .indexpage .footer{
     display:block;
   }
 }
