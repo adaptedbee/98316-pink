@@ -475,7 +475,7 @@
     width:88%;
     margin:0 auto;
 
-    background-image:url('http://placehold.it/260x300');
+    background-image:url('../img/timer.svg');
     background-size: 260px 300px;
     background-position:0 0;
     background-repeat:no-repeat;
@@ -698,8 +698,13 @@
   .effect{
     width:80%;
 
-    background-image:url('http://placehold.it/300x350');
+    // background-image:url('http://placehold.it/300x350');
     background-size: 300px 350px;
+
+    // background-image:url('../img/timer.svg');
+    // background-size: 260px 300px;
+    // background-position:0 0;
+    // background-repeat:no-repeat;
     &__wrapper{
       width:60%;
     }
@@ -718,11 +723,17 @@
   .reviews{
     padding-top:200px;
 
-    background-image:url('http://placehold.it/60x80');
+    background-image:url('../img/quotes.svg');
     background-size: 60px 80px;
     background-position:center 75px;
     background-repeat:no-repeat;
 
+    &__review{
+      background-image:url('../img/review-arrow-left.svg'), url('../img/review-arrow-right.svg');
+      background-size: 20px 40px, 20px 40px;
+      background-position:center 0 0, 100px 100px;
+      background-repeat:no-repeat, no-repeat;
+    }
     &__review-paragraph{
       width:82%;
       margin:0 auto;
