@@ -90,13 +90,13 @@
     margin-right:0;
   }
   &__application--ios{
-    background-image:url('http://placehold.it/45x60');
+    background-image:url('../img/apple-logo.svg');
   }
   &__application--android{
-    background-image:url('http://placehold.it/45x60');
+    background-image:url('../img/android-logo.svg');
   }
   &__application--windows8{
-    background-image:url('http://placehold.it/45x60');
+    background-image:url('../img/microsoft-logo.svg');
   }
   &__paragraph{
     @include basetext;
@@ -359,14 +359,14 @@
     // display:none;
   }
   &__cell--yes{
-    background-image:url('http://placehold.it/26x22');
+    background-image:url('../img/yes.svg');
     background-size: 26px 22px;
-    background-color:green;
+    // background-color:green;
   }
   &__cell--no{
-    background-image:url('http://placehold.it/26x26');
+    background-image:url('../img/no.svg');
     background-size: 26px 26px;
-    background-color:red;
+    // background-color:red;
   }
 }
 
