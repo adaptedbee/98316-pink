@@ -323,20 +323,45 @@
   width:840px;
   margin:0 auto; /* ???? */
 
+  border-collapse:collapse;
+
   &__head{
   }
   &__headcell{
-    background-color:$dark;
-    width:33%;
+    // background-color:$dark;
+    // width:33%;
+    width:280px;
     padding-top:25px;
 
-    border-left:2px solid #e5e5e5; /* !!!!!!!!!! */
+    // border-left:2px solid #e5e5e5;
+    // border-right:2px solid #e5e5e5;
+    // border-radius:2px;
+
   }
   &__headcell:nth-child(1){
     display:none;
+    border-right:2px solid $dark;
+  }
+  &__headcell:nth-child(2){
+    background-color:$dark;
+    border-left:2px solid $dark;
+    border-right:2px solid #e5e5e5;
+    border-top:2px solid $dark;
+    border-bottom:2px solid $dark;
   }
   &__headcell:nth-child(3){
-    // display:none;
+    background-color:$dark;
+    border-left:2px solid #e5e5e5;
+    border-right:2px solid #e5e5e5;
+    border-top:2px solid $dark;
+    border-bottom:2px solid $dark;
+  }
+  &__headcell:nth-child(4){
+    background-color:$dark;
+    border-left:2px solid #e5e5e5;
+    border-right:2px solid $dark;
+    border-top:2px solid $dark;
+    border-bottom:2px solid $dark;
   }
   &__headcell-apptype{
     font-size:$subheadlinetextsize;
@@ -370,14 +395,15 @@
   &__row{
   }
   &__cell{
-    width:30%;
+    // width:33%;
+    width:280px;
     border:2px solid #e5e5e5;
 
     font-size:$basetextsize;
     line-height:1; /*2.143*/
     color:$dark;
     background-color:$white;
-    text-transform:uppercase;
+
 
     background-position:230px center;
     background-repeat:no-repeat;
@@ -385,6 +411,9 @@
     padding-top:20px;
     padding-bottom:25px;
     padding-left:3%;
+  }
+  &__cell:not(:nth-child(1)){
+    text-transform:uppercase;
   }
   &__cell:nth-child(1){
     display:none;
@@ -601,10 +630,10 @@
     margin:0 auto;
 
     &__headcell{
-      width:24%;
+      width:25%;
     }
     &__headcell:nth-child(1){
-      display:table-cell; /* block ??? */
+      display:table-cell;
     }
     &__headcell-apptype{
       font-size:16px;
@@ -613,7 +642,7 @@
       font-size:18px;
     }
     &__cell{
-      width:24%;
+      width:25%;
     }
     &__cell:nth-child(1){
       display:table-cell;
@@ -808,6 +837,8 @@
     }
   }
   .price-table{
+    width:78%;
+
     &__headcell-apptype{
       font-size:18px;
       line-height:1;
