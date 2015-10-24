@@ -228,6 +228,38 @@
   &__review-subheadline{
     display:none;
   }
+  &__review-quote{
+    position:relative;
+  }
+  &__review-nav-arrow{
+    display:none;
+    position:absolute;
+
+    width:20px;
+    height:40px;
+
+    margin-top:-20px;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    cursor:pointer;
+
+    background-size: 20px 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  &__review-nav-arrow--left{
+    background-image:url('../img/review-arrow-left.svg');
+    top:50%;
+    left:0;
+  }
+  &__review-nav-arrow--right{
+    background-image:url('../img/review-arrow-right.svg');
+    top:50%;
+    right:0;
+  }
   &__review-paragraph{
     font-size:$basetextsize;
     line-height:1.667;
@@ -618,11 +650,14 @@
 
       order:3;
     }
+    &__review-quote{
+      order:1;
+    }
     &__review-paragraph{
       font-size:18px;
       line-height:30px;
       margin-bottom: 45px;
-      order:1;
+      // order:1;
     }
   }
   .price-table{
@@ -826,10 +861,10 @@
     background-repeat:no-repeat;
 
     &__review{
-      background-image:url('../img/review-arrow-left.svg'), url('../img/review-arrow-right.svg');
-      background-size: 20px 40px, 20px 40px;
-      background-position:center 0 0, 100px 100px;
-      background-repeat:no-repeat, no-repeat;
+
+    }
+    &__review-nav-arrow{
+      display:block;
     }
     &__review-paragraph{
       width:82%;
