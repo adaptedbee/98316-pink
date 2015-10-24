@@ -106,7 +106,7 @@ html, body{
 .header{
 	width:100%;
 	background-color:$introdark;
-	background-image:url('');
+	background-image:url(''); /* !!!!!!!!!!!!!!!!!!!!! */
 	background-position:0 0;
 	background-repeat:no-repeat;
 
@@ -298,6 +298,6 @@ html, body{
 		}
 	}
 	.footer{
-		width:78%;
+		width:80%; /* 78% */
 	}
 }

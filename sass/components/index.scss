@@ -57,7 +57,7 @@
     color:$white;
 
     display:block;
-    width:99%;
+    // width:99%;
     padding-top:15px;
     padding-bottom:15px;
     margin:0 auto 25px;
@@ -111,7 +111,7 @@
 .information{
   width:100%;
   background-color:$lightbg;
-  background-image:url('');
+  background-image:url(''); /* !!!!!!!!!!!!!! */
   background-size: 0 0;
   background-position:0 0;
   background-repeat:no-repeat;
@@ -326,7 +326,7 @@
     margin-bottom:20px;
   }
   &__headcell--hit{
-    background-image:url('');
+    background-image:url(''); /* !!!!!!!!!!!!!!!!!!! */
     background-size:0 0;
     background-position:0 0;
     background-repeat:no-repeat;
