@@ -13,6 +13,8 @@ html, body{
 	font-family: 'Open Sans', Arial, sans-serif;
 	@include basetext;
 	color:black;
+	max-width:1200px;
+	margin:0 auto;
 }
 .clearfix:after{
 	content:'';
