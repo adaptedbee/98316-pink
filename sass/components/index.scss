@@ -121,6 +121,9 @@
   &__wrapper{
     width:88%;
     margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
   }
   &__headline{
     @include headlinetext;
@@ -129,9 +132,17 @@
     margin-top:0;
     margin-bottom:45px;
 
+    order:1;
   }
-  &__img{
+  &__images{
+    width:100%;
     display:block;
+
+    order:3;
+  }
+  &__images-item{
+    display:none;
+
     margin:0 auto;
     width:160px;
     height:280px;
@@ -139,7 +150,9 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-
+  }
+  &__images-item--3{
+    display:block;
     // background-image: url('../img/iphone-screen-mobile-3@1x.png'), url('../img/iphone-case-mobile@1x.png');
     // background-size: 142px 251px, 160px 280px;
     // background-position:0 0, 0 0;
@@ -148,11 +161,17 @@
     background-position: 10px 34px, 0 0;
     background-repeat: no-repeat, no-repeat;
   }
+  &__text{
+    order:2;
+  }
 }
 .information-item{
-  &__img{
-    display:none;
-  }
+  // &__img{
+  //   display:none;
+  // }
+  // &__img--3{
+
+  // }
   &__subheadline{
     font-size:$subheadlinetextsize;
     line-height:1.333;
@@ -170,6 +189,21 @@
     margin-top:0;
     margin-bottom:40px;
   }
+  // &:last-child{
+  //   display:flex;
+  //   flex-direction:column;
+    // align-items:top;
+    // justify-content: space-between;
+    // .information-item__img{
+    //   order:3;
+    // }
+    // .information-item__subheadline{
+    //   order:1;
+    // }
+    // .information-item__paragraph{
+    //   order:2;
+    // }
+  // }
 }
 .effect{
   display:none;
@@ -444,26 +478,43 @@
     }
   }
   .information{
+    &__wrapper{
+      display:block;
+    }
     &__headline{
       font-size:40px;
       line-height:1.2;
     }
-    &__text{
-      width:50%;
-      float:right;
-      padding-top:75px;
+    &__images{
+      // width:100%;
+      // display:block;
     }
-    &__img{
+    &__images-item{
+      // display:none;
+    }
+    &__images-item--3{
+      //   display:none;
       margin-right:7%;
       width:43%; /* 270px */
       // height:480px;
       // background-image:url('http://placehold.it/270x480');
       float:left;
     }
+    &__text{
+      width:50%;
+      float:right;
+      // padding-top:75px;
+    }
+    // &__img{
+
+    // }
   }
   .information-item{
-    // &__img{
-    //   display:none;
+    // &:last-child{
+    //   display:block;
+    // }
+    // &__img--3{
+
     // }
     &__paragraph{
       margin-bottom:45px;
@@ -595,13 +646,13 @@
     }
   }
   .map{
-      width:100%;
-      height:380px;
-      background-image:url('http://placehold.it/700x380');
-      background-size: 100% 380px;
-      background-position:0 0;
-      background-repeat:no-repeat;
-    }
+    width:100%;
+    height:380px;
+    background-image:url('http://placehold.it/700x380');
+    background-size: 100% 380px;
+    background-position:0 0;
+    background-repeat:no-repeat;
+  }
   .indexpage .footer{
     display:block;
   }
@@ -634,55 +685,72 @@
     &__headline{
       font-size:50px;
     }
-    &__img{
-      display:none;
+    &__images{
+      display:flex;
+      flex-direction:row;
+      align-items:top;
+      justify-content: space-between;
     }
-  }
-  .information__text{
-    width:100%;
-
-    display:flex;
-    flex-direction:row;
-    align-items:top;
-    justify-content: space-between;
-  }
-  .information-item{
-    width:32%;
-
-    &__img{
+    &__images-item{
       display:block;
+
+      // margin:0 auto;
+      // width:160px;
+      // height:280px;
       margin:0 auto 60px;
       // width:60%; /* больше !!! 250 290 */
       // height:auto;
       width:290px;
       height:300px;
 
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-
+      // text-indent: 100%;
+      // white-space: nowrap;
+      // overflow: hidden;
       background-size: 290px 300px;
       background-position: 0 0;
       background-repeat: no-repeat;
     }
-    &__img--1{
+    &__images-item--1{
       background-image: url('../img/iphone-screen-desktop-1@1x.png');
       @media screen and (min-resolution: 1.5dppx) {
         background-image: url('../img/iphone-screen-desktop-1@2x.png');
       }
     }
-    &__img--2{
+    &__images-item--2{
       background-image: url('../img/iphone-screen-desktop-2@1x.png');
       @media screen and (min-resolution: 1.5dppx) {
         background-image: url('../img/iphone-screen-desktop-2@2x.png');
       }
     }
-    &__img--3{
+    &__images-item--3{
       background-image: url('../img/iphone-screen-desktop-3@1x.png');
       @media screen and (min-resolution: 1.5dppx) {
         background-image: url('../img/iphone-screen-desktop-3@2x.png');
       }
     }
+    &__text{
+      width:100%;
+
+      display:flex;
+      flex-direction:row;
+      align-items:top;
+      justify-content: space-between;
+    }
+  }
+
+  .information-item{
+    width:32%;
+
+
+    // &__img--1{
+
+    // }
+    // &__img--2{
+
+    // }
+    // &__img--3{
+
+    // }
     &__subheadline{
       font-size:30px;
       line-height:1;
