@@ -131,7 +131,9 @@ html, body{
 	}
 }
 .footer{
-
+	&--indexpage{
+		display:none;
+	}
 }
 .social-icons{
 	display:block;
@@ -288,7 +290,7 @@ html, body{
 		}
 	}
 	.top-menu{
-		width:80%; /*940 130*/
+		width:78%; /*940 130*/
 		padding-left:10%;
 		padding-right:10%;
 		// margin:0 auto;
@@ -300,6 +302,6 @@ html, body{
 		}
 	}
 	.footer{
-		width:80%; /* 78% */
+		width:78%; /* 78% */
 	}
 }
