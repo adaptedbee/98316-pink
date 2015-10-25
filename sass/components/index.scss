@@ -133,6 +133,12 @@
     margin-bottom:45px;
 
     order:1;
+    .br-separator--inline{
+      display:none;
+      @media screen and (min-width:700px){
+        display:inline;
+      }
+    }
   }
   &__images{
     width:100%;
@@ -518,8 +524,8 @@
     // margin-bottom:520px;
 
     &__headline{
-      width:48%;
-      margin-left:6%;
+      width:34%; /* 48 */
+      margin-left:13%;
 
       font-size:40px;
       line-height:1.2;
