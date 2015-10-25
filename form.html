@@ -83,7 +83,11 @@
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
 						</div>
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
-							<input class="storyform__pm-number" type="number" name="duration" id="duration">
+							<div class="storyform__pm-number-wrapper">
+								<div class="storyform__pm-number-button storyform__pm-number-button--minus">—</div>
+								<input class="storyform__pm-number storyform__pm-number--time" type="number" name="duration" id="duration">
+								<div class="storyform__pm-number-button storyform__pm-number-button--plus">+</div>
+							</div>
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
 						</div>
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
@@ -96,7 +100,11 @@
 					<h3 class="storyform__headline">Количество попутчиков</h3>
 					<div class="storyform__fields-wrapper">
 						<div class="storyform__input-wrapper storyform__input-wrapper--companions">
-							<input class="storyform__pm-number" type="number" name="companions" id="companions">
+							<div class="storyform__pm-number-wrapper">
+								<div class="storyform__pm-number-button storyform__pm-number-button--minus">—</div>
+								<input class="storyform__pm-number storyform__pm-number--companions" type="number" name="companions" id="companions">
+								<div class="storyform__pm-number-button storyform__pm-number-button--plus">+</div>
+							</div>
 						</div>
 						<div class="companion-table clearfix">
 							<div class="companion-table__name-wrapper clearfix">
@@ -143,7 +151,7 @@
 					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--achievements">
-					<h3 class="storyform__headline">Ваши безбашенные достижения в путешествии</h3>
+					<h3 class="storyform__headline">Ваши безбашенные <span><br></span>достижения в путешествии</h3>
 					<div class="storyform__fields-wrapper">
 						<ul class="clearfix">
 							<div class="checkbox-column">
@@ -196,46 +204,48 @@
 					<div class="storyform__fields-wrapper">
 						<input class="storyform__uploadbutton" type="file" name="img" accept="image/jpeg,image/png,image/gif">Загрузить фото</a>
 						<hr>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-1.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-2.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-3.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-4.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-5.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-6.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-7.JPG</figcaption>
-						</figure>
-						<figure class="photo-preview">
-							<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-							<span class="photo-preview__close">&times;</span>
-							<figcaption class="photo-preview__filename">IMG-8.JPG</figcaption>
-						</figure>
+						<div class="photo-previews">
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-1.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-2.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-3.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-4.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-5.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-6.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-7.JPG</figcaption>
+							</figure>
+							<figure class="photo-preview">
+								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+								<span class="photo-preview__close">&times;</span>
+								<figcaption class="photo-preview__filename">IMG-8.JPG</figcaption>
+							</figure>
+						</div>
 					</div>
 				</div>
 				<div class="storyform__submit-wrapper">

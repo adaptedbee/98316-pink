@@ -8,7 +8,7 @@
     color:$dark;
     text-align:center;
 
-    width:88%;
+    width:86%;
     margin:0 auto 50px;
 
     span{
@@ -40,6 +40,10 @@
   }
   &__fields--companions{
     background-color: #f2f2f2;
+
+  }
+  &__input-wrapper--companions{
+    border-bottom:2px solid #e5e5e5;
   }
   &__fields--achievements{
 
@@ -73,8 +77,15 @@
     @include formheadline;
     text-align:center;
 
-    margin-top:0;
+    // width:83%;
+    // margin:0 auto 40px;
+    margin-top:0px;
     margin-bottom:40px;
+    @media screen and (min-width:700px){
+      span{
+        display:none;
+      }
+    }
   }
   ul{
     padding-left:0;
@@ -109,16 +120,70 @@
     background-color:#f2f2f2;
     // outline:none;
   }
+  &__pm-number-wrapper{
+    width:100%;
+
+    font-size:0;
+  }
+  &__pm-number-button{
+    box-sizing:border-box;
+    width:20%;
+    display:inline-block;
+    vertical-align:top;
+
+    border:2px solid #e5e5e5;
+
+    font-size:30px;
+    line-height:1;
+
+    padding-top:15px;
+    padding-bottom:15px;
+
+    text-align:center;
+    background-color:white;
+
+    @media screen and (min-width:700px){
+      width:25%;
+    }
+  }
+  &__pm-number-button--plus{
+    // border-left:none;
+    // background-color:red;
+  }
+  &__pm-number-button--minus{
+    // border-right:none;
+  }
   &__pm-number{
     @include formlabel;
     @include formcenterblock;
     line-height:1.667;
 
-    border:2px solid #e5e5e5;
-    border-radius:1px;
+    border-top:2px solid #e5e5e5;
+    border-bottom:2px solid #e5e5e5;
+    border-left:none;
+    // border-radius:1px;
 
     margin-bottom:15px;
-    padding:0;
+    padding:15px 0 15px 0;
+
+    box-sizing:border-box;
+    width:60%;
+    display:inline-block;
+    vertical-align:top;
+
+    text-align:center;
+    background-color:#f2f2f2;
+    @media screen and (min-width:700px){
+      width:50%;
+    }
+  }
+  &__pm-number--time{
+
+  }
+  &__pm-number--companions{
+    @media screen and (min-width:700px){
+      border:none;
+    }
   }
   &__checkbox{
     margin-right:20px;
@@ -236,6 +301,7 @@
     text-align:center;
     border-right-width:1px;
     // border-collapse:collapse;
+    background-color:#f2f2f2;
   }
   &__input--name{
     border-left-width:1px;
