@@ -67,7 +67,7 @@
     @include formlabel;
     line-height:1.667;
     margin-bottom:25px;
-    padding-left:7%;
+    padding:0 0 0 7%;
   }
   &__headline{
     @include formheadline;
@@ -101,7 +101,7 @@
     border:2px solid #e5e5e5;
     border-radius:1px;
 
-    padding-left:7%;
+    padding:0 0 0 7%;
     width:93%;
     margin-bottom:15px;
   }
@@ -118,6 +118,7 @@
     border-radius:1px;
 
     margin-bottom:15px;
+    padding:0;
   }
   &__checkbox{
     margin-right:20px;
@@ -478,6 +479,9 @@
     }
     &__storyform__input-wrapper--achievements{
 
+    }
+    &__submit-wrapper{
+      width:78%;
     }
     &__fields--photos{
       // padding-left:5%;
