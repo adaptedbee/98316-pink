@@ -83,10 +83,10 @@
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
 						</div>
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
-							<div class="storyform__pm-number-wrapper">
-								<div class="storyform__pm-number-button storyform__pm-number-button--minus">—</div>
-								<input class="storyform__pm-number storyform__pm-number--time" type="number" name="duration" id="duration">
-								<div class="storyform__pm-number-button storyform__pm-number-button--plus">+</div>
+							<div class="storyform__pm-number-wrapper" id="time">
+								<div class="storyform__pm-number-button storyform__pm-number-button--minus" style="cursor:pointer;">—</div>
+								<input class="storyform__pm-number storyform__pm-number--time" type="text" name="duration" id="duration" value="1">
+								<div class="storyform__pm-number-button storyform__pm-number-button--plus" style="cursor:pointer;">+</div>
 							</div>
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
 						</div>
@@ -100,10 +100,10 @@
 					<h3 class="storyform__headline">Количество попутчиков</h3>
 					<div class="storyform__fields-wrapper">
 						<div class="storyform__input-wrapper storyform__input-wrapper--companions">
-							<div class="storyform__pm-number-wrapper">
-								<div class="storyform__pm-number-button storyform__pm-number-button--minus">—</div>
-								<input class="storyform__pm-number storyform__pm-number--companions" type="number" name="companions" id="companions">
-								<div class="storyform__pm-number-button storyform__pm-number-button--plus">+</div>
+							<div class="storyform__pm-number-wrapper" id="companions">
+								<div class="storyform__pm-number-button storyform__pm-number-button--minus" style="cursor:pointer;">—</div>
+								<input class="storyform__pm-number storyform__pm-number--companions" type="text" name="companions" value="1 чел">
+								<div class="storyform__pm-number-button storyform__pm-number-button--plus" style="cursor:pointer;">+</div>
 							</div>
 						</div>
 						<div class="companion-table clearfix">
@@ -254,6 +254,9 @@
 				</div>
 			</form>
 		</div>
+
+		<script src="js/pm-number.js"></script>
+		<script src="js/send.js"></script>
 
 		<footer class="footer">
 			<!-- <div class="logo"> -->
