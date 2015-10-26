@@ -21,7 +21,7 @@ html, body{
 	display:table;
 	clear:both;
 }
-.logo-link{
+.logo{
 	display:block;
 	width:75px;
 	height:25px;
@@ -30,20 +30,22 @@ html, body{
 	white-space: nowrap;
 	overflow: hidden;
 
-	float:left;
 	// text-decoration:none;
-	background-image:url('../img/logotype-white-mobile.svg');
-	background-size:75px 25px;
-	background-position:0 0;
-	background-repeat:no-repeat;
 
+	&--header{
+		float:left;
+
+		background-image:url('../img/logotype-white-mobile.svg');
+		background-size:75px 25px;
+		background-position:0 0;
+		background-repeat:no-repeat;
+	}
 	&--black{
 		width:150px;
 		height:40px;
 		background-image:url('../img/logotype-blue-tablet.svg');
 		background-size:150px 40px;
 
-		float:none;
 		margin:0 auto 40px;
 	}
 }
@@ -55,7 +57,8 @@ html, body{
 	padding-right:6%;
 
 	width:88%;
-	background-color:$dark;
+	// background-color:transparentize($dark,.3);
+	background-color:transparentize(red,.7);
 
 	&__nav-wrap{
 	}
@@ -104,31 +107,48 @@ html, body{
 	}
 
 }
-
+/* 460 240 */
 .header{
 	width:100%;
-	background-color:$introdark;
-	background-image:url(''); /* !!!!!!!!!!!!!!!!!!!!! */
-	background-position:0 0;
-	background-repeat:no-repeat;
+	// background-color:$introdark;
+	background-color:red;
 
-	&__wrapper{
-		display:block;
-		width:100%;
-		background:green;
+	background-image: url('../img/background-mobile@1x.jpg');
+	background-size: 700px auto;
+	background-position: center 0;
+	background-repeat: no-repeat;
 
-		padding-top:35px;
-		padding-bottom:45px;
+	@media screen and (min-width:320px) and (min-resolution: 1.5dppx) {
+		background-image: url('../img/background-mobile@2x.jpg');
 	}
-	&__headline{
-		@include headlinetext;
-		color:$white;
-
-		// margin-top:0;
-		// margin-bottom:0;
-		width:88%;
-		margin:0 auto 0;
+	@media screen and (min-width:320px) and (min-resolution: 3dppx) {
+		background-image: url('../img/background-mobile@3x.jpg');
 	}
+	@media screen and (min-width:700px){
+		background-image: url('../img/background-tablet@1x.jpg');
+		background-size: 1200px auto;
+	}
+	@media screen and (min-width:700px) and (min-resolution: 1.5dppx) {
+		background-image: url('../img/background-tablet@2x.jpg');
+	}
+	@media screen and (min-width:1200px){
+		background-image: url('../img/background-fullsize.jpg');
+		background-size: 1200px auto; /*750*/
+	}
+
+	// &__wrapper{
+	// 	display:block;
+	// 	width:100%;
+
+	// 	padding-top:35px;
+	// 	padding-bottom:45px;
+	// }
+	// &__headline{
+	// 	@include headlinetext;
+	// 	color:$white;
+	// 	width:88%;
+	// 	margin:0 auto 0;
+	// }
 }
 .footer{
 	&--indexpage{
@@ -232,8 +252,8 @@ html, body{
 		}
 	}
 	.top-menu{
-		padding-top:25px;
-		padding-bottom:40px;
+		padding-top:27px;
+		padding-bottom:43px;
 	}
 	.header{
 		&__wrapper{
