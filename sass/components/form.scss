@@ -277,8 +277,8 @@
     @include formlabel;
     // display:table-cell;
     // width:200px;
-    padding-top:20px;
-    padding-bottom:20px;
+    // padding-top:20px;
+    // padding-bottom:20px;
     // padding-left:20px;
     border:2px solid #e5e5e5;
     border-radius:1px;
@@ -288,7 +288,7 @@
       // width:99%; /* !!!!!!!!!!! */
       width:90%;
       // height:100%;
-      padding:0 0 0 10%;
+      padding:20px 0 20px 10%;
       border:none;
 
       font-size:18px;
@@ -298,6 +298,8 @@
   &__input--id{
     // width:19%;
     padding-left:0;
+    padding-top:20px;
+    padding-bottom:20px;
     text-align:center;
     border-right-width:1px;
     // border-collapse:collapse;
@@ -305,6 +307,10 @@
   }
   &__input--name{
     border-left-width:1px;
+  }
+  &__delete{
+    color:$dark;
+    text-decoration:none;
   }
 }
 .photo-preview{
