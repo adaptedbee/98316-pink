@@ -1,41 +1,52 @@
 .intro{
   width:100%;
-  // background-color:red;
-  background-image: url('../img/iphone-hand-mobile.png'), url('../img/background-mobile@1x.jpg');
-  background-size: 258px 286px, 100% 400px;
-  background-position: 0 107px, 0 0;
-  background-repeat: no-repeat, no-repeat;
 
-  padding-top:25px;
-  // height:370px;
-  @media screen and (min-width:320px) and (min-resolution: 1.5dppx) {
-    background-image: url('../img/iphone-hand-mobile@2x.png'), url('../img/background-mobile@2x.jpg');
-  }
-  @media screen and (min-width:320px) and (min-resolution: 3dppx) {
-    background-image: url('../img/iphone-hand-mobile@3x.png'), url('../img/background-mobile@3x.jpg');
-  }
-  @media screen and (min-width:700px){
-    background-image: url('../img/iphone-hand-tablet@1x.png'), url('../img/background-tablet@1x.jpg');
-    background-size: cover, 100% 520px;
-  }
-  @media screen and (min-width:700px) and (min-resolution: 1.5dppx) {
-    background-image: url('../img/iphone-hand-tablet@2x.png'), url('../img/background-tablet@2x.jpg');
-  }
-  @media screen and (min-width:1200px){
-    background-image: url('../img/iphone-hand-desktop@1x.png'), url('../img/background-fullsize.jpg');
-    background-size: cover, 100% 750px;
-  }
-  @media screen and (min-width:1200px) and (min-resolution: 1.5dppx) {
-    background-image: url('../img/iphone-hand-desktop@2x.png'), url('../img/background-fullsize.jpg');
-  }
+  padding-top:35px;
+  padding-bottom:55px;
 
+  &--index{
+    padding-top:25px;
+    padding-bottom:0;
+
+    background-image: url('../img/iphone-hand-mobile.png');
+    background-size: 258px auto; /* 286*/
+    background-position: 0 107px;
+    background-repeat: no-repeat;
+
+    @media screen and (min-width:320px) and (min-resolution: 1.5dppx) {
+      background-image: url('../img/iphone-hand-mobile@2x.png');
+    }
+    @media screen and (min-width:320px) and (min-resolution: 3dppx) {
+      background-image: url('../img/iphone-hand-mobile@3x.png');
+    }
+    @media screen and (min-width:700px){
+      background-image: url('../img/iphone-hand-tablet@1x.png');
+      background-size: 700px auto;
+      background-position: 100% 74px;
+    }
+    @media screen and (min-width:700px) and (min-resolution: 1.5dppx) {
+      background-image: url('../img/iphone-hand-tablet@2x.png');
+    }
+    @media screen and (min-width:1200px){
+      background-image: url('../img/iphone-hand-desktop@1x.png');
+      background-size: 1050px auto;
+      background-position: 100% 100px;
+    }
+    @media screen and (min-width:1200px) and (min-resolution: 1.5dppx) {
+      background-image: url('../img/iphone-hand-desktop@2x.png');
+      background-size: 1050px auto;
+    }
+  }
   &__headline{
     @include headlinetext;
 
     color:$white;
 
-    margin:0 auto 320px; /* 35px */
+    margin:0 auto; /* 35px */
     width:88%;
+  }
+  &__headline--index{
+    margin-bottom:310px; /* 320px */
   }
   &__download{
     width:100%;
@@ -57,12 +68,15 @@
     color:$white;
 
     display:block;
-    width:99%;
+    // width:99%;
     padding-top:15px;
     padding-bottom:15px;
     margin:0 auto 25px;
     border:3px solid white;
     border-radius:25px;
+    @media screen and (min-width:700px){
+      margin-bottom:45px;
+    }
   }
   &__applications{
     display:block;
@@ -72,17 +86,20 @@
 
     text-align:center;
 
+    @media screen and (min-width:700px){
+      margin-bottom:40px;
+    }
     // background-color:$introdark;
   }
   &__application{
     display:inline-block;
     vertical-align:top;
     width:45px;
-    height:60px;
+    height:57px;
     margin-right:35px;
     // margin-bottom:30px;
 
-    background-size:45px 60px;
+    background-size:45px 57px;
     background-position:0 0;
     background-repeat:no-repeat;
   }
@@ -111,7 +128,7 @@
 .information{
   width:100%;
   background-color:$lightbg;
-  background-image:url('');
+  background-image:url(''); /* !!!!!!!!!!!!!! */
   background-size: 0 0;
   background-position:0 0;
   background-repeat:no-repeat;
@@ -121,6 +138,9 @@
   &__wrapper{
     width:88%;
     margin:0 auto;
+
+    display:flex;
+    flex-direction:column;
   }
   &__headline{
     @include headlinetext;
@@ -129,9 +149,23 @@
     margin-top:0;
     margin-bottom:45px;
 
+    order:1;
+    .br-separator--inline{
+      display:none;
+      @media screen and (min-width:700px){
+        display:inline;
+      }
+    }
   }
-  &__img{
+  &__images{
+    width:100%;
     display:block;
+
+    order:3;
+  }
+  &__images-item{
+    display:none;
+
     margin:0 auto;
     width:160px;
     height:280px;
@@ -139,7 +173,9 @@
     text-indent: 100%;
     white-space: nowrap;
     overflow: hidden;
-
+  }
+  &__images-item--3{
+    display:block;
     // background-image: url('../img/iphone-screen-mobile-3@1x.png'), url('../img/iphone-case-mobile@1x.png');
     // background-size: 142px 251px, 160px 280px;
     // background-position:0 0, 0 0;
@@ -148,11 +184,17 @@
     background-position: 10px 34px, 0 0;
     background-repeat: no-repeat, no-repeat;
   }
+  &__text{
+    order:2;
+  }
 }
 .information-item{
-  &__img{
-    display:none;
-  }
+  // &__img{
+  //   display:none;
+  // }
+  // &__img--3{
+
+  // }
   &__subheadline{
     font-size:$subheadlinetextsize;
     line-height:1.333;
@@ -170,6 +212,21 @@
     margin-top:0;
     margin-bottom:40px;
   }
+  // &:last-child{
+  //   display:flex;
+  //   flex-direction:column;
+    // align-items:top;
+    // justify-content: space-between;
+    // .information-item__img{
+    //   order:3;
+    // }
+    // .information-item__subheadline{
+    //   order:1;
+    // }
+    // .information-item__paragraph{
+    //   order:2;
+    // }
+  // }
 }
 .effect{
   display:none;
@@ -193,6 +250,38 @@
   }
   &__review-subheadline{
     display:none;
+  }
+  &__review-quote{
+    position:relative;
+  }
+  &__review-nav-arrow{
+    display:none;
+    position:absolute;
+
+    width:20px;
+    height:40px;
+
+    margin-top:-20px;
+
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+
+    cursor:pointer;
+
+    background-size: 20px 40px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+  &__review-nav-arrow--left{
+    background-image:url('../img/review-arrow-left.svg');
+    top:50%;
+    left:0;
+  }
+  &__review-nav-arrow--right{
+    background-image:url('../img/review-arrow-right.svg');
+    top:50%;
+    right:0;
   }
   &__review-paragraph{
     font-size:$basetextsize;
@@ -289,20 +378,45 @@
   width:840px;
   margin:0 auto; /* ???? */
 
+  border-collapse:collapse;
+
   &__head{
   }
   &__headcell{
-    background-color:$dark;
-    width:33%;
+    // background-color:$dark;
+    // width:33%;
+    width:280px;
     padding-top:25px;
 
-    border-left:2px solid #e5e5e5; /* !!!!!!!!!! */
+    // border-left:2px solid #e5e5e5;
+    // border-right:2px solid #e5e5e5;
+    // border-radius:2px;
+
   }
   &__headcell:nth-child(1){
     display:none;
+    border-right:2px solid $dark;
+  }
+  &__headcell:nth-child(2){
+    background-color:$dark;
+    border-left:2px solid $dark;
+    border-right:2px solid #e5e5e5;
+    border-top:2px solid $dark;
+    border-bottom:2px solid $dark;
   }
   &__headcell:nth-child(3){
-    // display:none;
+    background-color:$dark;
+    border-left:2px solid #e5e5e5;
+    border-right:2px solid #e5e5e5;
+    border-top:2px solid $dark;
+    border-bottom:2px solid $dark;
+  }
+  &__headcell:nth-child(4){
+    background-color:$dark;
+    border-left:2px solid #e5e5e5;
+    border-right:2px solid $dark;
+    border-top:2px solid $dark;
+    border-bottom:2px solid $dark;
   }
   &__headcell-apptype{
     font-size:$subheadlinetextsize;
@@ -326,7 +440,7 @@
     margin-bottom:20px;
   }
   &__headcell--hit{
-    background-image:url('');
+    background-image:url(''); /* !!!!!!!!!!!!!!!!!!! */
     background-size:0 0;
     background-position:0 0;
     background-repeat:no-repeat;
@@ -336,14 +450,15 @@
   &__row{
   }
   &__cell{
-    width:30%;
+    // width:33%;
+    width:280px;
     border:2px solid #e5e5e5;
 
     font-size:$basetextsize;
     line-height:1; /*2.143*/
     color:$dark;
     background-color:$white;
-    text-transform:uppercase;
+
 
     background-position:230px center;
     background-repeat:no-repeat;
@@ -351,6 +466,9 @@
     padding-top:20px;
     padding-bottom:25px;
     padding-left:3%;
+  }
+  &__cell:not(:nth-child(1)){
+    text-transform:uppercase;
   }
   &__cell:nth-child(1){
     display:none;
@@ -371,10 +489,57 @@
 }
 
 .contacts{
-  width:100%;
-  margin-bottom:40px;
+  width:88%;
+  margin:0 auto 40px;
   padding-top:95px;
 
+  &__item{
+    width:100%;
+    display:block;
+  }
+  @media screen and (min-width:700px){
+    &__item{
+      width:48%;
+    }
+    &__item:nth-child(1){
+      // width:48%;
+      float:left;
+      margin-right:4%;
+    }
+    &__item:nth-child(2){
+      // width:48%;
+      float:right;
+    }
+    &__item:nth-child(3){
+      // width:48%;
+      // float:left;
+      margin:0 auto;
+    }
+  }
+  @media screen and (min-width:1200px){
+    &__wrapper{
+      display:flex;
+      flex-direction: row;
+      align-items:top;
+      justify-content: space-between;
+    }
+    &__item{
+      width:30%;
+      float:none;
+      // margin:0;
+    }
+    &__item:nth-child(1){
+      order:1;
+      margin-right:0;
+    }
+    &__item:nth-child(2){
+      order:3;
+    }
+    &__item:nth-child(3){
+      order:2;
+      margin:0;
+    }
+  }
   &__headline{
     @include headlinetext;
 
@@ -414,22 +579,28 @@
     background-repeat:no-repeat;
   }
 .indexpage .footer{
-  display:none;
+  // display:none;
 }
 
 @media screen and (min-width: 700px){
   .intro{
-    padding-top:100px;
+    padding-top:80px;
+    padding-bottom:70px;
+
+    &--index{
+      padding-top:100px;
+    }
     // margin-bottom:520px;
-
     &__headline{
-      width:48%;
-      margin-left:6%;
-
       font-size:40px;
       line-height:1.2;
 
-      margin-bottom:35px;
+      width:70%;
+    }
+    &__headline--index{
+      width:34%; /* 48 */
+      margin-left:13%;
+      margin-bottom:30px;
     }
     &__download{
       width:48%;
@@ -438,32 +609,52 @@
 
       background:none;
     }
+    &__download-wrapper{
+      width:100%;
+    }
     &__paragraph{
       font-size:18px;
       line-height:24px;
     }
   }
   .information{
+    &__wrapper{
+      display:block;
+    }
     &__headline{
       font-size:40px;
       line-height:1.2;
     }
-    &__text{
-      width:50%;
-      float:right;
-      padding-top:75px;
+    &__images{
+      // width:100%;
+      // display:block;
     }
-    &__img{
+    &__images-item{
+      // display:none;
+    }
+    &__images-item--3{
+      //   display:none;
       margin-right:7%;
       width:43%; /* 270px */
       // height:480px;
       // background-image:url('http://placehold.it/270x480');
       float:left;
     }
+    &__text{
+      width:50%;
+      float:right;
+      // padding-top:75px;
+    }
+    // &__img{
+
+    // }
   }
   .information-item{
-    // &__img{
-    //   display:none;
+    // &:last-child{
+    //   display:block;
+    // }
+    // &__img--3{
+
     // }
     &__paragraph{
       margin-bottom:45px;
@@ -538,11 +729,14 @@
 
       order:3;
     }
+    &__review-quote{
+      order:1;
+    }
     &__review-paragraph{
       font-size:18px;
       line-height:30px;
       margin-bottom: 45px;
-      order:1;
+      // order:1;
     }
   }
   .price-table{
@@ -550,10 +744,10 @@
     margin:0 auto;
 
     &__headcell{
-      width:24%;
+      width:25%;
     }
     &__headcell:nth-child(1){
-      display:table-cell; /* block ??? */
+      display:table-cell;
     }
     &__headcell-apptype{
       font-size:16px;
@@ -562,7 +756,7 @@
       font-size:18px;
     }
     &__cell{
-      width:24%;
+      width:25%;
     }
     &__cell:nth-child(1){
       display:table-cell;
@@ -576,7 +770,7 @@
     }
   }
   .contacts{
-    width:88%;
+    // width:88%;
     margin:0 auto;
     padding-top:125px;
 
@@ -595,25 +789,35 @@
     }
   }
   .map{
-      width:100%;
-      height:380px;
-      background-image:url('http://placehold.it/700x380');
-      background-size: 100% 380px;
-      background-position:0 0;
-      background-repeat:no-repeat;
-    }
+    width:100%;
+    height:380px;
+    background-image:url('http://placehold.it/700x380');
+    background-size: 100% 380px;
+    background-position:0 0;
+    background-repeat:no-repeat;
+  }
   .indexpage .footer{
-    display:block;
+    // display:block;
   }
 }
 @media screen and (min-width: 1200px){
   .intro{
-    padding-top:120px;
+    padding-top:70px;
+    padding-bottom:100px;
+
+    &--index{
+      padding-top:100px;
+      padding-bottom:75px;
+    }
 
     &__headline{
       font-size:50px;
+      line-height:1.1;
+    }
+    &__headline--index{
       width:25%;
       margin-left:10%;
+      margin-bottom:45px;
     }
     &__download{
       width:25%;
@@ -624,7 +828,10 @@
     }
     &__applink{
       font-size:21px;
-      margin-bottom:65px;
+      margin-bottom:60px;
+    }
+    &__applications{
+      margin-bottom:50px;
     }
   }
   .information{
@@ -634,55 +841,72 @@
     &__headline{
       font-size:50px;
     }
-    &__img{
-      display:none;
+    &__images{
+      display:flex;
+      flex-direction:row;
+      align-items:top;
+      justify-content: space-between;
     }
-  }
-  .information__text{
-    width:100%;
-
-    display:flex;
-    flex-direction:row;
-    align-items:top;
-    justify-content: space-between;
-  }
-  .information-item{
-    width:32%;
-
-    &__img{
+    &__images-item{
       display:block;
+
+      // margin:0 auto;
+      // width:160px;
+      // height:280px;
       margin:0 auto 60px;
       // width:60%; /* больше !!! 250 290 */
       // height:auto;
       width:290px;
       height:300px;
 
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-
+      // text-indent: 100%;
+      // white-space: nowrap;
+      // overflow: hidden;
       background-size: 290px 300px;
       background-position: 0 0;
       background-repeat: no-repeat;
     }
-    &__img--1{
+    &__images-item--1{
       background-image: url('../img/iphone-screen-desktop-1@1x.png');
       @media screen and (min-resolution: 1.5dppx) {
         background-image: url('../img/iphone-screen-desktop-1@2x.png');
       }
     }
-    &__img--2{
+    &__images-item--2{
       background-image: url('../img/iphone-screen-desktop-2@1x.png');
       @media screen and (min-resolution: 1.5dppx) {
         background-image: url('../img/iphone-screen-desktop-2@2x.png');
       }
     }
-    &__img--3{
+    &__images-item--3{
       background-image: url('../img/iphone-screen-desktop-3@1x.png');
       @media screen and (min-resolution: 1.5dppx) {
         background-image: url('../img/iphone-screen-desktop-3@2x.png');
       }
     }
+    &__text{
+      width:100%;
+
+      display:flex;
+      flex-direction:row;
+      align-items:top;
+      justify-content: space-between;
+    }
+  }
+
+  .information-item{
+    width:32%;
+
+
+    // &__img--1{
+
+    // }
+    // &__img--2{
+
+    // }
+    // &__img--3{
+
+    // }
     &__subheadline{
       font-size:30px;
       line-height:1;
@@ -729,10 +953,10 @@
     background-repeat:no-repeat;
 
     &__review{
-      background-image:url('../img/review-arrow-left.svg'), url('../img/review-arrow-right.svg');
-      background-size: 20px 40px, 20px 40px;
-      background-position:center 0 0, 100px 100px;
-      background-repeat:no-repeat, no-repeat;
+
+    }
+    &__review-nav-arrow{
+      display:block;
     }
     &__review-paragraph{
       width:82%;
@@ -740,6 +964,8 @@
     }
   }
   .price-table{
+    width:78%;
+
     &__headcell-apptype{
       font-size:18px;
       line-height:1;
@@ -754,6 +980,7 @@
     }
   }
   .contacts{
+    width:78%;
     padding-top:170px;
 
     &__headline{
@@ -777,6 +1004,6 @@
     background-repeat:no-repeat;
   }
   .indexpage .footer{
-    display:block;
+    // display:block;
   }
 }

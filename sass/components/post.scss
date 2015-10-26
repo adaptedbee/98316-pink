@@ -134,7 +134,8 @@
     float:right;
   }
   &__navigation-link--back{
-    width:99%; /*276 */
+    width:100%; /*276 */
+    box-sizing:border-box;
     margin:20px auto 0;
 
     float:right;
