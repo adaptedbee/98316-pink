@@ -31,6 +31,10 @@ html, body{
 	overflow: hidden;
 
 	// text-decoration:none;
+	@media screen and (min-width:700px){
+		width:150px;
+		height:40px;
+	}
 
 	&--header{
 		float:left;
@@ -39,14 +43,30 @@ html, body{
 		background-size:75px 25px;
 		background-position:0 0;
 		background-repeat:no-repeat;
+
+		@media screen and (min-width:700px){
+			background-image:url('../img/logotype-white-tablet.svg');
+			background-size:150px 40px;
+			background-position:0 0;
+			background-repeat:no-repeat;
+		}
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-white-desktop.svg');
+		}
 	}
-	&--black{
+	&--footer{
 		width:150px;
 		height:40px;
 		background-image:url('../img/logotype-blue-tablet.svg');
 		background-size:150px 40px;
 
 		margin:0 auto 40px;
+		@media screen and (min-width:700px){
+			margin: 0 0 40px;
+		}
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-blue-desktop.svg');
+		}
 	}
 }
 
@@ -133,22 +153,8 @@ html, body{
 	}
 	@media screen and (min-width:1200px){
 		background-image: url('../img/background-fullsize.jpg');
-		background-size: 1200px auto; /*750*/
+		background-size: 1200px auto;
 	}
-
-	// &__wrapper{
-	// 	display:block;
-	// 	width:100%;
-
-	// 	padding-top:35px;
-	// 	padding-bottom:45px;
-	// }
-	// &__headline{
-	// 	@include headlinetext;
-	// 	color:$white;
-	// 	width:88%;
-	// 	margin:0 auto 0;
-	// }
 }
 .footer{
 	&--indexpage{
@@ -227,25 +233,6 @@ html, body{
 	}
 }
 @media screen and (min-width:700px){
-	.logo-link{
-		width:150px;
-		height:40px;
-
-		background-image:url('../img/logotype-white-tablet.svg');
-		background-size:150px 40px;
-		background-position:0 0;
-		background-repeat:no-repeat;
-
-		&--black{ /* ПОВТОР !!!!!!!! */
-			width:150px;
-			height:40px;
-			background-image:url('../img/logotype-blue-tablet.svg');
-			background-size:150px 40px;
-
-			float:none;
-			margin:0 auto 40px;
-		}
-	}
 	.main-nav{
 		&__toggle{
 			margin-top:15px;
@@ -274,11 +261,6 @@ html, body{
 		flex-direction:row;
 		justify-content:space-between;
 		align-items:center;
-
-		.logo{
-			margin-left:0;
-			margin-right:0;
-		}
 	}
 	.social-icons{
 		margin-left:0;
@@ -291,22 +273,10 @@ html, body{
 }
 @media screen and (min-width:1200px){
 	.logo-link{
-		// width:150px;
-		// height:40px;
-
 		background-image:url('../img/logotype-white-desktop.svg');
-		// background-size:150px 40px;
-		// background-position:0 0;
-		// background-repeat:no-repeat;
 
 		&--black{
-			// width:150px;
-			// height:40px;
 			background-image:url('../img/logotype-blue-desktop.svg');
-			// background-size:150px 40px;
-
-			// float:none;
-			// margin:0 auto 40px;
 		}
 	}
 	.top-menu{
