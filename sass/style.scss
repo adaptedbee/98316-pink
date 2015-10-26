@@ -213,7 +213,9 @@ html, body{
 		font-size:14px;
 		line-height:18px;
 		color:$dark;
-
+		@media screen and (min-width:1200px){
+			font-size:18px;
+		}
 	}
 	&__academylogo{
 		display:inline-block;
@@ -222,14 +224,20 @@ html, body{
 		width:27px;
 		height:34px;
 
-		text-indent: 100%;
-		white-space: nowrap;
-		overflow: hidden;
+		// font-size:14px;
+		// line-height:18px;
 
-		background-image:url('../img/htmlacademy.svg');
-		background-size:27px 34px;
-		background-position:0 0;
-		background-repeat:no-repeat;
+		// text-indent: 100%;
+		// white-space: nowrap;
+		// overflow: hidden;
+
+		// background-image:url('../img/htmlacademy.svg');
+		// background-size:27px 34px;
+		// background-position:0 0;
+		// background-repeat:no-repeat;
+	}
+	&__academylogo-svg{
+		fill:red;
 	}
 }
 @media screen and (min-width:700px){
