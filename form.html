@@ -99,11 +99,13 @@
 						<div class="storyform__input-wrapper storyform__input-wrapper--companions">
 							<div class="storyform__pm-number-wrapper" id="companions">
 								<div class="storyform__pm-number-button storyform__pm-number-button--minus" style="cursor:pointer;">—</div>
-								<input class="storyform__pm-number storyform__pm-number--companions" type="text" name="companions" value="1 чел">
+								<input class="storyform__pm-number storyform__pm-number--companions" type="text" name="companions" value="0 чел">
 								<div class="storyform__pm-number-button storyform__pm-number-button--plus" style="cursor:pointer;">+</div>
 							</div>
 						</div>
-						<div class="companion-table clearfix">
+						<div class="companions">
+						</div>
+						<!-- <div class="companion-table clearfix">
 							<div class="companion-table__name-wrapper clearfix">
 								<div class="companion-table__id">
 									<div class="companion-table__label companion-table__label--id">№</div>
@@ -115,7 +117,7 @@
 								</div>
 							</div>
 							<div class="companion-table__delete-wrapper">
-								<div>Удалить</div>
+								<a class="companion-table__delete" href="#">Удалить</a>
 							</div>
 							<div class="companion-table__nickname-wrapper clearfix">
 								<div class="companion-table__nickname">
@@ -123,8 +125,8 @@
 									<div class="companion-table__input"><input type="text" name="companionnickname1" id="companionnickname1" placeholder="Ну как же без этого!"></div>
 								</div>
 							</div>
-						</div>
-						<div class="companion-table clearfix">
+						</div> -->
+						<!-- <div class="companion-table clearfix">
 							<div class="companion-table__name-wrapper clearfix">
 								<div class="companion-table__id">
 									<div class="companion-table__label companion-table__label--id">№</div>
@@ -136,7 +138,7 @@
 								</div>
 							</div>
 							<div class="companion-table__delete-wrapper">
-								<div>Удалить</div>
+								<a class="companion-table__delete" href="#">Удалить</a>
 							</div>
 							<div class="companion-table__nickname-wrapper clearfix">
 								<div class="companion-table__nickname">
@@ -144,7 +146,7 @@
 									<div class="companion-table__input"><input type="text" name="companionnickname2" id="companionnickname2" placeholder="Ну как же без этого!"></div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--achievements">
@@ -199,49 +201,20 @@
 				<div class="storyform__fields storyform__fields--photos clearfix">
 					<h3 class="storyform__headline">Ваши фотографии из поездки *</h3>
 					<div class="storyform__fields-wrapper">
-						<input class="storyform__uploadbutton" type="file" name="img" accept="image/jpeg,image/png,image/gif">Загрузить фото</a>
+						<input class="storyform__uploadbutton" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>Загрузить фото</a>
 						<hr>
 						<div class="photo-previews">
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-1.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-2.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-3.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-4.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-5.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-6.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-7.JPG</figcaption>
-							</figure>
-							<figure class="photo-preview">
-								<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
-								<span class="photo-preview__close">&times;</span>
-								<figcaption class="photo-preview__filename">IMG-8.JPG</figcaption>
-							</figure>
+							<ul class="photo-previews__list">
+								<!-- <li class="photo-previews__item">
+									<figure class="photo-preview">
+										<div class="photo-preview__image-wrap">
+											<img class="photo-preview__image" src="http://placehold.it/68x68" width="68" height="68" alt="">
+										</div>
+										<a class="photo-preview__close" href="#" title="Удалить">&times;</a>
+										<figcaption class="photo-preview__filename">IMG-1.JPG</figcaption>
+									</figure>
+								</li> -->
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -251,7 +224,39 @@
 				</div>
 			</form>
 		</div>
-
+		<script id="companion-template" type="text/html">
+			<div class="companion-table clearfix">
+				<div class="companion-table__name-wrapper clearfix">
+					<div class="companion-table__id">
+						<div class="companion-table__label companion-table__label--id">№</div>
+						<div class="companion-table__input companion-table__input--id">{{id}}</div>
+					</div>
+					<div class="companion-table__name">
+						<div class="companion-table__label companion-table__label--name"><label for="companionname{{id}}">Имя: *</label></div>
+						<div class="companion-table__input companion-table__input--name"><input type="text" name="companionname{{id}}" id="companionname{{id}}" placeholder="Введите ваше имя" required></div>
+					</div>
+				</div>
+				<div class="companion-table__delete-wrapper">
+					<a class="companion-table__delete" href="#">Удалить</a>
+				</div>
+				<div class="companion-table__nickname-wrapper clearfix">
+					<div class="companion-table__nickname">
+						<div class="companion-table__label companion-table__label--name"><label for="companionnickname{{id}}">Прозвище:</label></div>
+						<div class="companion-table__input"><input type="text" name="companionnickname{{id}}" id="companionnickname{{id}}" placeholder="Ну как же без этого!"></div>
+					</div>
+				</div>
+			</div>
+		</script>
+		<script id="image-template" type="text/html">
+			<figure class="photo-preview">
+				<div class="photo-preview__image-wrap">
+					<img class="photo-preview__image" src="{{image}}" width="68" height="68" alt="{{name}}">
+				</div>
+				<a class="photo-preview__close" href="#" title="Удалить">&times;</a>
+				<figcaption class="photo-preview__filename">{{name}}</figcaption>
+			</figure>
+		</script>
+		<script src="js/lib/mustache.min.js"></script>
 		<script src="js/menu.js"></script>
 		<script src="js/pm-number.js"></script>
 		<script src="js/send.js"></script>
