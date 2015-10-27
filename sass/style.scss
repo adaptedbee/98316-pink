@@ -293,20 +293,17 @@ html, body{
 		width:27px;
 		height:34px;
 
-		// font-size:14px;
-		// line-height:18px;
+		font-size:14px;
+		line-height:18px;
 
-		// text-indent: 100%;
-		// white-space: nowrap;
-		// overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
 
-		// background-image:url('../img/htmlacademy.svg');
-		// background-size:27px 34px;
-		// background-position:0 0;
-		// background-repeat:no-repeat;
-	}
-	&__academylogo-svg{
-		fill:red;
+		background-image:url('../img/htmlacademy--colored.svg');
+		background-size:27px 34px;
+		background-position:0 0;
+		background-repeat:no-repeat;
 	}
 }
 @media screen and (min-width:700px){
