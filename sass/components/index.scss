@@ -291,12 +291,12 @@
     background-repeat: no-repeat;
   }
   &__review-nav-arrow--left{
-    background-image:url('../img/review-arrow-left.svg');
+    background-image:url('../img/review-arrow-left--colored.svg');
     top:50%;
     left:0;
   }
   &__review-nav-arrow--right{
-    background-image:url('../img/review-arrow-right.svg');
+    background-image:url('../img/review-arrow-right--colored.svg');
     top:50%;
     right:0;
   }
@@ -487,12 +487,12 @@
     // display:none;
   }
   &__cell--yes{
-    background-image:url('../img/yes.svg');
+    background-image:url('../img/yes--green.svg');
     background-size: 26px 22px;
     // background-color:green;
   }
   &__cell--no{
-    background-image:url('../img/no.svg');
+    background-image:url('../img/no--red.svg');
     background-size: 26px 26px;
     // background-color:red;
   }
@@ -680,7 +680,7 @@
     width:88%;
     margin:0 auto;
 
-    background-image:url('../img/timer.svg');
+    background-image:url('../img/timer--colored.svg');
     background-size: 260px 300px;
     background-position:0 0;
     background-repeat:no-repeat;
@@ -962,8 +962,8 @@
   .reviews{
     padding-top:200px;
 
-    background-image:url('../img/quotes.svg');
-    background-size: 60px 80px;
+    background-image:url('../img/quotes--colored.svg');
+    background-size: 77px 60px;
     background-position:center 75px;
     background-repeat:no-repeat;
 

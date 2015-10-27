@@ -147,7 +147,7 @@ html, body{
 		float:right;
 		margin-right:6%;
 
-		background-image:url('../img/menu-burger.svg');
+		background-image:url('../img/menu-burger--white.svg');
 
 		@media screen and (min-width:700px){
 			margin-top:15px;
@@ -157,7 +157,10 @@ html, body{
 		}
 	}
 	&__toggle--close{
-		background-image:url('../img/menu-cross.svg');
+		width:25px;
+		background-size:25px 25px;
+
+		background-image:url('../img/menu-cross--white.svg');
 	}
 	// &__toggle--burger{
 
@@ -217,21 +220,27 @@ html, body{
 		white-space: nowrap;
 		overflow: hidden;
 
-		background-size:50px 50px;
-		background-position:0 0;
+		border:3px solid #e9ebec;
+		border-radius:50%;
+
+
+		background-position:center center;
 		background-repeat:no-repeat;
 	}
 	&__icon:last-child{
 		margin-right:0px;
 	}
 	&__icon--tw{
-		background-image:url('../img/twitter.svg');
+		background-image:url('../img/twitter--colored.svg');
+		background-size:17px 14px;
 	}
 	&__icon--fb{
-		background-image:url('../img/facebook.svg');
+		background-image:url('../img/facebook--colored.svg');
+		background-size:9px 19px;
 	}
 	&__icon--yt{
-		background-image:url('../img/youtube.svg');
+		background-image:url('../img/youtube--colored.svg');
+		background-size:14px 13px;
 	}
 }
 .copyright{
