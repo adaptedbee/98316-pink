@@ -137,6 +137,7 @@
 
   &__wrapper{
     width:88%;
+    max-width:1200px;
     margin:0 auto;
 
     display:flex;
@@ -386,13 +387,14 @@
 }
 
 .price{
-  // width:100%;
+  width:100%;
   background-color:$lightbg;
 }
 .price-table{
 
   // overflow:hidden;
   width:840px;
+
   margin:0 auto; /* ???? */
 
   border-collapse:collapse;
@@ -677,16 +679,19 @@
   .effect{
     display:block;
 
-    width:88%;
+
     margin:0 auto;
 
     background-image:url('../img/timer--colored.svg');
     background-size: 260px 300px;
-    background-position:0 0;
+    background-position:6% 0;
     background-repeat:no-repeat;
 
     &__wrapper{ /* ??? */
       width:48%;
+      //width:88%;
+      margin-right:6%;
+      max-width:1200px;
       float:right;
       padding-top:40px;
       padding-bottom:55px;
@@ -935,17 +940,18 @@
     }
   }
   .effect{
-    width:80%;
+    //width:80%;
 
-    // background-image:url('http://placehold.it/300x350');
+    background-color:#f2f2f2;
     background-size: 300px 350px;
-
-    // background-image:url('../img/timer.svg');
+    background-position:10% 0;
+    background-image:url('../img/timer--colored-desktop.svg');
     // background-size: 260px 300px;
     // background-position:0 0;
     // background-repeat:no-repeat;
     &__wrapper{
-      width:60%;
+      width:48%;
+      margin:0 10% 0 42%;
     }
     &__headline{
 
