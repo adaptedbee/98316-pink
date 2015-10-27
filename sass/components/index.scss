@@ -30,7 +30,7 @@
     @media screen and (min-width:1200px){
       background-image: url('../img/iphone-hand-desktop@1x.png');
       background-size: 1050px auto;
-      background-position: 100% 100px;
+      background-position: 100% 60px;
     }
     @media screen and (min-width:1200px) and (min-resolution: 1.5dppx) {
       background-image: url('../img/iphone-hand-desktop@2x.png');
@@ -146,7 +146,7 @@
     @include headlinetext;
 
     color:$dark;
-    margin-top:0;
+    margin-top:40px;
     margin-bottom:45px;
 
     order:1;
@@ -392,6 +392,8 @@
   background-size: 100% auto;
   background-position:0 0;
   background-repeat:no-repeat;
+
+  padding-top:100px;
 }
 .price-table{
 
@@ -656,9 +658,9 @@
     &__images-item--3{
       //   display:none;
       // margin-right:7%;
-      margin-right:40px;
+      margin-right:30px;
       // width:43%;
-      width:270px;
+      width:260px;
       height:480px;
       // height:auto; /* 270px */
       // height:480px;
@@ -693,8 +695,10 @@
 
     background-image:url('../img/timer--colored.svg');
     background-size: 260px 300px;
-    background-position:6% 0;
+    background-position:6% 60px;
     background-repeat:no-repeat;
+
+
 
     &__wrapper{ /* ??? */
       width:48%;
@@ -702,8 +706,8 @@
       margin-right:6%;
       max-width:1200px;
       float:right;
-      padding-top:40px;
-      padding-bottom:55px;
+      padding-top:90px;
+      padding-bottom:100px; /* 60px */
     }
     &__headline{
       font-size:30px;
@@ -766,6 +770,9 @@
       margin-bottom: 45px;
       // order:1;
     }
+  }
+  .price{
+    padding-bottom:70px;
   }
   .price-table{
     width:88%;

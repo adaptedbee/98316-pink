@@ -34,13 +34,14 @@
   }
   &__fields--app{
     background-color: #f2f2f2;
+    padding-bottom:20px;
   }
   &__fields--time{
 
   }
   &__fields--companions{
     background-color: #f2f2f2;
-
+    padding-bottom:20px;
   }
   &__input-wrapper--companions{
     border-bottom:2px solid #e5e5e5;
@@ -50,6 +51,7 @@
   }
   &__fields--photos{
     background-color: #f2f2f2;
+    padding-top:20px;
   }
   &__input-wrapper{
     @include formcenterblock;
@@ -112,7 +114,7 @@
     border:2px solid #e5e5e5;
     border-radius:1px;
 
-    padding:0 0 0 7%;
+    padding:15px 0 15px 7%;
     width:93%;
     margin-bottom:15px;
   }
@@ -180,7 +182,7 @@
     }
   }
   &__pm-number--time{
-
+    margin-bottom:15px;
   }
   &__pm-number--companions{
     @media screen and (min-width:700px){
@@ -557,7 +559,7 @@
     &__fields-wrapper--time{
       display:flex;
       flex-direction: row;
-      align-items:center;
+      align-items:top;
       justify-content: space-between;
     }
     &__input-wrapper--time{
