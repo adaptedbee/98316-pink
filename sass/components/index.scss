@@ -455,10 +455,16 @@
     margin-bottom:20px;
   }
   &__headcell--hit{
-    background-image:url(''); /* !!!!!!!!!!!!!!!!!!! */
-    background-size:0 0;
+    background-image:url('../img/icon-hit.png');
+    background-size:75px 75px;
     background-position:0 0;
     background-repeat:no-repeat;
+    @media screen and (min-width:700px){
+      background-size:60px 60px;
+    }
+    @media screen and (min-width:1200px){
+      background-size:75px 75px;
+    }
   }
   &__body{
   }
