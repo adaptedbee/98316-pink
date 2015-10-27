@@ -233,6 +233,7 @@
     color:$red;
   }
 }
+
 .companion-table{
   // display:table;
   width:100%;
@@ -315,6 +316,24 @@
   &__delete{
     color:$dark;
     text-decoration:none;
+  }
+}
+.achievements{
+  @media screen and (min-width:1200px){
+    //display:flex;
+    //flex-direction: row;
+    //align-items:center;
+    //justify-content: space-between;
+
+    li{
+      display:block;
+      width:30%;
+      margin-right:5%;
+      float:left;
+    }
+    li:nth-child(3n){
+      margin-right:0;
+    }
   }
 }
 .photo-previews{

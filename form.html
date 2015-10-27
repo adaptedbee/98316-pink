@@ -30,7 +30,7 @@
 
 		<div class="form">
 			<p class="form__text">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
-			<form class="storyform" action="" method="post">
+			<form class="storyform" action="/" method="post">
 				<div class="storyform__fields storyform__fields--name">
 					<!-- <div class="storyform__fields-wrapper"> -->
 						<div class="storyform__input-wrapper storyform__input-wrapper--name">
@@ -76,7 +76,7 @@
 					<h3 class="storyform__headline">Когда вы путешествовали? *</h3>
 					<div class="storyform__fields-wrapper storyform__fields-wrapper--time">
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
-							<input class="storyform__dateinput" type="date" name="startdate" id="startdate" placeholder="1 апреля 2015">
+							<input class="storyform__dateinput" type="date" name="startdate" id="startdate"><!--  1 апреля 2015 -->
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="startdate">Дата выезда</label>
 						</div>
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
@@ -88,7 +88,7 @@
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
 						</div>
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
-							<input class="storyform__dateinput" type="date" name="finishdate" id="finishdate" placeholder="1 апреля 2015" disabled>
+							<input class="storyform__dateinput" type="date" name="finishdate" id="finishdate" disabled>
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="finishdate">Дата возвращения</label>
 						</div>
 					</div>
@@ -105,55 +105,13 @@
 						</div>
 						<div class="companions">
 						</div>
-						<!-- <div class="companion-table clearfix">
-							<div class="companion-table__name-wrapper clearfix">
-								<div class="companion-table__id">
-									<div class="companion-table__label companion-table__label--id">№</div>
-									<div class="companion-table__input companion-table__input--id">1</div>
-								</div>
-								<div class="companion-table__name">
-									<div class="companion-table__label companion-table__label--name"><label for="companionname1">Имя: *</label></div>
-									<div class="companion-table__input companion-table__input--name"><input type="text" name="companionname1" id="companionname1" placeholder="Введите ваше имя" required></div>
-								</div>
-							</div>
-							<div class="companion-table__delete-wrapper">
-								<a class="companion-table__delete" href="#">Удалить</a>
-							</div>
-							<div class="companion-table__nickname-wrapper clearfix">
-								<div class="companion-table__nickname">
-									<div class="companion-table__label companion-table__label--name"><label for="companionnickname1">Прозвище:</label></div>
-									<div class="companion-table__input"><input type="text" name="companionnickname1" id="companionnickname1" placeholder="Ну как же без этого!"></div>
-								</div>
-							</div>
-						</div> -->
-						<!-- <div class="companion-table clearfix">
-							<div class="companion-table__name-wrapper clearfix">
-								<div class="companion-table__id">
-									<div class="companion-table__label companion-table__label--id">№</div>
-									<div class="companion-table__input companion-table__input--id">2</div>
-								</div>
-								<div class="companion-table__name">
-									<div class="companion-table__label companion-table__label--name"><label for="companionname2">Имя: *</label></div>
-									<div class="companion-table__input companion-table__input--name"><input type="text" name="companionname2" id="companionname2" placeholder="Введите ваше имя" required></div>
-								</div>
-							</div>
-							<div class="companion-table__delete-wrapper">
-								<a class="companion-table__delete" href="#">Удалить</a>
-							</div>
-							<div class="companion-table__nickname-wrapper clearfix">
-								<div class="companion-table__nickname">
-									<div class="companion-table__label companion-table__label--name"><label for="companionnickname2">Прозвище:</label></div>
-									<div class="companion-table__input"><input type="text" name="companionnickname2" id="companionnickname2" placeholder="Ну как же без этого!"></div>
-								</div>
-							</div>
-						</div> -->
 					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--achievements">
 					<h3 class="storyform__headline">Ваши безбашенные <span><br></span>достижения в путешествии</h3>
 					<div class="storyform__fields-wrapper">
-						<ul class="clearfix">
-							<div class="checkbox-column">
+						<ul class="achievements clearfix">
+							<!-- <div class="checkbox-column"> -->
 								<li>
 									<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 										<input class="storyform__checkbox" type="checkbox" name="selfie" id="selfie" checked>
@@ -166,8 +124,8 @@
 										<label class="storyform__label" for="beach">Обгорел на пляже</label>
 									</div>
 								</li>
-							</div>
-							<div class="checkbox-column">
+						<!-- 	</div>
+							<div class="checkbox-column"> -->
 								<li>
 									<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 										<input class="storyform__checkbox" type="checkbox" name="chuck" id="chuck">
@@ -180,8 +138,8 @@
 										<label class="storyform__label" for="souvenirs">Накупил сувениров</label>
 									</div>
 								</li>
-							</div>
-							<div class="checkbox-column">
+						<!-- 	</div>
+							<div class="checkbox-column"> -->
 								<li>
 									<div class="storyform__input-wrapper storyform__input-wrapper--achievements">
 										<input class="storyform__checkbox" type="checkbox" name="tower" id="tower" checked>
@@ -194,14 +152,14 @@
 										<label class="storyform__label" for="hotel">Разгромил отель</label>
 									</div>
 								</li>
-							</div>
+						<!-- 	</div> -->
 						</ul>
 					</div>
 				</div>
 				<div class="storyform__fields storyform__fields--photos clearfix">
 					<h3 class="storyform__headline">Ваши фотографии из поездки *</h3>
 					<div class="storyform__fields-wrapper">
-						<input class="storyform__uploadbutton" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>Загрузить фото</a>
+						<input class="storyform__uploadbutton" type="file" name="img" accept="image/jpeg,image/png,image/gif" multiple>
 						<hr>
 						<div class="photo-previews">
 							<ul class="photo-previews__list">
