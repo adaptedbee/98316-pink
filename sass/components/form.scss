@@ -161,9 +161,11 @@
     border-top:2px solid #e5e5e5;
     border-bottom:2px solid #e5e5e5;
     border-left:none;
+    border-right:none;
     // border-radius:1px;
 
-    margin-bottom:15px;
+    // margin-bottom:15px;
+    margin:0;
     padding:15px 0 15px 0;
 
     box-sizing:border-box;
@@ -182,7 +184,9 @@
   }
   &__pm-number--companions{
     @media screen and (min-width:700px){
-      border:none;
+      // border:none;
+      border-top:2px solid #f2f2f2;
+      border-bottom:2px solid #f2f2f2;
     }
   }
   &__checkbox{
@@ -277,8 +281,8 @@
     @include formlabel;
     // display:table-cell;
     // width:200px;
-    padding-top:20px;
-    padding-bottom:20px;
+    // padding-top:20px;
+    // padding-bottom:20px;
     // padding-left:20px;
     border:2px solid #e5e5e5;
     border-radius:1px;
@@ -288,7 +292,7 @@
       // width:99%; /* !!!!!!!!!!! */
       width:90%;
       // height:100%;
-      padding:0 0 0 10%;
+      padding:20px 0 20px 10%;
       border:none;
 
       font-size:18px;
@@ -298,6 +302,8 @@
   &__input--id{
     // width:19%;
     padding-left:0;
+    padding-top:20px;
+    padding-bottom:20px;
     text-align:center;
     border-right-width:1px;
     // border-collapse:collapse;
@@ -306,16 +312,44 @@
   &__input--name{
     border-left-width:1px;
   }
+  &__delete{
+    color:$dark;
+    text-decoration:none;
+  }
 }
 .photo-preview{
-  margin: 0 25px 0 0;
+  margin: 0 25px 20px 0;
   float:left;
 
+  position:relative;
+
+  &__image-wrap{
+    margin-bottom:7px;
+  }
   &__image{
 
   }
   &__close{
+    color:$dark;
+    text-decoration:none;
 
+    display:block;
+    width:30px;
+    height:30px;
+    border:2px solid #e5e5e5;
+    border-radius:50%;
+    text-align:center;
+
+    font-size:30px;
+    line-height:1;
+    color:#c1c1c1;
+    background-color:white;
+
+    position:absolute;
+    top:0;
+    left:68px;
+    margin-top:-16px;
+    margin-left:-16px;
   }
   &__filename{
     font-size:12px;

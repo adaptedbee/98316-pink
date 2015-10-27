@@ -183,6 +183,23 @@
     background-size: 142px 251px, 160px 280px;
     background-position: 10px 34px, 0 0;
     background-repeat: no-repeat, no-repeat;
+
+    @media screen and (min-width:320px) and (min-resolution: 1.5dppx) {
+      background-image: url('../img/iphone-screen-mobile-3@2x.png'), url('../img/iphone-case-mobile@2x.png');
+    }
+    @media screen and (min-width:320px) and (min-resolution: 3dppx) {
+      background-image: url('../img/iphone-screen-mobile-3@3x.png'), url('../img/iphone-case-mobile@3x.png');
+    }
+
+    @media screen and (min-width:700px){
+      background-image: url('../img/iphone-screen-tablet-3@1x.png');
+      background-size: 270px 480px;
+      background-position: 0 0;
+      background-repeat: no-repeat;
+    }
+    @media screen and (min-width:700px) and (min-resolution: 1.5dppx){
+      // background-image: url('../img/iphone-screen-tablet-3@2x.png');
+    }
   }
   &__text{
     order:2;
@@ -383,15 +400,8 @@
   &__head{
   }
   &__headcell{
-    // background-color:$dark;
-    // width:33%;
     width:280px;
     padding-top:25px;
-
-    // border-left:2px solid #e5e5e5;
-    // border-right:2px solid #e5e5e5;
-    // border-radius:2px;
-
   }
   &__headcell:nth-child(1){
     display:none;
@@ -634,8 +644,12 @@
     }
     &__images-item--3{
       //   display:none;
-      margin-right:7%;
-      width:43%; /* 270px */
+      // margin-right:7%;
+      margin-right:40px;
+      // width:43%;
+      width:270px;
+      height:480px;
+      // height:auto; /* 270px */
       // height:480px;
       // background-image:url('http://placehold.it/270x480');
       float:left;
@@ -762,7 +776,8 @@
       display:table-cell;
     }
     &__cell:not(:nth-child(1)){
-      text-indent: 100%;
+      // text-indent: 100%;
+      font-size:0;
       white-space: nowrap;
       overflow: hidden;
 
