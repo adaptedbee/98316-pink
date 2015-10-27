@@ -383,15 +383,8 @@
   &__head{
   }
   &__headcell{
-    // background-color:$dark;
-    // width:33%;
     width:280px;
     padding-top:25px;
-
-    // border-left:2px solid #e5e5e5;
-    // border-right:2px solid #e5e5e5;
-    // border-radius:2px;
-
   }
   &__headcell:nth-child(1){
     display:none;
@@ -762,7 +755,8 @@
       display:table-cell;
     }
     &__cell:not(:nth-child(1)){
-      text-indent: 100%;
+      // text-indent: 100%;
+      font-size:0;
       white-space: nowrap;
       overflow: hidden;
 
