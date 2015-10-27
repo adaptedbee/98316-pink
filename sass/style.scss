@@ -1,18 +1,18 @@
 @import "variables.scss";
+@import "normalize.scss";
 @import "components/index.scss";
 @import "components/form.scss";
 @import "components/blog.scss";
 @import "components/post.scss";
 
 html, body{
-	// padding: 0;
-	// margin: 0 auto;
-	// width: 700px;
-	/* max-width: 1200px; */
-
 	font-family: 'Open Sans', Arial, sans-serif;
 	@include basetext;
 	color:black;
+	//max-width:1200px;
+	margin:0 auto;
+}
+.wrapper{
 	max-width:1200px;
 	margin:0 auto;
 }
@@ -80,15 +80,13 @@ html, body{
 
 	// width:88%;
 	width:100%;
-	background-color:transparentize(red,.7);
-	// background-color:transparentize(black,0.7);
+	//background-color:transparentize(red,.7);
+	background-color:transparentize(black,0.7);
 
 	position:relative;
 }
 
 .main-nav{
-	// display:none;
-	// margin-top:45px;
 	background-color:$dark;
 
 	position:absolute;
@@ -103,9 +101,20 @@ html, body{
 		top:110px;
 	}
 
-	&--active{
+	@media screen and (min-width:1200px){
+		position:static;
+		z-index:0;
+		width:45%;
 		display:block;
+
+		float:right;
+		margin-right:10%;
+
+		font-size:0;
+
+		background-color:transparent;
 	}
+
 	&--active{
 		display:block;
 	}
@@ -114,6 +123,9 @@ html, body{
 		padding:0;
 		margin:0;
 		display:block;
+		@media screen and (min-width:1200px){
+			width:100%;
+		}
 	}
 	&__item{
 		font-size:$subheadlinetextsize;
@@ -128,11 +140,22 @@ html, body{
 		display:inline-block;
 
 		border-top:2px solid #000101;
+
+		@media screen and (min-width:1200px){
+			display:inline-block;
+			width:25%;
+			border:none;
+
+			text-align:right;
+		}
 	}
 	&__item a{
 		color:$white;
 		text-decoration:none;
 		text-transform:uppercase;
+		@media screen and (min-width:1200px){
+			text-transform:none;
+		}
 	}
 	&__item--active{
 	}
@@ -147,17 +170,21 @@ html, body{
 		float:right;
 		margin-right:6%;
 
-		background-image:url('../img/menu-burger.svg');
+		background-image:url('../img/menu-burger--white.svg');
 
 		@media screen and (min-width:700px){
 			margin-top:15px;
 		}
 		@media screen and (min-width:1200px){
-			margin-right:10%;
+			//margin-right:10%;
+			display:none;
 		}
 	}
 	&__toggle--close{
-		background-image:url('../img/menu-cross.svg');
+		width:25px;
+		background-size:25px 25px;
+
+		background-image:url('../img/menu-cross--white.svg');
 	}
 	// &__toggle--burger{
 
@@ -167,8 +194,8 @@ html, body{
 /* 460 240 */
 .header{
 	width:100%;
-	// background-color:$introdark;
-	background-color:red;
+	background-color:$introdark;
+	// background-color:red;
 
 	background-image: url('../img/background-mobile@1x.jpg');
 	background-size: 700px auto;
@@ -190,7 +217,7 @@ html, body{
 	}
 	@media screen and (min-width:1200px){
 		background-image: url('../img/background-fullsize.jpg');
-		background-size: 1200px auto;
+		background-size: 100% auto;
 	}
 }
 .footer{
@@ -217,21 +244,27 @@ html, body{
 		white-space: nowrap;
 		overflow: hidden;
 
-		background-size:50px 50px;
-		background-position:0 0;
+		border:3px solid #e9ebec;
+		border-radius:50%;
+
+
+		background-position:center center;
 		background-repeat:no-repeat;
 	}
 	&__icon:last-child{
 		margin-right:0px;
 	}
 	&__icon--tw{
-		background-image:url('../img/twitter.svg');
+		background-image:url('../img/twitter--colored.svg');
+		background-size:17px 14px;
 	}
 	&__icon--fb{
-		background-image:url('../img/facebook.svg');
+		background-image:url('../img/facebook--colored.svg');
+		background-size:9px 19px;
 	}
 	&__icon--yt{
-		background-image:url('../img/youtube.svg');
+		background-image:url('../img/youtube--colored.svg');
+		background-size:14px 13px;
 	}
 }
 .copyright{
@@ -261,20 +294,17 @@ html, body{
 		width:27px;
 		height:34px;
 
-		// font-size:14px;
-		// line-height:18px;
+		font-size:14px;
+		line-height:18px;
 
-		// text-indent: 100%;
-		// white-space: nowrap;
-		// overflow: hidden;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
 
-		// background-image:url('../img/htmlacademy.svg');
-		// background-size:27px 34px;
-		// background-position:0 0;
-		// background-repeat:no-repeat;
-	}
-	&__academylogo-svg{
-		fill:red;
+		background-image:url('../img/htmlacademy--colored.svg');
+		background-size:27px 34px;
+		background-position:0 0;
+		background-repeat:no-repeat;
 	}
 }
 @media screen and (min-width:700px){
@@ -301,7 +331,7 @@ html, body{
 	.footer{
 		width:88%;
 		margin:0 auto;
-
+		padding-top:35px;
 		display:flex;
 		flex-direction:row;
 		justify-content:space-between;
@@ -317,17 +347,9 @@ html, body{
 	}
 }
 @media screen and (min-width:1200px){
-	// .logo-link{
-	// 	background-image:url('../img/logotype-white-desktop.svg');
-
-	// 	&--black{
-	// 		background-image:url('../img/logotype-blue-desktop.svg');
-	// 	}
-	// }
 	.header{
 		&__wrapper{
 			padding-top:75px;
-			// padding-bottom:85px;
 		}
 	}
 	.footer{
