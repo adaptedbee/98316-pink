@@ -128,11 +128,10 @@
 .information{
   width:100%;
   background-color:$lightbg;
-  background-image:url(''); /* !!!!!!!!!!!!!! */
-  background-size: 0 0;
+  background-image:url('../img/triangle-white.svg');
+  background-size: 100% auto;
   background-position:0 0;
   background-repeat:no-repeat;
-
   padding-top:45px;
 
   &__wrapper{
@@ -389,6 +388,10 @@
 .price{
   width:100%;
   background-color:$lightbg;
+  background-image:url('../img/triangle-white.svg');
+  background-size: 100% auto;
+  background-position:0 0;
+  background-repeat:no-repeat;
 }
 .price-table{
 
