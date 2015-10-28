@@ -2,16 +2,37 @@
     var time = document.querySelector(".storyform__pm-number--time");
     var timeminus = document.querySelector("#time>.storyform__pm-number-button--minus");
     var timeplus = document.querySelector("#time>.storyform__pm-number-button--plus");
+    var startdate = document.querySelector("#startdate");
+    var finishdate = document.querySelector("#finishdate");
+    var newdate=moment();
 
     timeminus.addEventListener("click", function() {
       if (Number(time.value) > 0){
         time.value=Number(time.value)-1;
+        newdate = moment(startdate.value);
+        if (newdate.isValid()) {
+          newdate.add(time.value, 'days');
+          finishdate.value = newdate.format('YYYY-MM-DD');
+        }
       }
     });
 
     timeplus.addEventListener("click", function() {
       if (Number(time.value)<365){
         time.value=Number(time.value)+1;
+        newdate = moment(startdate.value);
+        if (newdate.isValid()) {
+          newdate.add(time.value, 'days');
+          finishdate.value = newdate.format('YYYY-MM-DD');
+        }
+      }
+    });
+
+    startdate.addEventListener("change", function() {
+      newdate = moment(startdate.value);
+      if (newdate.isValid()) {
+        newdate.add(time.value, 'days');
+        finishdate.value = newdate.format('YYYY-MM-DD');
       }
     });
 
