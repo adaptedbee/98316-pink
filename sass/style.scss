@@ -229,6 +229,7 @@ html, body{
 	&__item a:hover{
 		color: #d22856;
 		@media screen and (min-width:1200px){
+			color:$white;
 			border-bottom:1px solid white;
 		}
 	}
