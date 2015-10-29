@@ -88,6 +88,26 @@ html, body{
 			background-image:url('../img/logotype-blue-desktop.svg');
 		}
 	}
+	&--footer:hover{
+		background-image:url('../img/logotype-blue-tablet--hover.svg');
+
+		// @media screen and (min-width:700px){
+		// 	background-image:url('../img/logotype-blue-tablet--hover.svg');
+		// }
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-blue-desktop--hover.svg');
+		}
+	}
+	&--footer:focus{
+		background-image:url('../img/logotype-blue-tablet--focus.svg');
+
+		// @media screen and (min-width:700px){
+		// 	background-image:url('../img/logotype-blue-tablet--focus.svg');
+		// }
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-blue-desktop--focus.svg');
+		}
+	}
 }
 
 .top-menu{

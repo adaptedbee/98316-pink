@@ -608,6 +608,12 @@
     border: 3px solid $white;
     border-radius: 50%;
   }
+  &__controls label:hover{
+    background:#7e868f;
+  }
+  &__controls label:focus{
+    background:#e9ebec;
+  }
   &__controls label:last-child{
     margin-right:0;
   }
@@ -624,8 +630,8 @@
   #btn-2:checked ~ &__controls label[for="btn-3"],
   #btn-3:checked ~ &__controls label[for="btn-1"],
   #btn-3:checked ~ &__controls label[for="btn-2"]{
-    background-color: $label-inner;
-    border-color:$white;
+    //background-color: $label-inner;
+    //border-color:$white;
   }
   #btn-1:checked ~ &__review--2,
   #btn-1:checked ~ &__review--3{
