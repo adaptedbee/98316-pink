@@ -131,6 +131,14 @@
       margin-bottom:60px;
     }
   }
+  &__applink:hover{
+    background-color:white;
+    color:#d22856;
+  }
+  &__applink:focus{
+    background-color:white;
+    color:rgba(210,40,85,0.3);
+  }
   &__applications{
     display:block;
     // width:100%;
@@ -921,6 +929,14 @@
     text-decoration:none;
     margin-top:0;
     margin-bottom:25px;
+  }
+  &__link:hover{
+    color:$dark;
+    text-decoration:underline;
+  }
+  &__link:focus{
+    text-decoration:none;
+    opacity:0.3;
   }
 }
 .map{

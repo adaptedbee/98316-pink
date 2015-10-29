@@ -54,6 +54,26 @@ html, body{
 			margin-left:10%;
 		}
 	}
+	&--header:hover{
+		background-image:url('../img/logotype-white-mobile--hover.svg');
+
+		@media screen and (min-width:700px){
+			background-image:url('../img/logotype-white-tablet--hover.svg');
+		}
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-white-desktop--hover.svg');
+		}
+	}
+	&--header:focus{
+		background-image:url('../img/logotype-white-mobile--focus.svg');
+
+		@media screen and (min-width:700px){
+			background-image:url('../img/logotype-white-tablet--focus.svg');
+		}
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-white-desktop--focus.svg');
+		}
+	}
 	&--footer{
 		width:150px;
 		height:40px;
@@ -150,15 +170,27 @@ html, body{
 			text-align:right;
 		}
 	}
+	//&__item:hover{
+		//border-bottom:1px solid white;
+	//}
 	&__item a{
 		color:$white;
 		text-decoration:none;
 		text-transform:uppercase;
+		padding-bottom:5px;
 		@media screen and (min-width:1200px){
 			text-transform:none;
 			font-weight:normal;
+			&:hover{
+				border-bottom:1px solid white;
+			}
+			&:focus{
+				color:rgba(255,255,255,0.3);
+				border:none;
+			}
 		}
 	}
+
 	&__item--active{
 	}
 	&__toggle{
@@ -303,6 +335,13 @@ html, body{
 		background-position:center center;
 		background-repeat:no-repeat;
 	}
+	&__icon:hover{
+		border-color:$dark;
+	}
+	&__icon:focus{
+		//border-color:$dark;
+		opacity:0.3;
+	}
 	&__icon:last-child{
 		margin-right:0px;
 	}
@@ -359,9 +398,15 @@ html, body{
 		white-space: nowrap;
 		overflow: hidden;
 
-		background-image:url('../img/htmlacademy--colored.svg');
+		background-image:url('../img/htmlacademy.svg');
 		background-size:27px 34px;
 		background-position:0 0;
 		background-repeat:no-repeat;
+	}
+	&__academylogo:hover{
+		background-image:url('../img/htmlacademy--hover.svg');
+	}
+	&__academylogo:focus{
+		background-image:url('../img/htmlacademy--focus.svg');
 	}
 }
