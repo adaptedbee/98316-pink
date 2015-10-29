@@ -9,7 +9,6 @@ html, body{
 	font-family: 'Open Sans', Arial, sans-serif;
 	@include basetext;
 	color:black;
-	//max-width:1200px;
 	margin:0 auto;
 }
 .wrapper{
@@ -30,7 +29,6 @@ html, body{
 	white-space: nowrap;
 	overflow: hidden;
 
-	// text-decoration:none;
 	@media screen and (min-width:700px){
 		width:150px;
 		height:40px;
@@ -75,15 +73,15 @@ html, body{
 .top-menu{
 	padding-top:20px;
 	padding-bottom:20px;
-	// padding-left:6%;
-	// padding-right:6%;
-
-	// width:88%;
 	width:100%;
-	//background-color:transparentize(red,.7);
 	background-color:transparentize(black,0.7);
 
 	position:relative;
+
+	@media screen and (min-width:700px){
+		padding-top:27px;
+		padding-bottom:43px;
+	}
 }
 
 .main-nav{
@@ -176,7 +174,6 @@ html, body{
 			margin-top:15px;
 		}
 		@media screen and (min-width:1200px){
-			//margin-right:10%;
 			display:none;
 		}
 	}
@@ -186,12 +183,8 @@ html, body{
 
 		background-image:url('../img/menu-cross--white.svg');
 	}
-	// &__toggle--burger{
-
-	// }
-
 }
-/* 460 240 */
+
 .header{
 	width:100%;
 	background-color:$introdark;
@@ -219,19 +212,40 @@ html, body{
 		background-image: url('../img/background-fullsize.jpg');
 		background-size: 100% auto;
 	}
+	// &__wrapper{
+	// 	@media screen and (min-width:700px){
+	// 		padding-top:80px;
+	// 		padding-bottom:85px;
+	// 	}
+	// }
 }
 .footer{
 	&--indexpage{
 		display:none;
 	}
+	@media screen and (min-width:700px){
+		width:88%;
+		margin:0 auto;
+		padding-top:35px;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		align-items:center;
+	}
+	@media screen and (min-width:1200px){
+		width:78%;
+	}
 }
 .social-icons{
 	display:block;
-	// width:100%;
 	margin:0 auto 40px;
 	font-size:0;
 
 	text-align:center;
+	@media screen and (min-width:700px){
+		margin-left:0;
+		margin-right:0;
+	}
 
 	&__icon{
 		display:inline-block;
@@ -246,7 +260,6 @@ html, body{
 
 		border:3px solid #e9ebec;
 		border-radius:50%;
-
 
 		background-position:center center;
 		background-repeat:no-repeat;
@@ -274,6 +287,11 @@ html, body{
 
 	text-align:center;
 
+	@media screen and (min-width:700px){
+		margin-left:0;
+		margin-right:0;
+	}
+
 	&__text{
 		display:inline-block;
 		vertical-align:middle;
@@ -283,6 +301,7 @@ html, body{
 		font-size:14px;
 		line-height:18px;
 		color:$dark;
+
 		@media screen and (min-width:1200px){
 			font-size:18px;
 		}
@@ -305,54 +324,5 @@ html, body{
 		background-size:27px 34px;
 		background-position:0 0;
 		background-repeat:no-repeat;
-	}
-}
-@media screen and (min-width:700px){
-	// .main-nav{
-	// 	&__toggle{
-	// 		margin-top:15px;
-	// 	}
-	// }
-	.top-menu{
-		padding-top:27px;
-		padding-bottom:43px;
-	}
-	.header{
-		&__wrapper{
-			padding-top:80px;
-			padding-bottom:85px;
-		}
-		&__headline{
-			font-size:50px;
-			line-height:1.2;
-			font-weight:300;
-		}
-	}
-	.footer{
-		width:88%;
-		margin:0 auto;
-		padding-top:35px;
-		display:flex;
-		flex-direction:row;
-		justify-content:space-between;
-		align-items:center;
-	}
-	.social-icons{
-		margin-left:0;
-		margin-right:0;
-	}
-	.copyright{
-		margin-left:0;
-		margin-right:0;
-	}
-}
-@media screen and (min-width:1200px){
-	.header{
-		&__wrapper{
-			padding-top:75px;
-		}
-	}
-	.footer{
-		width:78%; /* 78% */
 	}
 }
