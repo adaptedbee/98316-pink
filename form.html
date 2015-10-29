@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width;initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Конкурс на самое безбашенное путешествие с Пинк</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic">
 		<link rel="stylesheet" href="css/normalize.css">
@@ -81,9 +81,9 @@
 						</div>
 						<div class="storyform__input-wrapper storyform__input-wrapper--time">
 							<div class="storyform__pm-number-wrapper" id="time">
-								<div class="storyform__pm-number-button storyform__pm-number-button--minus" style="cursor:pointer;">—</div>
-								<input class="storyform__pm-number storyform__pm-number--time" type="text" name="duration" id="duration" value="1">
-								<div class="storyform__pm-number-button storyform__pm-number-button--plus" style="cursor:pointer;">+</div>
+								<div class="storyform__pm-number-button storyform__pm-number-button--minus">—</div>
+								<input class="storyform__pm-number storyform__pm-number--time" type="text" name="duration" id="duration" value="0">
+								<div class="storyform__pm-number-button storyform__pm-number-button--plus">+</div>
 							</div>
 							<label class="storyform__highlighted-label storyform__highlighted-label--center" for="duration">Продолжительность</label>
 						</div>
@@ -98,9 +98,9 @@
 					<div class="storyform__fields-wrapper">
 						<div class="storyform__input-wrapper storyform__input-wrapper--companions">
 							<div class="storyform__pm-number-wrapper" id="companions">
-								<div class="storyform__pm-number-button storyform__pm-number-button--minus" style="cursor:pointer;">—</div>
+								<div class="storyform__pm-number-button storyform__pm-number-button--minus">—</div>
 								<input class="storyform__pm-number storyform__pm-number--companions" type="text" name="companions" value="0 чел">
-								<div class="storyform__pm-number-button storyform__pm-number-button--plus" style="cursor:pointer;">+</div>
+								<div class="storyform__pm-number-button storyform__pm-number-button--plus">+</div>
 							</div>
 						</div>
 						<div class="companions">
@@ -215,6 +215,7 @@
 			</figure>
 		</script>
 		<script src="js/lib/mustache.min.js"></script>
+		<script src="js/lib/moment.min.js"></script>
 		<script src="js/menu.js"></script>
 		<script src="js/pm-number.js"></script>
 		<script src="js/send.js"></script>

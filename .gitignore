@@ -1,6 +1,4 @@
-build/
 node_modules/
-bower_components/
 *.log
 Thumbs.db
 .DS_Store
