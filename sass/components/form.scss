@@ -1,6 +1,9 @@
 .form{
   width:100%;
   padding-top:50px;
+  @media screen and (min-width: 700px){
+    padding-top:100px;
+  }
 
   &__text{
     font-size:$basetextsize;
@@ -10,9 +13,21 @@
 
     width:86%;
     margin:0 auto 50px;
+    @media screen and (min-width: 700px){
+      font-size:18px;
+      line-height:30px;
+      width:80%;
+      margin:0 auto 45px;
+    }
+    @media screen and (min-width: 1200px){
+      width:65%;
+    }
 
     span{
       display:none;
+      @media screen and (min-width: 700px){
+        display:inline;
+      }
     }
   }
 }
@@ -23,21 +38,61 @@
     width:100%;
     background-color:$white;
     margin-bottom:20px;
+    @media screen and (min-width: 700px){
+      width:88%;
+      background-color:$white;
+      margin: 0 auto 20px;
+      // margin-bottom:20px;
+      border:2px solid #e5e5e5;
+    }
+    @media screen and (min-width: 1200px){
+      width:78%;
+      background-color:$white;
+      margin: 0 auto 20px;
+      // margin-bottom:20px;
+      border:2px solid #e5e5e5;
+    }
   }
   &__fields-wrapper{
     width:88%;
     margin:0 auto;
+    @media screen and (min-width: 700px){
+      width:80%;
+      // margin:0 auto;
+    }
+    @media screen and (min-width: 1200px){
+      width:88%;
+    }
   }
   &__fields--name{
     width:88%;
     margin:0 auto;
+    @media screen and (min-width: 700px){
+      border:none;
+    }
+    @media screen and (min-width: 1200px){
+      width:78%;
+      border:none;
+
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+    }
   }
   &__fields--app{
     background-color: #f2f2f2;
     padding-bottom:20px;
+    ul{
+      @media screen and (min-width: 1200px){
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+      }
+    }
   }
   &__fields--time{
-
   }
   &__fields--companions{
     background-color: #f2f2f2;
@@ -47,14 +102,35 @@
     border-bottom:2px solid #e5e5e5;
   }
   &__fields--achievements{
-
+    .checkbox-column{
+      @media screen and (min-width: 1200px){
+        width:32%; /*260px*/
+        display:block;
+        margin-right:2%; /*60px*/
+        float:left;
+      }
+    }
+    .checkbox-column:nth-child(3n){
+      @media screen and (min-width: 1200px){
+        margin-right:0;
+      }
+    }
   }
   &__fields--photos{
     background-color: #f2f2f2;
     padding-top:20px;
+    @media screen and (min-width: 700px){
+      margin-bottom:65px;
+    }
   }
   &__input-wrapper{
     @include formcenterblock;
+  }
+  &__input-wrapper--name{
+    @media screen and (min-width: 1200px){
+      width:300px;
+      margin:0;
+    }
   }
   &__highlighted-label{
     @include formheadline;
@@ -63,6 +139,9 @@
   }
   &__highlighted-label--name{
     padding-left:7%;
+    @media screen and (min-width: 700px){
+      padding-left:4%;
+    }
   }
   &__highlighted-label--center{
     text-align:center;
@@ -74,6 +153,49 @@
     line-height:1.667;
     margin-bottom:25px;
     padding:0 0 0 7%;
+    @media screen and (min-width: 700px){
+      width:96%;
+      padding-left:4%;
+    }
+  }
+  &__fields-wrapper--time{
+    @media screen and (min-width: 1200px){
+      display:flex;
+      flex-direction: row;
+      align-items:top;
+      justify-content: space-between;
+    }
+  }
+  &__input-wrapper--time{
+    @media screen and (min-width: 700px){
+      width:48%; /* 240px */
+      float:left;
+    }
+    @media screen and (min-width: 1200px){
+      float:none;
+      margin:0;
+      // display:inline-block;
+      width:240px;
+      // margin-right:45px;
+    }
+  }
+  &__input-wrapper--time:nth-child(1){
+    @media screen and (min-width: 700px){
+      margin-right:4%;
+    }
+    @media screen and (min-width: 1200px){
+      margin-right:0;
+    }
+  }
+  &__input-wrapper--companions{
+    @media screen and (min-width: 700px){
+      width:48%;
+      margin:0 0 15px 0;
+      // float:left;
+    }
+    @media screen and (min-width: 1200px){
+      width:30%;
+    }
   }
   &__headline{
     @include formheadline;
@@ -205,6 +327,17 @@
   &__submit-wrapper{
     width:88%;
     margin:0 auto;
+    @media screen and (min-width:700px){
+      display:flex;
+      flex-direction: row;
+      align-items:center;
+      justify-content: space-between;
+
+      margin-bottom:100px;
+    }
+    @media screen and (min-width: 1200px){
+      width:78%;
+    }
   }
   &__submitbutton{
     width:280px;
@@ -224,6 +357,10 @@
     @include formcenterblock;
 
     margin-bottom:45px;
+    @media screen and (min-width:700px){
+      width:300px;
+      margin:0;
+    }
   }
   &__comment{
     font-size:$basetextsize;
@@ -232,6 +369,9 @@
     color:$dark;
     margin-top:0;
     margin-bottom:60px;
+    @media screen and (min-width:700px){
+      margin:0;
+    }
   }
   &__comment span{
     color:$red;
@@ -242,29 +382,87 @@
   // display:table;
   width:100%;
   margin:0 auto 20px;
+  @media screen and (min-width: 700px){
+    width:100%; /* 380px */
+    margin:0 0 20px 0;
+  }
 
   &__name-wrapper{
     width:100%;
+    @media screen and (min-width: 700px){
+      width:76%;
+      margin-right:8%;
+      float:left;
+    }
+    @media screen and (min-width: 1200px){
+      width:46%;
+      margin-right:2%;
+      float:left;
+    }
   }
   &__nickname-wrapper{
     // width:80%;
     // margin-left:20%;
     width:100%;
+    @media screen and (min-width: 700px){
+      width:76%;
+      margin-right:8%;
+      float:left;
+    }
+    @media screen and (min-width: 1200px){
+      width:36%;
+      margin-right:6%;
+      float:left;
+
+      margin-left:0;
+    }
   }
   &__delete-wrapper{
     display:none;
+    @media screen and (min-width: 700px){
+      display:block;
+      width:16%;
+      float:right;
+      // background-color:red;
+
+      margin-top:78px;
+
+      font-size:14px;
+      line-height:1;
+      text-transform:uppercase;
+      text-align:right;
+    }
+    @media screen and (min-width: 1200px){
+      display:block;
+      width:10%;
+      float:right;
+      // background-color:red;
+    }
   }
   &__id{
     float:left;
     width:20%;
+    @media screen and (min-width: 700px){
+      width:15%;
+      margin-right:5%;
+    }
   }
   &__name{
     float:right;
     width:80%;
+    @media screen and (min-width: 700px){
+      width:80%;
+    }
   }
   &__nickname{
     float:right;
     width:80%;
+    @media screen and (min-width: 700px){
+      width:80%;
+    }
+    @media screen and (min-width: 1200px){
+      width:100%;
+    }
   }
   &__label{
     @include formheadline;
@@ -313,9 +511,15 @@
     border-right-width:1px;
     // border-collapse:collapse;
     background-color:#f2f2f2;
+    @media screen and (min-width: 700px){
+      border-right:2px solid #e5e5e5;
+    }
   }
   &__input--name{
     border-left-width:1px;
+    @media screen and (min-width: 700px){
+      border-left:2px solid #e5e5e5;
+    }
   }
   &__delete{
     color:$dark;
@@ -381,272 +585,5 @@
     font-size:12px;
     line-height:1.5;
     color:$dark;
-  }
-}
-@media screen and (min-width: 700px){
-  .form{
-    padding-top:100px;
-
-    &__text{
-      font-size:18px;
-      line-height:30px;
-      width:80%;
-      margin:0 auto 45px;
-
-      span{
-        display:inline;
-      }
-    }
-  }
-  .storyform{
-    &__fields{
-      width:88%;
-      background-color:$white;
-      margin: 0 auto 20px;
-      // margin-bottom:20px;
-      border:2px solid #e5e5e5;
-    }
-    &__fields--name{
-      border:none;
-    }
-    &__fields-wrapper{
-      width:80%;
-      // margin:0 auto;
-    }
-    &__fields--app{
-      // padding-left:10%;
-      // padding-right:10%;
-    }
-    &__fields--time{
-      // padding-left:10%;
-      // padding-right:10%;
-    }
-    &__fields--companions{
-      // padding-left:10%;
-      // padding-right:10%;
-    }
-    &__fields--achievements{
-      // padding-left:10%;
-      // padding-right:10%;
-    }
-    &__fields--photos{
-      // padding-left:10%;
-      // padding-right:10%;
-      margin-bottom:65px;
-    }
-    &__highlighted-label--name{
-      padding-left:4%;
-    }
-    &__textinput{
-      width:96%;
-      padding-left:4%;
-    }
-    &__input-wrapper--time{
-      width:48%; /* 240px */
-      float:left;
-    }
-    &__input-wrapper--time:nth-child(1){
-      margin-right:4%;
-    }
-    &__input-wrapper--companions{
-      width:48%;
-      margin:0 0 15px 0;
-      // float:left;
-    }
-    &__pm-number{
-      // width:48%;
-      // margin:0 0 15px 0;
-    }
-    &__submitbutton{
-      width:300px;
-      margin:0;
-    }
-    &__comment{
-      margin:0;
-    }
-    &__submit-wrapper{
-      display:flex;
-      flex-direction: row;
-      align-items:center;
-      justify-content: space-between;
-
-      margin-bottom:100px;
-    }
-  }
-  .companion-table{
-    width:100%; /* 380px */
-    margin:0 0 20px 0;
-
-    &__name-wrapper{
-      width:76%;
-      margin-right:8%;
-      float:left;
-    }
-    &__nickname-wrapper{
-      width:76%;
-      margin-right:8%;
-      float:left;
-    }
-    &__delete-wrapper{
-      display:block;
-      width:16%;
-      float:right;
-      // background-color:red;
-
-      margin-top:78px;
-
-      font-size:14px;
-      line-height:1;
-      text-transform:uppercase;
-      text-align:right;
-    }
-    &__id{
-      width:15%;
-      margin-right:5%;
-    }
-    &__input--id{
-      border-right:2px solid #e5e5e5;
-    }
-    &__input--name{
-      border-left:2px solid #e5e5e5;
-    }
-    &__name{
-      width:80%;
-    }
-    &__nickname{
-      width:80%;
-    }
-  }
-}
-@media screen and (min-width: 1200px){
-  .form{
-
-    &__text{
-      width:65%;
-    }
-  }
-  .storyform{
-
-    &__fields{
-      width:78%;
-      background-color:$white;
-      margin: 0 auto 20px;
-      // margin-bottom:20px;
-      border:2px solid #e5e5e5;
-    }
-    &__fields--name{
-      border:none;
-
-      display:flex;
-      flex-direction: row;
-      align-items:center;
-      justify-content: space-between;
-    }
-    &__fields-wrapper{
-      width:88%;
-    }
-    &__input-wrapper--name{
-      width:300px;
-      margin:0;
-    }
-    &__fields--app{
-
-      ul{
-        display:flex;
-        flex-direction: row;
-        align-items:center;
-        justify-content: space-between;
-      }
-    }
-    &__fields-wrapper--time{
-      display:flex;
-      flex-direction: row;
-      align-items:top;
-      justify-content: space-between;
-    }
-    &__input-wrapper--time{
-      float:none;
-      margin:0;
-      // display:inline-block;
-      width:240px;
-      // margin-right:45px;
-    }
-    &__input-wrapper--time:nth-child(1){
-      margin-right:0;
-    }
-    &__input-wrapper--companions{
-      width:30%;
-    }
-    &__fields--companions{
-      // padding-left:5%;
-      // padding-right:5%;
-    }
-    &__fields--achievements{
-      // padding-left:5%;
-      // padding-right:5%;
-
-      ul{
-        // display:flex;
-        // flex-direction: row;
-        // align-items:center;
-        // justify-content: space-between;
-      }
-      // ul>li{
-      .checkbox-column{
-        width:32%; /*260px*/
-        display:block;
-        margin-right:2%; /*60px*/
-        float:left;
-      }
-      // ul>li:nth-child(3n){
-      .checkbox-column:nth-child(3){
-        margin-right:0;
-      }
-    }
-    &__storyform__input-wrapper--achievements{
-
-    }
-    &__submit-wrapper{
-      width:78%;
-    }
-    &__fields--photos{
-      // padding-left:5%;
-      // padding-right:5%;
-      // margin-bottom:65px;
-    }
-  }
-  .companion-table{
-
-    &__name-wrapper{
-      width:46%;
-      margin-right:2%;
-      float:left;
-    }
-    &__nickname-wrapper{
-      width:36%;
-      margin-right:6%;
-      float:left;
-
-      margin-left:0;
-    }
-    &__delete-wrapper{
-      display:block;
-      width:10%;
-      float:right;
-      // background-color:red;
-    }
-    // &__id{
-    //   width:15%;
-    //   margin-right:5%;
-    // }
-    // &__input--id{
-    //   border-right:2px solid #e5e5e5;
-    // }
-    // &__input--name{
-    //   border-left:2px solid #e5e5e5;
-    // }
-    &__nickname{
-      width:100%;
-    }
   }
 }
