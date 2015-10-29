@@ -319,10 +319,33 @@
     margin-right:20px;
   }
   &__uploadbutton{
-    @include formlabel;
-    font-weight:600;
-
+    display:none;
+  }
+  &__uploadbutton-label{
     @include formcenterblock;
+    padding-top:20px;
+    padding-bottom:20px;
+
+    @include formlabel;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-align:center;
+
+
+    //display:block;
+    //width:100%;
+    background-color:white;
+    cursor:pointer;
+    border:2px solid #e5e5e5;
+    margin-bottom:30px;
+    @media screen and (min-width:700px){
+      margin-bottom:40px;
+    }
+    @media screen and (min-width:1200px){
+      background-color:#d22856;
+      border-color:#d22856;
+      color:white;
+    }
   }
   &__submit-wrapper{
     width:88%;
@@ -546,6 +569,7 @@
 }
 .photo-previews{
   min-height:100px;
+  border-top:2px solid #e5e5e5;
 }
 .photo-preview{
   margin: 0 25px 20px 0;
