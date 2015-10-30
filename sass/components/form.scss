@@ -1,858 +1,1085 @@
-.form{
-  width:100%;
-  padding-top:50px;
-  @media screen and (min-width: 700px){
-    padding-top:100px;
-  }
-
-  &__text{
-    font-size:$basetextsize;
-    line-height:2.143;
-    color:$dark;
-    text-align:center;
-
-    width:86%;
-    margin:0 auto 50px;
-    @media screen and (min-width: 700px){
-      font-size:18px;
-      line-height:30px;
-      width:80%;
-      margin:0 auto 45px;
-    }
-    @media screen and (min-width: 1200px){
-      width:65%;
+.form
+{
+    width: 100%;
+    padding-top: 50px;
+    @media screen and (min-width: 700px)
+    {
+        padding-top: 100px;
     }
 
-    span{
-      display:none;
-      @media screen and (min-width: 700px){
-        display:inline;
-      }
+    &__text
+    {
+        font-size: $basetextsize;
+        line-height: 2.143;
+
+        width: 86%;
+        margin: 0 auto 50px;
+
+        text-align: center;
+
+        color: $dark;
+        @media screen and (min-width: 700px)
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            width: 80%;
+            margin: 0 auto 45px;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            width: 65%;
+        }
+
+        span
+        {
+            display: none;
+            @media screen and (min-width: 700px)
+            {
+                display: inline;
+            }
+        }
     }
-  }
 }
 
-.storyform{
+.storyform
+{
+    &__fields
+    {
+        width: 100%;
+        margin-bottom: 20px;
 
-  &__fields{
-    width:100%;
-    background-color:$white;
-    margin-bottom:20px;
-    @media screen and (min-width: 700px){
-      width:88%;
-      background-color:$white;
-      margin: 0 auto 20px;
-      // margin-bottom:20px;
-      border:2px solid #e5e5e5;
-    }
-    @media screen and (min-width: 1200px){
-      width:78%;
-      background-color:$white;
-      margin: 0 auto 20px;
-      // margin-bottom:20px;
-      border:2px solid #e5e5e5;
-    }
-  }
-  &__fields-wrapper{
-    width:88%;
-    margin:0 auto;
-    @media screen and (min-width: 700px){
-      width:80%;
-      // margin:0 auto;
-    }
-    @media screen and (min-width: 1200px){
-      width:88%;
-    }
-  }
-  &__fields--name{
-    width:88%;
-    margin:0 auto;
-    @media screen and (min-width: 700px){
-      border:none;
-    }
-    @media screen and (min-width: 1200px){
-      width:78%;
-      border:none;
+        background-color: $white;
+        @media screen and (min-width: 700px)
+        {
+            width: 88%;
+            margin: 0 auto 20px;
+            // margin-bottom:20px;
 
-      display:flex;
-      flex-direction: row;
-      align-items:center;
-      justify-content: space-between;
-    }
-  }
-  &__fields--app{
-    background-color: #f2f2f2;
-    padding-bottom:20px;
-    ul{
-      @media screen and (min-width: 1200px){
-        display:flex;
-        flex-direction: row;
-        align-items:center;
-        justify-content: space-between;
-      }
-    }
-  }
-  &__fields--time{
-  }
-  &__fields--companions{
-    background-color: #f2f2f2;
-    padding-bottom:20px;
-  }
-  &__input-wrapper--companions{
-    border-bottom:2px solid #e5e5e5;
-  }
-  &__fields--achievements{
-    .checkbox-column{
-      @media screen and (min-width: 1200px){
-        width:32%; /*260px*/
-        display:block;
-        margin-right:2%; /*60px*/
-        float:left;
-      }
-    }
-    .checkbox-column:nth-child(3n){
-      @media screen and (min-width: 1200px){
-        margin-right:0;
-      }
-    }
-  }
-  &__fields--photos{
-    background-color: #f2f2f2;
-    padding-top:20px;
-    @media screen and (min-width: 700px){
-      margin-bottom:65px;
-    }
-  }
-  &__input-wrapper{
-    @include formcenterblock;
-  }
-  &__input-wrapper--name{
-    @media screen and (min-width: 1200px){
-      width:300px;
-      margin:0;
-    }
-  }
-  &__highlighted-label{
-    @include formheadline;
-    display:block;
-    margin-bottom:5px; /*10*/
-  }
-  &__highlighted-label--name{
-    padding-left:7%;
-    @media screen and (min-width: 700px){
-      padding-left:4%;
-    }
-  }
-  &__highlighted-label--center{
-    text-align:center;
-  }
-  &__textinput{
-    width:93%;
+            border: 2px solid #e5e5e5;
+            background-color: $white;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            width: 78%;
+            margin: 0 auto 20px;
+            // margin-bottom:20px;
 
-    @include formlabel;
-    line-height:1.667;
-    margin-bottom:25px;
-    padding:15px 0 15px 7%;
-    border:2px solid #e5e5e5;
-    border-radius:1px;
+            border: 2px solid #e5e5e5;
+            background-color: $white;
+        }
+    }
+    &__fields-wrapper
+    {
+        width: 88%;
+        margin: 0 auto;
+        @media screen and (min-width: 700px)
+        {
+            width: 80%;
+            // margin:0 auto;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            width: 88%;
+        }
+    }
+    &__fields--name
+    {
+        width: 88%;
+        margin: 0 auto;
+        @media screen and (min-width: 700px)
+        {
+            border: none;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            display: flex;
+            flex-direction: row;
 
-    @media screen and (min-width: 700px){
-      width:96%;
-      padding-left:4%;
-    }
-  }
-  &__textinput:hover{
-    border-color:$dark;
-  }
-  &__textinput:focus{
-    border-color:$red;
-  }
-  &__fields-wrapper--time{
-    @media screen and (min-width: 1200px){
-      display:flex;
-      flex-direction: row;
-      align-items:top;
-      justify-content: space-between;
-    }
-  }
-  &__input-wrapper--time{
-    @media screen and (min-width: 700px){
-      width:48%; /* 240px */
-      float:left;
-    }
-    @media screen and (min-width: 1200px){
-      float:none;
-      margin:0;
-      // display:inline-block;
-      width:240px;
-      // margin-right:45px;
-    }
-  }
-  &__input-wrapper--time:nth-child(1){
-    @media screen and (min-width: 700px){
-      margin-right:4%;
-    }
-    @media screen and (min-width: 1200px){
-      margin-right:0;
-    }
-  }
-  &__input-wrapper--companions{
-    padding-bottom:50px;
+            width: 78%;
 
-    @media screen and (min-width: 700px){
-      width:48%;
-      margin:0 0 15px 0;
-      // float:left;
-      padding-bottom:40px;
-    }
-    @media screen and (min-width: 1200px){
-      width:30%;
-    }
-  }
-  &__headline{
-    @include formheadline;
-    text-align:center;
+            border: none;
 
-    // width:83%;
-    // margin:0 auto 40px;
-    margin-top:0px;
-    margin-bottom:40px;
-    @media screen and (min-width:700px){
-      span{
-        display:none;
-      }
+            align-items: center;
+            justify-content: space-between;
+        }
     }
-  }
-  ul{
-    padding-left:0;
-    margin:0;
-    list-style:none;
-  }
-  ul>li{
-    display:block;
-    margin-top:0;
-    margin-bottom:35px;
-  }
-  &__radio{
-    // margin-right:20px;
-    display:none;
-  }
-  &__radio + &__label{
+    &__fields--app
+    {
+        padding-bottom: 20px;
+
+        background-color: #f2f2f2;
+        ul
+        {
+            @media screen and (min-width: 1200px)
+            {
+                display: flex;
+                flex-direction: row;
+
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    &__fields--companions
+    {
+        padding-bottom: 20px;
+
+        background-color: #f2f2f2;
+    }
+    &__input-wrapper--companions
+    {
+        border-bottom: 2px solid #e5e5e5;
+    }
+    &__fields--achievements
+    {
+        .checkbox-column
+        {
+            @media screen and (min-width: 1200px)
+            {
+                display: block;
+                float: left;
+
+                width: 32%; /*260px*/
+                margin-right: 2%; /*60px*/
+            }
+        }
+        .checkbox-column:nth-child(3n)
+        {
+            @media screen and (min-width: 1200px)
+            {
+                margin-right: 0;
+            }
+        }
+    }
+    &__fields--photos
+    {
+        padding-top: 20px;
+
+        background-color: #f2f2f2;
+        @media screen and (min-width: 700px)
+        {
+            margin-bottom: 65px;
+        }
+    }
+    &__input-wrapper
+    {
+        @include formcenterblock;
+    }
+    &__input-wrapper--name
+    {
+        @media screen and (min-width: 1200px)
+        {
+            width: 300px;
+            margin: 0;
+        }
+    }
+    &__highlighted-label
+    {
+        display: block;
+
+        margin-bottom: 5px; /*10*/
+
+        @include formheadline;
+    }
+    &__highlighted-label--name
+    {
+        padding-left: 7%;
+        @media screen and (min-width: 700px)
+        {
+            padding-left: 4%;
+        }
+    }
+    &__highlighted-label--center
+    {
+        text-align: center;
+    }
+    &__textinput
+    {
+        line-height: 1.667;
+
+        width: 93%;
+        margin-bottom: 25px;
+        padding: 15px 0 15px 7%;
+
+        border: 2px solid #e5e5e5;
+        border-radius: 1px;
+
+        @include formlabel;
+
+        @media screen and (min-width: 700px)
+        {
+            width: 96%;
+            padding-left: 4%;
+        }
+    }
+    &__textinput:hover
+    {
+        border-color: $dark;
+    }
+    &__textinput:focus
+    {
+        border-color: $red;
+    }
+    &__fields-wrapper--time
+    {
+        @media screen and (min-width: 1200px)
+        {
+            display: flex;
+            flex-direction: row;
+
+            align-items: top;
+            justify-content: space-between;
+        }
+    }
+    &__input-wrapper--time
+    {
+        @media screen and (min-width: 700px)
+        {
+            float: left;
+
+            width: 48%; /* 240px */
+        }
+        @media screen and (min-width: 1200px)
+        {
+            float: none;
+            // display:inline-block;
+
+            width: 240px;
+            margin: 0;
+            // margin-right:45px;
+        }
+    }
+    &__input-wrapper--time:nth-child(1)
+    {
+        @media screen and (min-width: 700px)
+        {
+            margin-right: 4%;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            margin-right: 0;
+        }
+    }
+    &__input-wrapper--companions
+    {
+        padding-bottom: 50px;
+
+        @media screen and (min-width: 700px)
+        {
+            width: 48%;
+            margin: 0 0 15px 0;
+            // float:left;
+            padding-bottom: 40px;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            width: 30%;
+        }
+    }
+    &__headline
+    {
+        // width:83%;
+        // margin:0 auto 40px;
+        margin-top: 0;
+        margin-bottom: 40px;
+
+        text-align: center;
+
+        @include formheadline;
+        @media screen and (min-width:700px)
+        {
+            span
+            {
+                display: none;
+            }
+        }
+    }
+    ul
+    {
+        margin: 0;
+        padding-left: 0;
+
+        list-style: none;
+    }
+    ul > li
+    {
+        display: block;
+
+        margin-top: 0;
+        margin-bottom: 35px;
+    }
+    &__radio
+    {
+        // margin-right:20px;
+        display: none;
+    }
+    &__radio + &__label
+    {
+        position: relative;
+
+        display: inline-block;
+
+        padding-left: 60px;
+
+        cursor: pointer;
+        vertical-align: center;
+    }
+    &__radio + &__label::before
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 40px;
+        height: 40px;
+
+        content: '';
+
+        background: url('../img/icon-radio.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 40px 40px;
+    }
+    &__radio:checked + &__label::before
+    {
+        background: url('../img/icon-radio--checked.png');
+    }
+    &__radio:hover + &__label::before
+    {
+        background: url('../img/icon-radio--hover.png');
+    }
+    &__radio:checked:hover + &__label::before
+    {
+        background: url('../img/icon-radio--checked-hover.png');
+    }
+    &__radio:active + &__label::before
+    {
+        background: url('../img/icon-radio--active.png');
+    }
+    &__radio:checked:active + &__label::before
+    {
+        background: url('../img/icon-radio--checked-active.png');
+    }
+    &__label
+    {
+        padding-top: 11px;
+
+        @include formlabel;
+        // display: inline-block;
+        // vertical-align: center;
+    }
+    &__dateinput
+    {
+        line-height: 1.667;
+
+        width: 93%;
+        margin-bottom: 15px;
+        padding: 15px 0 15px 7%;
+
+        border: 2px solid #e5e5e5;
+        border-radius: 1px;
+
+        @include formlabel;
+        @include formcenterblock;
+    }
+    &__dateinput:hover
+    {
+        border-color: $dark;
+    }
+    &__dateinput:active
+    {
+        border-color: $red;
+    }
+    &__dateinput:disabled
+    {
+        background-color: #f2f2f2;
+    }
+    &__dateinput:disabled:hover
+    {
+        border: 2px solid #e5e5e5;
+    }
+    &__pm-number-wrapper
+    {
+        font-size: 0;
+
+        width: 100%;
+    }
+    &__pm-number-button
+    {
+        font-size: 30px;
+        line-height: 1;
+
+        display: inline-block;
+
+        box-sizing: border-box;
+        width: 20%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        cursor: pointer;
+        text-align: center;
+        vertical-align: top;
+
+        border: 2px solid #e5e5e5;
+        background-color: white;
+
+        @media screen and (min-width:700px)
+        {
+            width: 25%;
+        }
+    }
+    &__pm-number-button:hover
+    {
+        border-color: $dark;
+    }
+    &__pm-number-button:active
+    {
+        color: white;
+        border-color: $dark;
+        background-color: $dark;
+    }
+    &__pm-number-button--plus
+    {
+        // border-left:none;
+        // background-color:red;
+    }
+    &__pm-number-button--minus
+    {
+        // border-right:none;
+    }
+    &__pm-number
+    {
+        line-height: 1.667;
+
+        display: inline-block;
+
+        box-sizing: border-box;
+        width: 60%;
+        // border-radius:1px;
+        // margin-bottom:15px;
+        margin: 0;
+        padding: 15px 0 15px 0;
+
+        text-align: center;
+        vertical-align: top;
+
+        border-top: 2px solid #e5e5e5;
+        border-right: none;
+        border-bottom: 2px solid #e5e5e5;
+        border-left: none;
+        background-color: #f2f2f2;
+
+        @include formlabel;
+        @include formcenterblock;
+        @media screen and (min-width:700px)
+        {
+            width: 50%;
+        }
+    }
+    &__pm-number--time
+    {
+        margin-bottom: 15px;
+    }
+    &__pm-number--companions
+    {
+        @media screen and (min-width:700px)
+        {
+            // border:none;
+            border-top: 2px solid #f2f2f2;
+            border-bottom: 2px solid #f2f2f2;
+        }
+    }
+    &__checkbox
+    {
+        //margin-right:20px;
+        display: none;
+    }
+    &__checkbox + &__label
+    {
+        position: relative;
+
+        display: inline-block;
+
+        padding-left: 60px;
+
+        cursor: pointer;
+        vertical-align: center;
+    }
+    &__checkbox + &__label::before
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 39px;
+        height: 39px;
+
+        content: '';
+
+        background: url('../img/icon-checkbox.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 39px 39px;
+    }
+    &__checkbox:checked + &__label::before
+    {
+        background: url('../img/icon-checkbox--checked.png');
+    }
+    &__checkbox:hover + &__label::before
+    {
+        background: url('../img/icon-checkbox--hover.png');
+    }
+    &__checkbox:checked:hover + &__label::before
+    {
+        background: url('../img/icon-checkbox--checked-hover.png');
+    }
+    &__checkbox:active + &__label::before
+    {
+        background: url('../img/icon-checkbox--active.png');
+    }
+    &__checkbox:checked:active + &__label::before
+    {
+        background: url('../img/icon-checkbox--checked-active.png');
+    }
+    &__uploadbutton
+    {
+        display: none;
+    }
+    &__uploadbutton-label
+    {
+        font-weight: bold;
+
+        margin-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+
+        border: 2px solid #e5e5e5;
+        //display:block;
+        //width:100%;
+        background-color: white;
+
+        @include formcenterblock;
+        @include formlabel;
+        @media screen and (min-width:700px)
+        {
+            margin-bottom: 40px;
+        }
+        @media screen and (min-width:1200px)
+        {
+            color: white;
+            border-color: #d22856;
+            background-color: #d22856;
+        }
+    }
+    &__uploadbutton-label:hover
+    {
+        border-color: $dark;
+    }
+    &__uploadbutton-label:active
+    {
+        color: $white;
+        background-color: $dark;
+    }
+    &__submit-wrapper
+    {
+        width: 88%;
+        margin: 0 auto;
+        @media screen and (min-width:700px)
+        {
+            display: flex;
+            flex-direction: row;
+
+            margin-bottom: 100px;
+
+            align-items: center;
+            justify-content: space-between;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            width: 78%;
+        }
+    }
+    &__submitbutton
+    {
+        font-size: $subheadlinetextsize;
+        font-weight: bold;
+        line-height: 1; /* 1.667 */
+
+        width: 280px;
+        margin-bottom: 45px;
+        padding-top: 22px;
+        padding-bottom: 22px;
+
+        text-align: center;
+        text-transform: uppercase;
+
+        color: $white;
+        border: none;
+        border-radius: 1px;
+        outline: none;
+        background-color: $submitcolor;
+
+        @include formcenterblock;
+        @media screen and (min-width:700px)
+        {
+            width: 300px;
+            margin: 0;
+        }
+    }
+    &__submitbutton:hover
+    {
+        background-color: #1c9b5e;
+    }
+    &__submitbutton:active
+    {
+        color: transparentize($white,.3);
+        background-color: #1c9b5e;
+    }
+    &__submitbutton:disabled
+    {
+        color: $white;
+    }
+    &__comment
+    {
+        font-size: $basetextsize;
+        line-height: 2.143; /*2.143*/
+
+        margin-top: 0;
+        margin-bottom: 60px;
+
+        text-align: center;
+
+        color: $dark;
+        @media screen and (min-width:700px)
+        {
+            margin: 0;
+        }
+    }
+    &__comment span
+    {
+        color: $red;
+    }
+}
+
+.companion-table
+{
+    // display:table;
+    width: 100%;
+    margin: 0 auto 20px;
+    @media screen and (min-width: 700px)
+    {
+        width: 100%; /* 380px */
+        margin: 0 0 20px 0;
+    }
+
+    &__name-wrapper
+    {
+        width: 100%;
+        @media screen and (min-width: 700px)
+        {
+            float: left;
+
+            width: 76%;
+            margin-right: 8%;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            float: left;
+
+            width: 46%;
+            margin-right: 2%;
+        }
+    }
+    &__nickname-wrapper
+    {
+        // width:80%;
+        // margin-left:20%;
+        width: 100%;
+        @media screen and (min-width: 700px)
+        {
+            float: left;
+
+            width: 76%;
+            margin-right: 8%;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            float: left;
+
+            width: 36%;
+            margin-right: 6%;
+            margin-left: 0;
+        }
+    }
+    &__delete-wrapper
+    {
+        display: none;
+        @media screen and (min-width: 700px)
+        {
+            font-size: 14px;
+            line-height: 1;
+
+            display: block;
+            float: right;
+
+            width: 16%;
+            // background-color:red;
+            margin-top: 78px;
+
+            text-align: right;
+            text-transform: uppercase;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            display: block;
+            float: right;
+
+            width: 10%;
+            // background-color:red;
+        }
+    }
+    &__id
+    {
+        float: left;
+
+        width: 20%;
+        @media screen and (min-width: 700px)
+        {
+            width: 15%;
+            margin-right: 5%;
+        }
+    }
+    &__name
+    {
+        float: right;
+
+        width: 80%;
+        @media screen and (min-width: 700px)
+        {
+            width: 80%;
+        }
+    }
+    &__nickname
+    {
+        float: right;
+
+        width: 80%;
+        @media screen and (min-width: 700px)
+        {
+            width: 80%;
+        }
+        @media screen and (min-width: 1200px)
+        {
+            width: 100%;
+        }
+    }
+    &__label
+    {
+        // display:table-cell;
+        line-height: 1;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 25px;
+        padding-bottom: 15px;
+
+        @include formheadline;
+    }
+    &__label--id
+    {
+        text-align: center;
+    }
+    &__label--name
+    {
+        margin-left: 10%;
+    }
+    &__input
+    {
+        // display:table-cell;
+        // width:200px;
+        // padding-top:20px;
+        // padding-bottom:20px;
+        // padding-left:20px;
+        border: 2px solid #e5e5e5;
+        border-radius: 1px;
+        background-color: white;
+
+        @include formlabel;
+
+        input
+        {
+            font-size: 18px;
+            line-height: 1;
+            // width:99%; /* !!!!!!!!!!! */
+
+            width: 90%;
+            // height:100%;
+            padding: 20px 0 20px 10%;
+
+            border: none;
+        }
+    }
+    &__input--id
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        // width:19%;
+        padding-left: 0;
+
+        text-align: center;
+
+        border-right-width: 1px;
+        // border-collapse:collapse;
+        background-color: #f2f2f2;
+        @media screen and (min-width: 700px)
+        {
+            border-right: 2px solid #e5e5e5;
+        }
+    }
+    &__input--name
+    {
+        border-left-width: 1px;
+        @media screen and (min-width: 700px)
+        {
+            border-left: 2px solid #e5e5e5;
+        }
+    }
+    &__delete
+    {
+        text-decoration: none;
+
+        color: $dark;
+    }
+    &__delete:hover
+    {
+        text-decoration: underline;
+
+        color: $red;
+    }
+    &__delete:active
+    {
+        text-decoration: none;
+
+        color: transparentize($red,.7);
+    }
+}
+.achievements
+{
+    @media screen and (min-width:1200px)
+    {
+        //display:flex;
+        //flex-direction: row;
+        //align-items:center;
+        //justify-content: space-between;
+
+        li
+        {
+            display: block;
+            float: left;
+
+            width: 30%;
+            margin-right: 5%;
+        }
+        li:nth-child(3n)
+        {
+            margin-right: 0;
+        }
+    }
+}
+.photo-previews
+{
+    min-height: 100px;
+
+    border-top: 2px solid #e5e5e5;
+}
+.photo-preview
+{
     position: relative;
-    display: inline-block;
-    vertical-align: center;
-    padding-left: 60px;
-    cursor: pointer;
-  }
-  &__radio + &__label::before{
-    content: "";
+
+    float: left;
+
+    margin: 0 25px 20px 0;
+
+    &__image-wrap
+    {
+        margin-bottom: 7px;
+    }
+
+    &__close
+    {
+        font-size: 30px;
+        line-height: 1;
+
+        position: absolute;
+        top: 0;
+        left: 68px;
+
+        display: block;
+
+        width: 30px;
+        height: 30px;
+        margin-top: -16px;
+        margin-left: -16px;
+
+        text-align: center;
+        text-decoration: none;
+
+        color: $dark;
+        color: #c1c1c1;
+        border: 2px solid #e5e5e5;
+        border-radius: 50%;
+        background-color: white;
+    }
+    &__close:hover
+    {
+        color: $dark;
+        border-color: $dark;
+    }
+    &__close:active
+    {
+        color: white;
+        background-color: $dark;
+    }
+    &__filename
+    {
+        font-size: 12px;
+        line-height: 1.5;
+
+        color: $dark;
+    }
+}
+
+.popup
+{
     position: absolute;
-    width:40px;
-    height:40px;
-    top: 0;
-    left: 0;
-    background: url("../img/icon-radio.png");
-    background-size:40px 40px;
-    background-position:0 0;
-    background-repeat: no-repeat;
-  }
-  &__radio:checked + &__label::before{
-    background: url("../img/icon-radio--checked.png");
-  }
-  &__radio:hover + &__label::before{
-    background: url("../img/icon-radio--hover.png");
-  }
-  &__radio:checked:hover + &__label::before{
-    background: url("../img/icon-radio--checked-hover.png");
-  }
-  &__radio:active + &__label::before{
-    background: url("../img/icon-radio--active.png");
-  }
-  &__radio:checked:active + &__label::before{
-    background: url("../img/icon-radio--checked-active.png");
-  }
-  &__label{
-    @include formlabel;
-    padding-top:11px;
-    // display: inline-block;
-    // vertical-align: center;
-  }
-  &__dateinput{
-    @include formlabel;
-    @include formcenterblock;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
 
-    line-height:1.667;
+    display: none;
 
-    border:2px solid #e5e5e5;
-    border-radius:1px;
+    width: 320px;
+    // height:380px;
+    height: auto;
+    margin-left: -160px;
 
-    padding:15px 0 15px 7%;
-    width:93%;
-    margin-bottom:15px;
-  }
-  &__dateinput:hover{
-    border-color:$dark;
-  }
-  &__dateinput:active{
-    border-color:$red;
-  }
-  &__dateinput:disabled{
-    background-color:#f2f2f2;
-  }
-  &__dateinput:disabled:hover{
-    border:2px solid #e5e5e5;
-  }
-  &__pm-number-wrapper{
-    width:100%;
+    background-color: white;
+    // box-shadow: 0px 30px 50px 0px rgba(0,0,0,.75);
+    box-shadow: 0 7px 15px 0 rgba(0, 1, 1, .15);
 
-    font-size:0;
-  }
-  &__pm-number-button{
-    box-sizing:border-box;
-    width:20%;
-    display:inline-block;
-    vertical-align:top;
-
-    border:2px solid #e5e5e5;
-
-    font-size:30px;
-    line-height:1;
-
-    padding-top:15px;
-    padding-bottom:15px;
-
-    text-align:center;
-    background-color:white;
-
-    cursor:pointer;
-
-    @media screen and (min-width:700px){
-      width:25%;
+    &--active
+    {
+        display: block;
     }
-  }
-  &__pm-number-button:hover{
-    border-color:$dark;
-  }
-  &__pm-number-button:active{
-    border-color:$dark;
-    background-color:$dark;
-    color:white;
-  }
-  &__pm-number-button--plus{
-    // border-left:none;
-    // background-color:red;
-  }
-  &__pm-number-button--minus{
-    // border-right:none;
-  }
-  &__pm-number{
-    @include formlabel;
-    @include formcenterblock;
-    line-height:1.667;
 
-    border-top:2px solid #e5e5e5;
-    border-bottom:2px solid #e5e5e5;
-    border-left:none;
-    border-right:none;
-    // border-radius:1px;
-
-    // margin-bottom:15px;
-    margin:0;
-    padding:15px 0 15px 0;
-
-    box-sizing:border-box;
-    width:60%;
-    display:inline-block;
-    vertical-align:top;
-
-    text-align:center;
-    background-color:#f2f2f2;
-    @media screen and (min-width:700px){
-      width:50%;
+    @media screen and (min-width:700px)
+    {
+        width: 460px;
+        margin-left: -230px;
     }
-  }
-  &__pm-number--time{
-    margin-bottom:15px;
-  }
-  &__pm-number--companions{
-    @media screen and (min-width:700px){
-      // border:none;
-      border-top:2px solid #f2f2f2;
-      border-bottom:2px solid #f2f2f2;
+    @media screen and (min-width:700px)
+    {
+        width: 780px;
+        margin-left: -390px;
     }
-  }
-  &__checkbox{
-    //margin-right:20px;
-    display:none;
-  }
-  &__checkbox + &__label{
-    position: relative;
-    display: inline-block;
-    vertical-align: center;
-    padding-left: 60px;
-    cursor: pointer;
-  }
-  &__checkbox + &__label::before{
-    content: "";
-    position: absolute;
-    width:39px;
-    height:39px;
-    top: 0;
-    left: 0;
-    background: url("../img/icon-checkbox.png");
-    background-size:39px 39px;
-    background-position:0 0;
-    background-repeat: no-repeat;
-  }
-  &__checkbox:checked + &__label::before{
-    background: url("../img/icon-checkbox--checked.png");
-  }
-  &__checkbox:hover + &__label::before{
-    background: url("../img/icon-checkbox--hover.png");
-  }
-  &__checkbox:checked:hover + &__label::before{
-    background: url("../img/icon-checkbox--checked-hover.png");
-  }
-  &__checkbox:active + &__label::before{
-    background: url("../img/icon-checkbox--active.png");
-  }
-  &__checkbox:checked:active + &__label::before{
-    background: url("../img/icon-checkbox--checked-active.png");
-  }
-  &__uploadbutton{
-    display:none;
-  }
-  &__uploadbutton-label{
-    @include formcenterblock;
-    padding-top:20px;
-    padding-bottom:20px;
 
-    @include formlabel;
-    font-weight:bold;
-    text-transform:uppercase;
-    text-align:center;
-    //display:block;
-    //width:100%;
-    background-color:white;
-    cursor:pointer;
-    border:2px solid #e5e5e5;
-    margin-bottom:30px;
-    @media screen and (min-width:700px){
-      margin-bottom:40px;
+    &__headline
+    {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1;
+
+        display: block;
+
+        width: 88%;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 30px;
+        padding-top: 45px;
+
+        text-align: center;
+        @media screen and (min-width:700px)
+        {
+            font-size: 30px;
+            line-height: 40px;
+
+            width: 74%;
+            padding-top: 70px;
+        }
+        @media screen and (min-width:700px)
+        {
+            width: 60%;
+            margin-bottom: 25px;
+            padding-top: 75px;
+        }
     }
-    @media screen and (min-width:1200px){
-      background-color:#d22856;
-      border-color:#d22856;
-      color:white;
+    &__text
+    {
+        font-size: 14px;
+        line-height: 24px;
+
+        display: block;
+
+        width: 88%;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 15px;
+
+        text-align: center;
+        @media screen and (min-width:700px)
+        {
+            font-size: 18px;
+
+            width: 74%;
+        }
+        @media screen and (min-width:1200px)
+        {
+            width: 60%;
+            margin-bottom: 40px;
+            // font-size:18px;
+        }
     }
-  }
-  &__uploadbutton-label:hover{
-    border-color:$dark;
-  }
-  &__uploadbutton-label:active{
-    background-color:$dark;
-    color:$white;
-  }
-  &__submit-wrapper{
-    width:88%;
-    margin:0 auto;
-    @media screen and (min-width:700px){
-      display:flex;
-      flex-direction: row;
-      align-items:center;
-      justify-content: space-between;
+    &__close-wrapper
+    {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
 
-      margin-bottom:100px;
+        background-color: #f2f2f2;
     }
-    @media screen and (min-width: 1200px){
-      width:78%;
+    &__close
+    {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 30px;
+
+        display: block;
+
+        width: 88%;
+        margin: 0 auto;
+        padding-top: 23px;
+        padding-bottom: 23px;
+
+        cursor: pointer;
+        text-align: center;
+        text-transform: uppercase;
+
+        color: white;
+        border-radius: 1px;
+        background-color: #2aab6d;
+        @media screen and (min-width:700px)
+        {
+            width: 74%;
+        }
+        @media screen and (min-width:1200px)
+        {
+            width: 60%;
+        }
     }
-  }
-  &__submitbutton{
-    width:280px;
-    font-size:$subheadlinetextsize;
-    line-height:1; /* 1.667 */
-    color: $white;
-    font-weight:bold;
-    text-align: center;
-    text-transform:uppercase;
-    padding-top:22px;
-    padding-bottom:22px;
-    background-color: $submitcolor;
-    border:none;
-    outline:none;
-    border-radius:1px;
-
-    @include formcenterblock;
-
-    margin-bottom:45px;
-    @media screen and (min-width:700px){
-      width:300px;
-      margin:0;
-    }
-  }
-  &__submitbutton:hover{
-    background-color:#1c9b5e;
-  }
-  &__submitbutton:active{
-    background-color:#1c9b5e;
-    color:transparentize($white,0.3);
-  }
-  &__submitbutton:disabled{
-    color:$white;
-
-  }
-  &__comment{
-    font-size:$basetextsize;
-    line-height:2.143; /*2.143*/
-    text-align:center;
-    color:$dark;
-    margin-top:0;
-    margin-bottom:60px;
-    @media screen and (min-width:700px){
-      margin:0;
-    }
-  }
-  &__comment span{
-    color:$red;
-  }
-}
-
-.companion-table{
-  // display:table;
-  width:100%;
-  margin:0 auto 20px;
-  @media screen and (min-width: 700px){
-    width:100%; /* 380px */
-    margin:0 0 20px 0;
-  }
-
-  &__name-wrapper{
-    width:100%;
-    @media screen and (min-width: 700px){
-      width:76%;
-      margin-right:8%;
-      float:left;
-    }
-    @media screen and (min-width: 1200px){
-      width:46%;
-      margin-right:2%;
-      float:left;
-    }
-  }
-  &__nickname-wrapper{
-    // width:80%;
-    // margin-left:20%;
-    width:100%;
-    @media screen and (min-width: 700px){
-      width:76%;
-      margin-right:8%;
-      float:left;
-    }
-    @media screen and (min-width: 1200px){
-      width:36%;
-      margin-right:6%;
-      float:left;
-
-      margin-left:0;
-    }
-  }
-  &__delete-wrapper{
-    display:none;
-    @media screen and (min-width: 700px){
-      display:block;
-      width:16%;
-      float:right;
-      // background-color:red;
-
-      margin-top:78px;
-
-      font-size:14px;
-      line-height:1;
-      text-transform:uppercase;
-      text-align:right;
-    }
-    @media screen and (min-width: 1200px){
-      display:block;
-      width:10%;
-      float:right;
-      // background-color:red;
-    }
-  }
-  &__id{
-    float:left;
-    width:20%;
-    @media screen and (min-width: 700px){
-      width:15%;
-      margin-right:5%;
-    }
-  }
-  &__name{
-    float:right;
-    width:80%;
-    @media screen and (min-width: 700px){
-      width:80%;
-    }
-  }
-  &__nickname{
-    float:right;
-    width:80%;
-    @media screen and (min-width: 700px){
-      width:80%;
-    }
-    @media screen and (min-width: 1200px){
-      width:100%;
-    }
-  }
-  &__label{
-    @include formheadline;
-    // display:table-cell;
-
-    line-height:1;
-    padding-top:25px;
-    padding-bottom:15px;
-    margin-top:0;
-    margin-bottom:0;
-  }
-  &__label--id{
-    text-align:center;
-  }
-  &__label--name{
-    margin-left:10%;
-  }
-  &__input{
-    @include formlabel;
-    // display:table-cell;
-    // width:200px;
-    // padding-top:20px;
-    // padding-bottom:20px;
-    // padding-left:20px;
-    border:2px solid #e5e5e5;
-    border-radius:1px;
-    background-color:white;
-
-    input{
-      // width:99%; /* !!!!!!!!!!! */
-      width:90%;
-      // height:100%;
-      padding:20px 0 20px 10%;
-      border:none;
-
-      font-size:18px;
-      line-height:1;
-    }
-  }
-  &__input--id{
-    // width:19%;
-    padding-left:0;
-    padding-top:20px;
-    padding-bottom:20px;
-    text-align:center;
-    border-right-width:1px;
-    // border-collapse:collapse;
-    background-color:#f2f2f2;
-    @media screen and (min-width: 700px){
-      border-right:2px solid #e5e5e5;
-    }
-  }
-  &__input--name{
-    border-left-width:1px;
-    @media screen and (min-width: 700px){
-      border-left:2px solid #e5e5e5;
-    }
-  }
-  &__delete{
-    color:$dark;
-    text-decoration:none;
-  }
-  &__delete:hover{
-    color:$red;
-    text-decoration:underline;
-  }
-  &__delete:active{
-    text-decoration:none;
-    color:transparentize($red,0.7);
-  }
-}
-.achievements{
-  @media screen and (min-width:1200px){
-    //display:flex;
-    //flex-direction: row;
-    //align-items:center;
-    //justify-content: space-between;
-
-    li{
-      display:block;
-      width:30%;
-      margin-right:5%;
-      float:left;
-    }
-    li:nth-child(3n){
-      margin-right:0;
-    }
-  }
-}
-.photo-previews{
-  min-height:100px;
-  border-top:2px solid #e5e5e5;
-}
-.photo-preview{
-  margin: 0 25px 20px 0;
-  float:left;
-
-  position:relative;
-
-  &__image-wrap{
-    margin-bottom:7px;
-  }
-  &__image{
-
-  }
-  &__close{
-    color:$dark;
-    text-decoration:none;
-
-    display:block;
-    width:30px;
-    height:30px;
-    border:2px solid #e5e5e5;
-    border-radius:50%;
-    text-align:center;
-
-    font-size:30px;
-    line-height:1;
-    color:#c1c1c1;
-    background-color:white;
-
-    position:absolute;
-    top:0;
-    left:68px;
-    margin-top:-16px;
-    margin-left:-16px;
-  }
-  &__close:hover{
-    color:$dark;
-    border-color:$dark;
-  }
-  &__close:active{
-    color:white;
-    background-color:$dark;
-  }
-  &__filename{
-    font-size:12px;
-    line-height:1.5;
-    color:$dark;
-  }
-}
-
-.popup{
-  display:none;
-  position:absolute;
-  top: 50%;
-  left:50%;
-
-  margin-left:-160px;
-
-  width: 320px;
-  // height:380px;
-  height:auto;
-
-  z-index:10;
-  background-color:white;
-  // box-shadow: 0px 30px 50px 0px rgba(0,0,0,.75);
-  box-shadow: 0px 7px 15px 0px rgba(0, 1, 1, 0.15);
-
-  &--active{
-    display:block;
-  }
-
-  @media screen and (min-width:700px){
-    width:460px;
-    margin-left:-230px;
-  }
-  @media screen and (min-width:700px){
-    width:780px;
-    margin-left:-390px;
-  }
-
-  &__headline{
-    display:block;
-    width:88%;
-    margin:0 auto;
-
-    font-size:18px;
-    line-height:1;
-    font-weight:bold;
-
-    padding-top:45px;
-    margin-top:0;
-    margin-bottom:30px;
-
-    text-align:center;
-    @media screen and (min-width:700px){
-      width:74%;
-      padding-top:70px;
-      font-size:30px;
-      line-height:40px;
-    }
-    @media screen and (min-width:700px){
-      width:60%;
-
-      padding-top:75px;
-      margin-bottom:25px;
-    }
-  }
-  &__text{
-    display:block;
-    width:88%;
-    margin:0 auto;
-
-    font-size:14px;
-    line-height:24px;
-    margin-top:0;
-    margin-bottom:15px;
-
-    text-align:center;
-    @media screen and (min-width:700px){
-      width:74%;
-      font-size:18px;
-    }
-    @media screen and (min-width:1200px){
-      width:60%;
-      margin-bottom:40px;
-      // font-size:18px;
-    }
-  }
-  &__close-wrapper{
-    width:100%;
-    background-color:#f2f2f2;
-
-    padding-top:50px;
-    padding-bottom:50px;
-  }
-  &__close{
-    display:block;
-    width:88%;
-    margin:0 auto;
-
-    background-color:#2aab6d;
-    border-radius:1px;
-    padding-top:23px;
-    padding-bottom:23px;
-
-    font-size:18px;
-    line-height:30px;
-    font-weight:bold;
-    text-transform:uppercase;
-    color:white;
-    text-align:center;
-
-    cursor:pointer;
-    @media screen and (min-width:700px){
-      width:74%;
-    }
-    @media screen and (min-width:1200px){
-      width:60%;
-    }
-  }
 }
