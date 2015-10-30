@@ -309,6 +309,7 @@
         @media screen and (min-width:1200px)
         {
             width: 31%;
+            float: none;
         }
     }
     &__navigation-link--prev
@@ -320,12 +321,13 @@
         @media screen and (min-width:700px)
         {
             width: 22%;
-
+            float: none;
             order: 1;
         }
         @media screen and (min-width:1200px)
         {
-            margin-right: 2%;
+            // margin-right: 2%;
+
         }
     }
     &__navigation-link--next
@@ -358,7 +360,8 @@
         }
         @media screen and (min-width:1200px)
         {
-            margin-right: 2%;
+            // margin-right: 2%;
+            float: none;
         }
     }
 }

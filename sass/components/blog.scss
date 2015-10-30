@@ -218,7 +218,8 @@
         border: 2px solid #e5e5e5;
         border-radius: 1px;
 
-        @include formlabel;
+        // @include formlabel;
+        font-size: $subheadlinetextsize;
         a
         {
             padding: 15px 24px;
