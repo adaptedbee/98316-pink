@@ -48,7 +48,25 @@
     compminus.addEventListener("click", function() {
       if (parseInt(companions.value,10) > 0){
         companions.value=(parseInt(companions.value,10)-1)+" чел";
-        removeComp(queue[queue.length-1]);
+        //console.log(queue.length+" человек");
+        queue.splice(queue.length-1);
+        //console.log(queue.length+" человек осталось");
+        var currentcomps = comparea.querySelectorAll("#comptable");
+        // var lastcompid = 0;
+        // if (currentcomps%2==0) {
+        //   lastcompid=currentcomps.length/2;
+        // } else {
+        //   lastcompid=Math.floor(currentcomps.length/2);
+        // }
+        //console.log(currentcomps.length+" блоков");
+        //console.log(lastcompid+" блоков на самом деле");
+        //var lastcomp = currentcomps[lastcompid];
+        var lastcomp = currentcomps[currentcomps.length-1];
+        //console.log(String(lastcomp));
+        //lastcomp.parentNode.removeChild(lastcomp);
+        lastcomp.parentNode.removeChild(lastcomp);
+        //console.log(currentcomps.length+" блоков осталось");
+        //console.log("----------------------");
       }
     });
 
