@@ -88,6 +88,26 @@ html, body{
 			background-image:url('../img/logotype-blue-desktop.svg');
 		}
 	}
+	&--footer:hover{
+		background-image:url('../img/logotype-blue-tablet--hover.svg');
+
+		// @media screen and (min-width:700px){
+		// 	background-image:url('../img/logotype-blue-tablet--hover.svg');
+		// }
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-blue-desktop--hover.svg');
+		}
+	}
+	&--footer:focus{
+		background-image:url('../img/logotype-blue-tablet--focus.svg');
+
+		// @media screen and (min-width:700px){
+		// 	background-image:url('../img/logotype-blue-tablet--focus.svg');
+		// }
+		@media screen and (min-width:1200px){
+			background-image:url('../img/logotype-blue-desktop--focus.svg');
+		}
+	}
 }
 
 .top-menu{
@@ -96,7 +116,23 @@ html, body{
 	width:100%;
 	background-color:transparentize(black,0.7);
 
+	//border-bottom:1px solid transparentize(black,0.7);
+
 	position:relative;
+
+	&--active{
+		// box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.15),
+		// 						0px 1px 0px 0px rgba(0, 0, 0, 1);
+		// border-bottom:1px solid rgba(0, 0, 0, 1);
+		// outline:1px solid rgba(255, 255, 255, 0.15);
+		background-color:#283645;
+
+		// border-bottom:1px solid #000101;
+		//border-top:1px solid #485461;
+		// border-bottom:1px solid #485461;
+		box-shadow: 0px 2px 0px 0px #485461,
+								0px 1px 0px 0px #000101;
+	}
 
 	@media screen and (min-width:700px){
 		padding-top:27px;
@@ -108,7 +144,7 @@ html, body{
 	background-color:$dark;
 
 	position:absolute;
-	top:65px;
+	top:67px;
 	left:0;
 	z-index:1;
 	width:100%;
@@ -116,7 +152,7 @@ html, body{
 	display:none;
 
 	@media screen and (min-width:700px){
-		top:110px;
+		top:112px;
 	}
 
 	@media screen and (min-width:1200px){
@@ -158,7 +194,12 @@ html, body{
 		padding-bottom:20px;
 		display:inline-block;
 
-		border-top:2px solid #000101;
+		//border-bottom:1px solid #000101;
+		//border-top:1px solid #485461;
+		// box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.15),
+		// 						0px 1px 0px 0px rgba(0, 0, 0, 1);
+		box-shadow: 0px 2px 0px 0px #485461,
+								0px 1px 0px 0px #000101;
 
 		@media screen and (min-width:1200px){
 			display:inline-block;
@@ -166,6 +207,7 @@ html, body{
 			width:auto;
 			border:none;
 			padding-left:70px;
+			box-shadow:none;
 
 			text-align:right;
 		}
@@ -178,21 +220,29 @@ html, body{
 		text-decoration:none;
 		text-transform:uppercase;
 		padding-bottom:5px;
+
 		@media screen and (min-width:1200px){
 			text-transform:none;
 			font-weight:normal;
-			&:hover{
-				border-bottom:1px solid white;
-			}
-			&:focus{
-				color:rgba(255,255,255,0.3);
-				border:none;
-			}
+		}
+	}
+	&__item a:hover{
+		color: #d22856;
+		@media screen and (min-width:1200px){
+			color:$white;
+			border-bottom:1px solid white;
+		}
+	}
+	&__item a:focus{
+		color: rgba(210,40,86,0.3);
+		@media screen and (min-width:1200px){
+			color:rgba(255,255,255,0.3);
+			border:none;
 		}
 	}
 
-	&__item--active{
-	}
+	// &__item--active{
+	// }
 	&__toggle{
 		display:block;
 		width:50px;
@@ -204,7 +254,7 @@ html, body{
 		float:right;
 		margin-right:6%;
 
-		background-image:url('../img/menu-burger--white.svg');
+		background-image:url('../img/menu-burger.svg');
 
 		@media screen and (min-width:700px){
 			margin-top:15px;
@@ -213,11 +263,23 @@ html, body{
 			display:none;
 		}
 	}
+	&__toggle:hover{
+		background-image:url('../img/menu-burger--hover.svg');
+	}
+	&__toggle:focus{
+		background-image:url('../img/menu-burger--focus.svg');
+	}
 	&__toggle--close{
 		width:25px;
 		background-size:25px 25px;
 
-		background-image:url('../img/menu-cross--white.svg');
+		background-image:url('../img/menu-cross.svg');
+	}
+	&__toggle--close:hover{
+		background-image:url('../img/menu-cross--hover.svg');
+	}
+	&__toggle--close:focus{
+		background-image:url('../img/menu-cross--focus.svg');
 	}
 }
 

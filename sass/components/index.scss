@@ -550,14 +550,26 @@
     }
   }
   &__review-nav-arrow--left{
-    background-image:url('../img/review-arrow-left--colored.svg');
+    background-image:url('../img/review-arrow-left.svg');
     top:50%;
     left:0;
   }
+  &__review-nav-arrow--left:hover{
+    background-image:url('../img/review-arrow-left--hover.svg');
+  }
+  &__review-nav-arrow--left:active{
+    background-image:url('../img/review-arrow-left--active.svg');
+  }
   &__review-nav-arrow--right{
-    background-image:url('../img/review-arrow-right--colored.svg');
+    background-image:url('../img/review-arrow-right.svg');
     top:50%;
     right:0;
+  }
+  &__review-nav-arrow--right:hover{
+    background-image:url('../img/review-arrow-right--hover.svg');
+  }
+  &__review-nav-arrow--right:active{
+    background-image:url('../img/review-arrow-right--active.svg');
   }
   &__review-paragraph{
     font-size:$basetextsize;
@@ -608,6 +620,12 @@
     border: 3px solid $white;
     border-radius: 50%;
   }
+  &__controls label:hover{
+    background:#7e868f;
+  }
+  &__controls label:active{
+    background:#e9ebec;
+  }
   &__controls label:last-child{
     margin-right:0;
   }
@@ -624,8 +642,8 @@
   #btn-2:checked ~ &__controls label[for="btn-3"],
   #btn-3:checked ~ &__controls label[for="btn-1"],
   #btn-3:checked ~ &__controls label[for="btn-2"]{
-    background-color: $label-inner;
-    border-color:$white;
+    //background-color: $label-inner;
+    //border-color:$white;
   }
   #btn-1:checked ~ &__review--2,
   #btn-1:checked ~ &__review--3{
