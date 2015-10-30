@@ -197,10 +197,13 @@
     }
   }
   &__input-wrapper--companions{
+    padding-bottom:50px;
+
     @media screen and (min-width: 700px){
       width:48%;
       margin:0 0 15px 0;
       // float:left;
+      padding-bottom:40px;
     }
     @media screen and (min-width: 1200px){
       width:30%;
@@ -287,9 +290,17 @@
     width:93%;
     margin-bottom:15px;
   }
+  &__dateinput:hover{
+    border-color:$dark;
+  }
+  &__dateinput:active{
+    border-color:$red;
+  }
   &__dateinput:disabled{
     background-color:#f2f2f2;
-    // outline:none;
+  }
+  &__dateinput:disabled:hover{
+    border:2px solid #e5e5e5;
   }
   &__pm-number-wrapper{
     width:100%;
@@ -658,7 +669,7 @@
     color:$red;
     text-decoration:underline;
   }
-  &__delete:focus{
+  &__delete:active{
     text-decoration:none;
     color:transparentize($red,0.7);
   }

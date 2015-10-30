@@ -45,7 +45,8 @@
     reader.addEventListener("load", function(event) {
       var html = Mustache.render(template, {
         "image": event.target.result,
-        "name": file.name
+        "name": file.name,
+        "id": queue.length+1
       });
       var li = document.createElement("li");
       li.classList.add("photo-previews__item");

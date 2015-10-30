@@ -64,14 +64,14 @@ html, body{
 			background-image:url('../img/logotype-white-desktop--hover.svg');
 		}
 	}
-	&--header:focus{
-		background-image:url('../img/logotype-white-mobile--focus.svg');
+	&--header:active{
+		background-image:url('../img/logotype-white-mobile--active.svg');
 
 		@media screen and (min-width:700px){
-			background-image:url('../img/logotype-white-tablet--focus.svg');
+			background-image:url('../img/logotype-white-tablet--active.svg');
 		}
 		@media screen and (min-width:1200px){
-			background-image:url('../img/logotype-white-desktop--focus.svg');
+			background-image:url('../img/logotype-white-desktop--active.svg');
 		}
 	}
 	&--footer{
@@ -98,14 +98,14 @@ html, body{
 			background-image:url('../img/logotype-blue-desktop--hover.svg');
 		}
 	}
-	&--footer:focus{
-		background-image:url('../img/logotype-blue-tablet--focus.svg');
+	&--footer:active{
+		background-image:url('../img/logotype-blue-tablet--active.svg');
 
 		// @media screen and (min-width:700px){
-		// 	background-image:url('../img/logotype-blue-tablet--focus.svg');
+		// 	background-image:url('../img/logotype-blue-tablet--active.svg');
 		// }
 		@media screen and (min-width:1200px){
-			background-image:url('../img/logotype-blue-desktop--focus.svg');
+			background-image:url('../img/logotype-blue-desktop--active.svg');
 		}
 	}
 }
@@ -138,6 +138,10 @@ html, body{
 		padding-top:27px;
 		padding-bottom:43px;
 	}
+	//@media screen and (min-width:1200px){
+		//padding-top:20px;
+		//padding-bottom:40px;
+	//}
 }
 
 .main-nav{
@@ -203,13 +207,17 @@ html, body{
 
 		@media screen and (min-width:1200px){
 			display:inline-block;
+			vertical-align:top;
 			//width:25%;
 			width:auto;
 			border:none;
-			padding-left:70px;
+			padding:22px 0 0 70px;
+			//padding-left:70px;
 			box-shadow:none;
 
 			text-align:right;
+			//padding-top:11px;
+			//padding-bottom:11px;
 		}
 	}
 	//&__item:hover{
@@ -248,6 +256,10 @@ html, body{
 		width:50px;
 		height:25px;
 
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+
 		background-size:50px 25px;
 		background-position:0 0;
 		background-repeat:no-repeat;
@@ -266,8 +278,8 @@ html, body{
 	&__toggle:hover{
 		background-image:url('../img/menu-burger--hover.svg');
 	}
-	&__toggle:focus{
-		background-image:url('../img/menu-burger--focus.svg');
+	&__toggle:active{
+		background-image:url('../img/menu-burger--active.svg');
 	}
 	&__toggle--close{
 		width:25px;
@@ -278,8 +290,8 @@ html, body{
 	&__toggle--close:hover{
 		background-image:url('../img/menu-cross--hover.svg');
 	}
-	&__toggle--close:focus{
-		background-image:url('../img/menu-cross--focus.svg');
+	&__toggle--close:active{
+		background-image:url('../img/menu-cross--active.svg');
 	}
 }
 
@@ -292,6 +304,7 @@ html, body{
 	background-size: 700px auto;
 	background-position: center 0;
 	background-repeat: no-repeat;
+	background-color:$dark;
 
 	@media screen and (min-width:320px) and (min-resolution: 1.5dppx) {
 		background-image: url('../img/background-mobile@2x.jpg');
