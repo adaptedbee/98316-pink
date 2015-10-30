@@ -550,14 +550,26 @@
     }
   }
   &__review-nav-arrow--left{
-    background-image:url('../img/review-arrow-left--colored.svg');
+    background-image:url('../img/review-arrow-left.svg');
     top:50%;
     left:0;
   }
+  &__review-nav-arrow--left:hover{
+    background-image:url('../img/review-arrow-left--hover.svg');
+  }
+  &__review-nav-arrow--left:active{
+    background-image:url('../img/review-arrow-left--active.svg');
+  }
   &__review-nav-arrow--right{
-    background-image:url('../img/review-arrow-right--colored.svg');
+    background-image:url('../img/review-arrow-right.svg');
     top:50%;
     right:0;
+  }
+  &__review-nav-arrow--right:hover{
+    background-image:url('../img/review-arrow-right--hover.svg');
+  }
+  &__review-nav-arrow--right:active{
+    background-image:url('../img/review-arrow-right--active.svg');
   }
   &__review-paragraph{
     font-size:$basetextsize;
