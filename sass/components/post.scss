@@ -1,277 +1,364 @@
-.blogpost{
-  width:100%;
+.blogpost
+{
+    font-size: 14px;
+    line-height: 1.929;
 
-  font-size:14px;
-  line-height:1.929;
+    width: 100%;
 
-  &__wrapper{
-    padding-top:35px;
-    width:88%;
-    display:block;
-    margin:0 auto 30px;
+    &__wrapper
+    {
+        display: block;
 
-    @media screen and (min-width:700px){
-      padding-top:85px;
-      position:relative;
-    }
-    @media screen and (min-width:1200px){
-      padding-top:110px;
-      width:68%;
-    }
+        width: 88%;
+        margin: 0 auto 30px;
+        padding-top: 35px;
 
-    hr{
-      margin-top:0;
-      margin-bottom:35px;
-      @media screen and (min-width:700px){
-        display:none;
-      }
-    }
-  }
-  &__headline{
-    font-size:30px;
-    line-height:1.2;
-    color:$dark;
-    margin-top:0;
-    margin-bottom:25px;
-    font-weight:bold;
-    text-align:center;
-    @media screen and (min-width:700px){
-      margin-bottom:35px;
-      font-size:50px;
-      line-height:1.2;
-    }
-  }
-  &__date-description-wrapper{
-    @media screen and (min-width:700px){
-      display: flex;
-      flex-direction: column;
-    }
-  }
-  &__date{
-    font-size:12px;
-    line-height:2.25;
-    color:$red;
-    text-transform:uppercase;
-    text-align:center;
+        @media screen and (min-width:700px)
+        {
+            position: relative;
 
-    margin-top:0;
-    margin-bottom:10%;
+            padding-top: 85px;
+        }
+        @media screen and (min-width:1200px)
+        {
+            width: 68%;
+            padding-top: 110px;
+        }
 
-    @media screen and (min-width:700px){
-      order:2;
+        hr
+        {
+            margin-top: 0;
+            margin-bottom: 35px;
+            @media screen and (min-width:700px)
+            {
+                display: none;
+            }
+        }
+    }
+    &__headline
+    {
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 1.2;
 
-      background-color:white;
-      display:inline-block;
-      vertical-align:middle;
-      width:100%;
-      margin-bottom:50px;
+        margin-top: 0;
+        margin-bottom: 25px;
 
-      font-size:14px;
-      line-height:30px;
-    }
-  }
-  &__date:after{
-    @media screen and (min-width:700px){
-      content: "";
-      top: -15px;
+        text-align: center;
 
-      display:inline-block;
-      vertical-align:middle;
-      border-bottom: 1px dotted #e5e5e5;
-      width:25%;
-      margin-left:25px;
-    }
-    @media screen and (min-width:1200px){
-      width:31%;
-    }
-  }
-  &__date:before{
-    @media screen and (min-width:700px){
-      content: "";
-      top: -15px;
+        color: $dark;
+        @media screen and (min-width:700px)
+        {
+            font-size: 50px;
+            line-height: 1.2;
 
-      display:inline-block;
-      vertical-align:middle;
-      border-bottom: 1px dotted #e5e5e5;
-      width:25%;
-      margin-right:25px;
+            margin-bottom: 35px;
+        }
     }
-    @media screen and (min-width:1200px){
-      width:31%;
+    &__date-description-wrapper
+    {
+        @media screen and (min-width:700px)
+        {
+            display: flex;
+            flex-direction: column;
+        }
     }
-  }
-  &__description{
-    font-size:16px;
-    line-height:1.6875;
-    color:$dark;
-    text-align:center;
+    &__date
+    {
+        font-size: 12px;
+        line-height: 2.25;
 
-    display:block;
-    // padding-bottom:25px;
-    // border-bottom:1px solid #e5e5e5;
-    margin-top:0;
-    margin-bottom:30px;
-    @media screen and (min-width:700px){
-      order:1;
+        margin-top: 0;
+        margin-bottom: 10%;
 
-      margin-bottom:40px;
-      font-size:24px;
-      line-height:40px;
-    }
-  }
-  &__subheadline{
-    @include formlabel;
-    font-weight:bold;
-    text-transform:uppercase;
-    // padding-top:35px;
-    margin-top:0;
-    margin-bottom:30px;
-    @media screen and (min-width:700px){
-      font-size:24px;
-      line-height:30px;
-    }
-  }
-  &__paragraph{
-    color:$dark;
-    margin-top:0;
-    margin-bottom:40px;
-    @media screen and (min-width:700px){
-      font-size:18px;
-      line-height:30px;
-      margin-bottom:65px;
-    }
-  }
-  &__paragraph a{
-    color:$red;
-  }
-  &__ulist{
-    display:block;
-    padding-left:6%;
-    margin-top:0;
-    margin-bottom:0;
+        text-align: center;
+        text-transform: uppercase;
 
-    // font-size:14px;
-    // line-height:1.929;
-    color:$dark;
-    // list-style-type:disc;
-    @media screen and (min-width:700px){
-      font-size:18px;
-      line-height:30px;
-      padding-left:3%;
-    }
-    li{
-      // display:block;
-      margin-top:0;
-      margin-bottom:30px;
-      @media screen and (min-width:700px){
-        padding-left:25px;
-        margin-bottom:45px;
-      }
-    }
-  }
-  &__quote{
-    font-size:14px;
-    line-height:1.929;
-    color:$dark;
+        color: $red;
 
-    display:block;
-    margin:0 0 45px 0;
-    padding-left:20px;
-    border-left:2px solid $red;
-    @media screen and (min-width:700px){
-      font-size:18px;
-      line-height:30px;
-      padding-left:35px;
-    }
-  }
-  &__quote-author{
-    // font-size:14px;
-    // line-height:1.929;
+        @media screen and (min-width:700px)
+        {
+            font-size: 14px;
+            line-height: 30px;
 
-    font-style: italic;
-    color:#8a8a8a;
-    display:block;
-    @media screen and (min-width:700px){
-      font-size:18px;
-      line-height:30px;
-    }
-  }
-  &__navigation{
-    display:block;
-    width:100%;
-    margin:0 auto 40px;
-    // font-size:0;
-    @media screen and (min-width:700px){
-      display:flex;
-      flex-direction: row;
-      align-items:center;
-      justify-content: space-between;
-    }
-    @media screen and (min-width:1200px){
-      margin-bottom:55px;
-    }
-  }
-  &__navigation-link{
-    @include formlabel;
-    font-weight:bold;
-    text-decoration:none;
-    text-align:center;
-    text-transform:uppercase;
-    color:$dark;
+            display: inline-block;
 
-    display:block;
-    // display:inline-block;
-    // vertical-align:top;
-    // margin-bottom:20px;
+            width: 100%;
+            margin-bottom: 50px;
 
-    padding-top:20px;
-    padding-bottom:20px;
-    border:2px solid #e5e5e5;
-    border-radius:1px;
-    @media screen and (min-width:700px){
-      float:none;
-    }
-    @media screen and (min-width:1200px){
-      width:31%;
-    }
-  }
-  &__navigation-link--prev{
-    width: 45%; /*126*/
-    // margin-right:20px;
+            vertical-align: middle;
 
-    float:left;
-    @media screen and (min-width:700px){
-      width: 22%;
-      order:1;
-    }
-    @media screen and (min-width:1200px){
-      margin-right:2%;
-    }
-  }
-  &__navigation-link--next{
-    width: 45%;
-    // margin-right:0;
+            background-color: white;
 
-    float:right;
-    @media screen and (min-width:700px){
-      width: 22%;
-      order:3;
+            order: 2;
+        }
     }
-  }
-  &__navigation-link--back{
-    width:100%; /*276 */
-    box-sizing:border-box;
-    margin:20px auto 0;
+    &__date:after
+    {
+        @media screen and (min-width:700px)
+        {
+            top: -15px;
 
-    float:right;
-    // float:none;
-    @media screen and (min-width:700px){
-      width:48%;
-      margin-top:0;
-      order:2;
+            display: inline-block;
+
+            width: 25%;
+            margin-left: 25px;
+
+            content: '';
+            vertical-align: middle;
+
+            border-bottom: 1px dotted #e5e5e5;
+        }
+        @media screen and (min-width:1200px)
+        {
+            width: 31%;
+        }
     }
-    @media screen and (min-width:1200px){
-      margin-right:2%;
+    &__date:before
+    {
+        @media screen and (min-width:700px)
+        {
+            top: -15px;
+
+            display: inline-block;
+
+            width: 25%;
+            margin-right: 25px;
+
+            content: '';
+            vertical-align: middle;
+
+            border-bottom: 1px dotted #e5e5e5;
+        }
+        @media screen and (min-width:1200px)
+        {
+            width: 31%;
+        }
     }
-  }
+    &__description
+    {
+        font-size: 16px;
+        line-height: 1.6875;
+
+        display: block;
+        // padding-bottom:25px;
+        // border-bottom:1px solid #e5e5e5;
+
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        color: $dark;
+        @media screen and (min-width:700px)
+        {
+            font-size: 24px;
+            line-height: 40px;
+
+            margin-bottom: 40px;
+
+            order: 1;
+        }
+    }
+    &__subheadline
+    {
+        font-weight: bold;
+        // padding-top:35px;
+
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        text-transform: uppercase;
+
+        @include formlabel;
+        @media screen and (min-width:700px)
+        {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    &__paragraph
+    {
+        margin-top: 0;
+        margin-bottom: 40px;
+
+        color: $dark;
+        @media screen and (min-width:700px)
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            margin-bottom: 65px;
+        }
+    }
+    &__paragraph a
+    {
+        color: $red;
+    }
+    &__ulist
+    {
+        display: block;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 6%;
+        // font-size:14px;
+        // line-height:1.929;
+
+        color: $dark;
+        // list-style-type:disc;
+        @media screen and (min-width:700px)
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            padding-left: 3%;
+        }
+        li
+        {
+            // display:block;
+            margin-top: 0;
+            margin-bottom: 30px;
+            @media screen and (min-width:700px)
+            {
+                margin-bottom: 45px;
+                padding-left: 25px;
+            }
+        }
+    }
+    &__quote
+    {
+        font-size: 14px;
+        line-height: 1.929;
+
+        display: block;
+
+        margin: 0 0 45px 0;
+        padding-left: 20px;
+
+        color: $dark;
+        border-left: 2px solid $red;
+        @media screen and (min-width:700px)
+        {
+            font-size: 18px;
+            line-height: 30px;
+
+            padding-left: 35px;
+        }
+    }
+    &__quote-author
+    {
+        // font-size:14px;
+        // line-height:1.929;
+        font-style: italic;
+
+        display: block;
+
+        color: #8a8a8a;
+        @media screen and (min-width:700px)
+        {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+    &__navigation
+    {
+        display: block;
+
+        width: 100%;
+        margin: 0 auto 40px;
+        // font-size:0;
+        @media screen and (min-width:700px)
+        {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            justify-content: space-between;
+        }
+        @media screen and (min-width:1200px)
+        {
+            margin-bottom: 55px;
+        }
+    }
+    &__navigation-link
+    {
+        font-weight: bold;
+
+        display: block;
+        // display:inline-block;
+        // vertical-align:top;
+        // margin-bottom:20px;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        color: $dark;
+        border: 2px solid #e5e5e5;
+        border-radius: 1px;
+
+        @include formlabel;
+        @media screen and (min-width:700px)
+        {
+            float: none;
+        }
+        @media screen and (min-width:1200px)
+        {
+            width: 31%;
+        }
+    }
+    &__navigation-link--prev
+    {
+        // margin-right:20px;
+        float: left;
+
+        width: 45%; /*126*/
+        @media screen and (min-width:700px)
+        {
+            width: 22%;
+
+            order: 1;
+        }
+        @media screen and (min-width:1200px)
+        {
+            margin-right: 2%;
+        }
+    }
+    &__navigation-link--next
+    {
+        // margin-right:0;
+        float: right;
+
+        width: 45%;
+        @media screen and (min-width:700px)
+        {
+            width: 22%;
+
+            order: 3;
+        }
+    }
+    &__navigation-link--back
+    {
+        float: right;
+
+        box-sizing: border-box;
+        width: 100%; /*276 */
+        margin: 20px auto 0;
+        // float:none;
+        @media screen and (min-width:700px)
+        {
+            width: 48%;
+            margin-top: 0;
+
+            order: 2;
+        }
+        @media screen and (min-width:1200px)
+        {
+            margin-right: 2%;
+        }
+    }
 }

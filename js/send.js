@@ -10,6 +10,9 @@
   var template = document.querySelector("#image-template").innerHTML;
   var queue = [];
 
+  var popupsuccess = document.querySelector(".popup--success");
+  var popupclose = document.querySelector(".popup__close");
+
   form.addEventListener("submit", function(event) {
     event.preventDefault();
     var data = new FormData(form);
@@ -19,6 +22,12 @@
     request(data, function(response) {
       console.log(response);
     });
+    popupsuccess.classList.add("popup--active");
+  });
+
+  popupclose.addEventListener("click", function(event) {
+      // event.preventDefault();
+      popup.classList.remove("modal-content-show");
   });
 
   function request(data, fn) {

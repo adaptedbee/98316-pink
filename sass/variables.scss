@@ -13,29 +13,40 @@ $subheadlinetextsize: 18px;
 $baselineheight: 1.7;
 $headlinelineheight: 1.17;
 
-@mixin basetext{
-  font-size:$basetextsize;
-  line-height:$baselineheight;
+@mixin basetext
+{
+    font-size: $basetextsize;
+    line-height: $baselineheight;
 }
-@mixin headlinetext{
-  font-size:$headlinetextsize;
-  line-height:$headlinelineheight;
-  font-weight:300;
-  text-align:center;
+@mixin headlinetext
+{
+    font-size: $headlinetextsize;
+    font-weight: 300;
+    line-height: $headlinelineheight;
+
+    text-align: center;
 }
-@mixin formheadline{
-  font-size:$basetextsize;
-  line-height:2.143;
-  color:$red;
-  text-transform:uppercase;
+@mixin formheadline
+{
+    font-size: $basetextsize;
+    line-height: 2.143;
+
+    text-transform: uppercase;
+
+    color: $red;
 }
-@mixin formlabel{
-  font-size:$subheadlinetextsize;
-  line-height: 1; /* 1.667 */
-  color:$dark;
+@mixin formlabel
+{
+    font-size: $subheadlinetextsize;
+    line-height: 1; /* 1.667 */
+
+    color: $dark;
 }
-@mixin formcenterblock{ /* ??? */
-  width: 100%;
-  margin:0 auto;
-  display:block;
+@mixin formcenterblock
+{
+    display: block;
+    /* ??? */
+
+    width: 100%;
+    margin: 0 auto;
 }
