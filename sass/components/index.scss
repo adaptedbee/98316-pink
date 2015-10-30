@@ -692,10 +692,12 @@
   margin:0 auto; /* ???? */
 
   border-collapse:collapse;
+  transform: translate(-31%);
 
   @media screen and (min-width: 700px){
     width:88%;
     margin:0 auto;
+    transform:none;
   }
   @media screen and (min-width: 1200px){
     width:78%;
