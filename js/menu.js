@@ -6,7 +6,6 @@
     var topmenu = document.querySelector(".top-menu");
 
     link.addEventListener("click", function(event) {
-        event.preventDefault();
         menu.classList.toggle("main-nav--active");
         link.classList.toggle("main-nav__toggle--close");
         topmenu.classList.toggle("top-menu--active");

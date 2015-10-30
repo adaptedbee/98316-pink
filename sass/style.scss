@@ -248,6 +248,10 @@ html, body{
 		width:50px;
 		height:25px;
 
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+
 		background-size:50px 25px;
 		background-position:0 0;
 		background-repeat:no-repeat;
@@ -266,8 +270,8 @@ html, body{
 	&__toggle:hover{
 		background-image:url('../img/menu-burger--hover.svg');
 	}
-	&__toggle:focus{
-		background-image:url('../img/menu-burger--focus.svg');
+	&__toggle:active{
+		background-image:url('../img/menu-burger--active.svg');
 	}
 	&__toggle--close{
 		width:25px;
@@ -278,8 +282,8 @@ html, body{
 	&__toggle--close:hover{
 		background-image:url('../img/menu-cross--hover.svg');
 	}
-	&__toggle--close:focus{
-		background-image:url('../img/menu-cross--focus.svg');
+	&__toggle--close:active{
+		background-image:url('../img/menu-cross--active.svg');
 	}
 }
 
