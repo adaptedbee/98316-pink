@@ -293,7 +293,7 @@
   &__dateinput:hover{
     border-color:$dark;
   }
-  &__dateinput:focus{
+  &__dateinput:active{
     border-color:$red;
   }
   &__dateinput:disabled{
@@ -669,7 +669,7 @@
     color:$red;
     text-decoration:underline;
   }
-  &__delete:focus{
+  &__delete:active{
     text-decoration:none;
     color:transparentize($red,0.7);
   }

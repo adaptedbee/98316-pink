@@ -64,14 +64,14 @@ html, body{
 			background-image:url('../img/logotype-white-desktop--hover.svg');
 		}
 	}
-	&--header:focus{
-		background-image:url('../img/logotype-white-mobile--focus.svg');
+	&--header:active{
+		background-image:url('../img/logotype-white-mobile--active.svg');
 
 		@media screen and (min-width:700px){
-			background-image:url('../img/logotype-white-tablet--focus.svg');
+			background-image:url('../img/logotype-white-tablet--active.svg');
 		}
 		@media screen and (min-width:1200px){
-			background-image:url('../img/logotype-white-desktop--focus.svg');
+			background-image:url('../img/logotype-white-desktop--active.svg');
 		}
 	}
 	&--footer{
@@ -98,14 +98,14 @@ html, body{
 			background-image:url('../img/logotype-blue-desktop--hover.svg');
 		}
 	}
-	&--footer:focus{
-		background-image:url('../img/logotype-blue-tablet--focus.svg');
+	&--footer:active{
+		background-image:url('../img/logotype-blue-tablet--active.svg');
 
 		// @media screen and (min-width:700px){
-		// 	background-image:url('../img/logotype-blue-tablet--focus.svg');
+		// 	background-image:url('../img/logotype-blue-tablet--active.svg');
 		// }
 		@media screen and (min-width:1200px){
-			background-image:url('../img/logotype-blue-desktop--focus.svg');
+			background-image:url('../img/logotype-blue-desktop--active.svg');
 		}
 	}
 }
