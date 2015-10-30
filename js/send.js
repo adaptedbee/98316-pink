@@ -42,7 +42,7 @@
     xhr.send(data);
   }
 
-  form.querySelector(".storyform__uploadbutton").addEventListener("change", function() {
+  form.querySelector(".storyform__uploadbutton-label").addEventListener("click", function() {
     var files = this.files;
     for (var i = 0; i < files.length; i++) {
       preview(files[i]);
